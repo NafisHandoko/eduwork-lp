@@ -11,10 +11,9 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        kelas: resolve(__dirname, "/kelas.html"),
         main: resolve(__dirname, "index.html"),
-
-        // aboutjs: resolve(__dirname, 'about.js')
+        kelas: resolve(__dirname, "kelas.html"),
+        detail_kelas: resolve(__dirname, "detail-kelas.html"),
       },
     },
   },
