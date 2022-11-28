@@ -327,3 +327,11 @@ border-radius: 30px;
 .fixed-position{
   position: fixed;
 }
+
+.shadow-list {
+  box-shadow: 70.7107px 70.7107px 80px rgba(0, 0, 0, 0.03), 45.831px 45.831px 46.8519px rgba(0, 0, 0, 0.0227778), 27.2367px 27.2367px 25.4815px rgba(0, 0, 0, 0.0182222), 14.1421px 14.1421px 13px rgba(0, 0, 0, 0.015), 5.76161px 5.76161px 6.51852px rgba(0, 0, 0, 0.0117778), 1.30946px 1.30946px 3.14815px rgba(0, 0, 0, 0.00722222);
+}
+
+.shadow-pp {
+  filter: drop-shadow(66.9554px 74.2763px 80px rgba(0, 0, 0, 0.05)) drop-shadow(43.397px 48.1421px 46.8519px rgba(0, 0, 0, 0.037963)) drop-shadow(25.7902px 28.6101px 25.4815px rgba(0, 0, 0, 0.0303704)) drop-shadow(13.3911px 14.8553px 13px rgba(0, 0, 0, 0.025)) drop-shadow(5.45563px 6.05214px 6.51852px rgba(0, 0, 0, 0.0196296)) drop-shadow(1.23992px 1.37549px 3.14815px rgba(0, 0, 0, 0.012037));
+}

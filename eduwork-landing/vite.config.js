@@ -14,6 +14,7 @@ export default defineConfig({
         main: resolve(__dirname, "index.html"),
         kelas: resolve(__dirname, "kelas.html"),
         detail_kelas: resolve(__dirname, "detail-kelas.html"),
+        list_mentor: resolve(__dirname, "list-mentor.html"),
       },
     },
   },
