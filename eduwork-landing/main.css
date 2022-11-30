@@ -18,6 +18,27 @@ html{
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 0.5s;
 }
+#navProf{
+  top: 0;
+  position: sticky;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.5s;
+}
+#ppMentor{
+  top: 0;
+  position: sticky;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.5s;
+}
+#menuCourse{
+  top: 0;
+  position: sticky;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.5s;
+}
 .shadow-filter {
   --tw-shadow: 16.1194px 29.936px 110px rgba(0, 0, 0, 0.04), 10.4478px 19.403px 64.4213px rgba(0, 0, 0, 0.0303704), 6.20895px 11.5309px 35.037px rgba(0, 0, 0, 0.0242963), 3.22388px 5.9872px 17.875px rgba(0, 0, 0, 0.02), 1.31343px 2.43923px 8.96296px rgba(0, 0, 0, 0.0157037), 0.298507px 0.554371px 4.3287px rgba(0, 0, 0, 0.00962963);
   --tw-shadow-colored: 16.1194px 29.936px 110px var(--tw-shadow-color), 10.4478px 19.403px 64.4213px var(--tw-shadow-color), 6.20895px 11.5309px 35.037px var(--tw-shadow-color), 3.22388px 5.9872px 17.875px var(--tw-shadow-color), 1.31343px 2.43923px 8.96296px var(--tw-shadow-color), 0.298507px 0.554371px 4.3287px var(--tw-shadow-color);

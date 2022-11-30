@@ -19,7 +19,12 @@
         class="flex justify-between items-center w-[90%] lg:w-[1016px] container mx-auto py-2 md:py-5"
       >
         <a href="/" class="w-[154px] h-[31px]">
-          <img class="" src="./images/logo/favicon.png" alt="Eduwork Logo" />
+          <img
+            loading="lazy"
+            class=""
+            src="./images/logo/favicon.png"
+            alt="Eduwork Logo"
+          />
         </a>
         <button
           data-collapse-toggle="navbar-cta"
@@ -296,12 +301,12 @@
           <button
             class="flex bg-primary gap-[10px] justify-center w-ful md:w-[276px] py-[23px] px-[35px] rounded-[10px] text-[16px] font-medium text-white"
           >
-            <img src="./images/icon/Play.png" alt="play" />
+            <img loading="lazy" src="./images/icon/Play.png" alt="play" />
             Bergabung Sekarang
           </button>
         </div>
         <div class="w-full md:w-1/2">
-          <img src="./images/img-hero-list-mentor.png" alt="" />
+          <img loading="lazy" src="./images/img-hero-list-mentor.png" alt="" />
         </div>
       </div>
     </div>
@@ -363,7 +368,7 @@
           x-on:keydown.escape.prevent.stop="close($refs.button)"
           x-on:focusin.window="! $refs.panel.contains($event.target) && close()"
           x-id="['dropdown-button']"
-          class="relative w-full md:w-[202.31px] h-fit mb-[17px] md:mb-0 py-[11px] pl-[16px] font-[700] text-[#6C6E71] color-[#6c6e71] bg-white border border-[#a7a6ba] rounded-[20px] text-[12px]"
+          class="relative w-full h-fit mb-[17px] md:mb-0 py-[11px] pl-[16px] font-[700] text-[#6C6E71] color-[#6c6e71] bg-white border border-[#a7a6ba] rounded-[20px] text-[12px]"
         >
           <!-- Button -->
           <button
@@ -439,7 +444,7 @@
           x-on:keydown.escape.prevent.stop="close($refs.button)"
           x-on:focusin.window="! $refs.panel.contains($event.target) && close()"
           x-id="['dropdown-button']"
-          class="relative w-full md:w-[202.31px] h-fit mb-[17px] md:mb-0 py-[11px] pl-[16px] color-[#6c6e71] text-[12px] bg-white border border-[#a7a6ba] rounded-[20px] font-[700] text-[#6C6E71]"
+          class="relative w-full h-fit mb-[17px] md:mb-0 py-[11px] pl-[16px] color-[#6c6e71] text-[12px] bg-white border border-[#a7a6ba] rounded-[20px] font-[700] text-[#6C6E71]"
         >
           <!-- Button -->
           <button
@@ -515,7 +520,7 @@
           x-on:keydown.escape.prevent.stop="close($refs.button)"
           x-on:focusin.window="! $refs.panel.contains($event.target) && close()"
           x-id="['dropdown-button']"
-          class="relative w-full md:w-[202.31px] h-fit mb-[17px] md:mb-0 py-[11px] pl-[16px] color-[#6c6e71] bg-white border border-[#a7a6ba] rounded-[20px] text-[12px] font-[700] text-[#6C6E71]"
+          class="relative w-full h-fit mb-[17px] md:mb-0 py-[11px] pl-[16px] color-[#6c6e71] bg-white border border-[#a7a6ba] rounded-[20px] text-[12px] font-[700] text-[#6C6E71]"
         >
           <!-- Button -->
           <button
@@ -572,7 +577,11 @@
           class="text-[12px] mb-[17px] w-full md:w-[205px] h-fit sm:mb-0 py-[11px] md:pr-[64px] font-[700] flex color-[#6c6e71] mr-[13px] bg-[#ffd200] rounded-[20px]"
         >
           <div class="mx-auto flex flow-row gap-1">
-            <img class="md:ml-[54.06px]" src="./images/svg/search.svg" />Cari
+            <img
+              loading="lazy"
+              class="md:ml-[54.06px]"
+              src="./images/svg/search.svg"
+            />Cari
           </div>
         </button>
       </div>
@@ -583,80 +592,94 @@
     >
       <div class="w-full flex flex-col justify-center items-center gap-[18px]">
         <h2 class="text-primary text-[24px] font-semibold">Mentor</h2>
-        <h1 class="text-[34px] font-semibold">
+        <h1 class="text-[34px] font-semibold text-center">
           Temukan mentor terbaik untuk kamu
         </h1>
       </div>
       <div class="flex flex-col mt-[50px] gap-[50px]">
-        <div class="flex gap-[26px] items-start">
-          <img
-            src="./images/pp-pelita.png"
-            alt=""
-            class="rounded-[10px] w-[231px] object-cover shadow-pp"
-          />
-          <div class="flex flex-col gap-[15px]">
-            <div class="flex justify-between items-center">
-              <h1 class="text-[20px] font-semibold">Pelita Nur Najmina</h1>
-              <img src="./images/ic-save.png" alt="save" />
-            </div>
-            <div class="flex gap-2">
-              <img src="./favicon.png" alt="" class="h-[42px] w-[42px]" />
-              <div class="flex flex-col">
-                <h1 class="font-semibold text-[14px]">Programmer</h1>
-                <h3 class="text-[14px] text-[#989898]">Eduwork</h3>
+        <div class="flex flex-col md:flex-row gap-[26px]">
+          <div
+            class="flex flex-col md:flex-row gap-[26px] bg-white p-5 rounded-lg shadow-s2"
+          >
+            <img
+              loading="lazy"
+              src="./images/pp-pelita.png"
+              alt=""
+              class="rounded-[10px] w-[231px] object-cover shadow-pp"
+            />
+            <div class="flex flex-col gap-[15px]">
+              <div class="flex justify-between items-center">
+                <h1 class="text-[20px] font-semibold">Pelita Nur Najmina</h1>
+                <img loading="lazy" src="./images/ic-save.png" alt="save" />
               </div>
-            </div>
-            <div class="flex gap-3 text-[12px]">
-              <h1>Start</h1>
-              <p class="font-semibold">4.0</p>
-              <li>100 Siswa</li>
-              <li>75 Tersalurkan</li>
-            </div>
-            <div class="h-[1px] w-full bg-[#CCCCCC]/50"></div>
-            <div class="flex justify-between items-center text-[12px]">
-              <p>Q&A Chats</p>
-              <p>WA Calls</p>
-              <p>Email</p>
-              <p>Zoom 1x /Week</p>
-            </div>
-            <div class="h-[1px] w-full bg-[#CCCCCC]/50"></div>
-            <div class="flex flex-col">
-              <p class="font-semibold text-[12px]">Kelas Terbaru</p>
-              <div class="flex mt-4 gap-4">
-                <div class="flex items-center gap-3">
-                  <img
-                    src="./images/kelas-terbaru.png"
-                    alt=""
-                    class="rounded-[5px]"
-                  />
-                  <div class="flex flex-col gap-1">
-                    <h1 class="text-[12px] font-semibold">
-                      Membuat Design System
-                    </h1>
-                    <p class="text-[12px] text-[#303030]">
-                      Front end Developer
-                    </p>
-                  </div>
+              <div class="flex gap-2">
+                <img
+                  loading="lazy"
+                  src="./favicon.png"
+                  alt=""
+                  class="h-[42px] w-[42px]"
+                />
+                <div class="flex flex-col">
+                  <h1 class="font-semibold text-[14px]">Programmer</h1>
+                  <h3 class="text-[14px] text-[#989898]">Eduwork</h3>
                 </div>
-                <div class="flex items-center gap-3">
-                  <img
-                    src="./images/kelas-terbaru.png"
-                    alt=""
-                    class="rounded-[5px]"
-                  />
-                  <div class="flex flex-col gap-1">
-                    <h1 class="text-[12px] font-semibold">Design Hand-Off</h1>
-                    <p class="text-[12px] text-[#303030]">Back end Developer</p>
+              </div>
+              <div class="flex gap-3 text-[12px]">
+                <h1>Start</h1>
+                <p class="font-semibold">4.0</p>
+                <li>100 Siswa</li>
+                <li>75 Tersalurkan</li>
+              </div>
+              <div class="h-[1px] w-full bg-[#CCCCCC]/50"></div>
+              <div class="flex justify-between items-center text-[12px]">
+                <p>Q&A Chats</p>
+                <p>WA Calls</p>
+                <p>Email</p>
+                <p>Zoom 1x /Week</p>
+              </div>
+              <div class="h-[1px] w-full bg-[#CCCCCC]/50"></div>
+              <div class="flex flex-col">
+                <p class="font-semibold text-[12px]">Kelas Terbaru</p>
+                <div class="flex mt-4 gap-4">
+                  <div class="flex items-center gap-3">
+                    <img
+                      loading="lazy"
+                      src="./images/kelas-terbaru.png"
+                      alt=""
+                      class="rounded-[5px]"
+                    />
+                    <div class="flex flex-col gap-1">
+                      <h1 class="text-[12px] font-semibold">
+                        Membuat Design System
+                      </h1>
+                      <p class="text-[12px] text-[#303030]">
+                        Front end Developer
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <img
+                      loading="lazy"
+                      src="./images/kelas-terbaru.png"
+                      alt=""
+                      class="rounded-[5px]"
+                    />
+                    <div class="flex flex-col gap-1">
+                      <h1 class="text-[12px] font-semibold">Design Hand-Off</h1>
+                      <p class="text-[12px] text-[#303030]">
+                        Back end Developer
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="flex flex-col gap-4 w-[300px] h-full">
+          <div class="flex flex-col gap-4 w-[300px]">
             <div
               x-data="{ tab: window.location.hash ? window.location.hash.substring(1) : 'pengenalan' }"
               id="tab_wrapper"
-              class="flex flex-col bg-white px-6 py-6 rounded-[10px] shadow-list h-full"
+              class="flex flex-col bg-white px-6 py-6 rounded-[10px] shadow-s2 h-full"
             >
               <!-- The tabs navigation -->
               <nav class="flex gap-4 text-[14px] mb-4">
@@ -689,135 +712,138 @@
               </div>
               <div x-show="tab === 'skills'" class="text-[12px] h-full">
                 I am a general intelligence living in Lisbon. My training and my
-                primary research interest is software engineering. I believe
-                that one of the essentials goals of our generation is to upgrade
-                ...
+                primary research interest is software engineering....
               </div>
               <div x-show="tab === 'events'" class="text-[12px] h-full">
+                I am a general intelligence living in Lisbon.I believe that one
+                of the essentials goals of our generation is to upgrade ...
+              </div>
+            </div>
+            <button class="bg-primary text-white rounded-[10px] py-3">
+              Lihat Profile
+            </button>
+          </div>
+        </div>
+        <div class="flex flex-col md:flex-row gap-[26px]">
+          <div
+            class="flex flex-col md:flex-row gap-[26px] bg-white p-5 rounded-lg shadow-s2"
+          >
+            <img
+              loading="lazy"
+              src="./images/pp-pelita.png"
+              alt=""
+              class="rounded-[10px] w-[231px] object-cover shadow-pp"
+            />
+            <div class="flex flex-col gap-[15px]">
+              <div class="flex justify-between items-center">
+                <h1 class="text-[20px] font-semibold">Pelita Nur Najmina</h1>
+                <img loading="lazy" src="./images/ic-save.png" alt="save" />
+              </div>
+              <div class="flex gap-2">
+                <img
+                  loading="lazy"
+                  src="./favicon.png"
+                  alt=""
+                  class="h-[42px] w-[42px]"
+                />
+                <div class="flex flex-col">
+                  <h1 class="font-semibold text-[14px]">Programmer</h1>
+                  <h3 class="text-[14px] text-[#989898]">Eduwork</h3>
+                </div>
+              </div>
+              <div class="flex gap-3 text-[12px]">
+                <h1>Start</h1>
+                <p class="font-semibold">4.0</p>
+                <li>100 Siswa</li>
+                <li>75 Tersalurkan</li>
+              </div>
+              <div class="h-[1px] w-full bg-[#CCCCCC]/50"></div>
+              <div class="flex justify-between items-center text-[12px]">
+                <p>Q&A Chats</p>
+                <p>WA Calls</p>
+                <p>Email</p>
+                <p>Zoom 1x /Week</p>
+              </div>
+              <div class="h-[1px] w-full bg-[#CCCCCC]/50"></div>
+              <div class="flex flex-col">
+                <p class="font-semibold text-[12px]">Kelas Terbaru</p>
+                <div class="flex mt-4 gap-4">
+                  <div class="flex items-center gap-3">
+                    <img
+                      loading="lazy"
+                      src="./images/kelas-terbaru.png"
+                      alt=""
+                      class="rounded-[5px]"
+                    />
+                    <div class="flex flex-col gap-1">
+                      <h1 class="text-[12px] font-semibold">
+                        Membuat Design System
+                      </h1>
+                      <p class="text-[12px] text-[#303030]">
+                        Front end Developer
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <img
+                      loading="lazy"
+                      src="./images/kelas-terbaru.png"
+                      alt=""
+                      class="rounded-[5px]"
+                    />
+                    <div class="flex flex-col gap-1">
+                      <h1 class="text-[12px] font-semibold">Design Hand-Off</h1>
+                      <p class="text-[12px] text-[#303030]">
+                        Back end Developer
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col gap-4 w-[300px]">
+            <div
+              x-data="{ tab: window.location.hash ? window.location.hash.substring(1) : 'pengenalan' }"
+              id="tab_wrapper"
+              class="flex flex-col bg-white px-6 py-6 rounded-[10px] shadow-s2 h-full"
+            >
+              <!-- The tabs navigation -->
+              <nav class="flex gap-4 text-[14px] mb-4">
+                <a
+                  :class="{ 'text-primary font-semibold': tab === 'pengenalan' }"
+                  @click.prevent="tab = 'pengenalan'; window.location.hash = 'pengenalan'"
+                  href="#"
+                  >Pengenalan</a
+                >
+                <a
+                  :class="{ 'text-primary font-semibold': tab === 'skills' }"
+                  @click.prevent="tab = 'skills'; window.location.hash = 'skills'"
+                  href="#"
+                  >Skills</a
+                >
+                <a
+                  :class="{ 'text-primary font-semibold': tab === 'events' }"
+                  @click.prevent="tab = 'events'; window.location.hash = 'events'"
+                  href="#"
+                  >Events</a
+                >
+              </nav>
+
+              <!-- The tabs content -->
+              <div x-show="tab === 'pengenalan'" class="text-[12px] h-full">
                 I am a general intelligence living in Lisbon. My training and my
                 primary research interest is software engineering. I believe
                 that one of the essentials goals of our generation is to upgrade
                 ...
               </div>
-            </div>
-            <button class="bg-primary text-white rounded-[10px] py-3">
-              Lihat Profile
-            </button>
-          </div>
-        </div>
-        <div class="flex gap-[26px] items-start">
-          <img
-            src="./images/pp-dimas.png"
-            alt=""
-            class="rounded-[10px] w-[231px] object-cover shadow-pp"
-          />
-          <div class="flex flex-col gap-[15px]">
-            <div class="flex justify-between items-center">
-              <h1 class="text-[20px] font-semibold">Dimas H V</h1>
-              <img src="./images/ic-save.png" alt="save" />
-            </div>
-            <div class="flex gap-2">
-              <img src="./favicon.png" alt="" class="h-[42px] w-[42px]" />
-              <div class="flex flex-col">
-                <h1 class="font-semibold text-[14px]">Programmer</h1>
-                <h3 class="text-[14px] text-[#989898]">Eduwork</h3>
+              <div x-show="tab === 'skills'" class="text-[12px] h-full">
+                I am a general intelligence living in Lisbon. My training and my
+                primary research interest is software engineering....
               </div>
-            </div>
-            <div class="flex gap-3 text-[12px]">
-              <h1>Start</h1>
-              <p class="font-semibold">4.0</p>
-              <li>100 Siswa</li>
-              <li>75 Tersalurkan</li>
-            </div>
-            <div class="h-[1px] w-full bg-[#CCCCCC]/50"></div>
-            <div class="flex justify-between items-center text-[12px]">
-              <p>Q&A Chats</p>
-              <p>WA Calls</p>
-              <p>Email</p>
-              <p>Zoom 1x /Week</p>
-            </div>
-            <div class="h-[1px] w-full bg-[#CCCCCC]/50"></div>
-            <div class="flex flex-col">
-              <p class="font-semibold text-[12px]">Kelas Terbaru</p>
-              <div class="flex mt-4 gap-4">
-                <div class="flex items-center gap-3">
-                  <img
-                    src="./images/kelas-terbaru.png"
-                    alt=""
-                    class="rounded-[5px]"
-                  />
-                  <div class="flex flex-col gap-1">
-                    <h1 class="text-[12px] font-semibold">
-                      Membuat Design System
-                    </h1>
-                    <p class="text-[12px] text-[#303030]">
-                      Front end Developer
-                    </p>
-                  </div>
-                </div>
-                <div class="flex items-center gap-3">
-                  <img
-                    src="./images/kelas-terbaru.png"
-                    alt=""
-                    class="rounded-[5px]"
-                  />
-                  <div class="flex flex-col gap-1">
-                    <h1 class="text-[12px] font-semibold">Design Hand-Off</h1>
-                    <p class="text-[12px] text-[#303030]">Back end Developer</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="flex flex-col gap-4 w-[300px] h-full">
-            <div
-              class="flex flex-col bg-white px-6 py-6 rounded-[10px] shadow-list h-full"
-            >
-              <div
-                x-data="{ tab: window.location.hash ? window.location.hash.substring(1) : 'pengenalan' }"
-                id="tab_wrapper"
-              >
-                <!-- The tabs navigation -->
-                <nav class="flex gap-4 text-[14px] mb-4">
-                  <a
-                    :class="{ 'text-primary font-semibold': tab === 'pengenalan' }"
-                    @click.prevent="tab = 'pengenalan'; window.location.hash = 'pengenalan'"
-                    href="#"
-                    >Pengenalan</a
-                  >
-                  <a
-                    :class="{ 'text-primary font-semibold': tab === 'skills' }"
-                    @click.prevent="tab = 'skills'; window.location.hash = 'skills'"
-                    href="#"
-                    >Skills</a
-                  >
-                  <a
-                    :class="{ 'text-primary font-semibold': tab === 'events' }"
-                    @click.prevent="tab = 'events'; window.location.hash = 'events'"
-                    href="#"
-                    >Events</a
-                  >
-                </nav>
-
-                <!-- The tabs content -->
-                <div x-show="tab === 'pengenalan'" class="text-[12px]">
-                  I am a general intelligence living in Lisbon. My training and
-                  my primary research interest is software engineering. I
-                  believe that one of the essentials goals of our generation is
-                  to upgrade ...
-                </div>
-                <div x-show="tab === 'skills'" class="text-[12px]">
-                  I am a general intelligence living in Lisbon. My training and
-                  my primary research interest is software engineering. I
-                  believe that one of the essentials goals of our generation is
-                  to upgrade ...
-                </div>
-                <div x-show="tab === 'events'" class="text-[12px]">
-                  I am a general intelligence living in Lisbon. My training and
-                  my primary research interest is software engineering. I
-                  believe that one of the essentials goals of our generation is
-                  to upgrade ...
-                </div>
+              <div x-show="tab === 'events'" class="text-[12px] h-full">
+                I am a general intelligence living in Lisbon.I believe that one
+                of the essentials goals of our generation is to upgrade ...
               </div>
             </div>
             <button class="bg-primary text-white rounded-[10px] py-3">
@@ -825,119 +851,126 @@
             </button>
           </div>
         </div>
-        <div class="flex gap-[26px] items-start">
-          <img
-            src="./images/pp-pelita.png"
-            alt=""
-            class="rounded-[10px] w-[231px] object-cover shadow-pp"
-          />
-          <div class="flex flex-col gap-[15px]">
-            <div class="flex justify-between items-center">
-              <h1 class="text-[20px] font-semibold">Pelita Nur Najmina</h1>
-              <h1>Save</h1>
-            </div>
-            <div class="flex gap-2">
-              <img src="./favicon.png" alt="" class="h-[42px] w-[42px]" />
-              <div class="flex flex-col">
-                <h1 class="font-semibold text-[14px]">Programmer</h1>
-                <h3 class="text-[14px] text-[#989898]">Eduwork</h3>
+        <div class="flex flex-col md:flex-row gap-[26px]">
+          <div
+            class="flex flex-col md:flex-row gap-[26px] bg-white p-5 rounded-lg shadow-s2"
+          >
+            <img
+              loading="lazy"
+              src="./images/pp-pelita.png"
+              alt=""
+              class="rounded-[10px] w-[231px] object-cover shadow-pp"
+            />
+            <div class="flex flex-col gap-[15px]">
+              <div class="flex justify-between items-center">
+                <h1 class="text-[20px] font-semibold">Pelita Nur Najmina</h1>
+                <img loading="lazy" src="./images/ic-save.png" alt="save" />
               </div>
-            </div>
-            <div class="flex gap-3 text-[12px]">
-              <h1>Start</h1>
-              <p class="font-semibold">4.0</p>
-              <li>100 Siswa</li>
-              <li>75 Tersalurkan</li>
-            </div>
-            <div class="h-[1px] w-full bg-[#CCCCCC]/50"></div>
-            <div class="flex justify-between items-center text-[12px]">
-              <p>Q&A Chats</p>
-              <p>WA Calls</p>
-              <p>Email</p>
-              <p>Zoom 1x /Week</p>
-            </div>
-            <div class="h-[1px] w-full bg-[#CCCCCC]/50"></div>
-            <div class="flex flex-col">
-              <p class="font-semibold text-[12px]">Kelas Terbaru</p>
-              <div class="flex mt-4 gap-4">
-                <div class="flex items-center gap-3">
-                  <img
-                    src="./images/kelas-terbaru.png"
-                    alt=""
-                    class="rounded-[5px]"
-                  />
-                  <div class="flex flex-col gap-1">
-                    <h1 class="text-[12px] font-semibold">
-                      Membuat Design System
-                    </h1>
-                    <p class="text-[12px] text-[#303030]">
-                      Front end Developer
-                    </p>
-                  </div>
+              <div class="flex gap-2">
+                <img
+                  loading="lazy"
+                  src="./favicon.png"
+                  alt=""
+                  class="h-[42px] w-[42px]"
+                />
+                <div class="flex flex-col">
+                  <h1 class="font-semibold text-[14px]">Programmer</h1>
+                  <h3 class="text-[14px] text-[#989898]">Eduwork</h3>
                 </div>
-                <div class="flex items-center gap-3">
-                  <img
-                    src="./images/kelas-terbaru.png"
-                    alt=""
-                    class="rounded-[5px]"
-                  />
-                  <div class="flex flex-col gap-1">
-                    <h1 class="text-[12px] font-semibold">Design Hand-Off</h1>
-                    <p class="text-[12px] text-[#303030]">Back end Developer</p>
+              </div>
+              <div class="flex gap-3 text-[12px]">
+                <h1>Start</h1>
+                <p class="font-semibold">4.0</p>
+                <li>100 Siswa</li>
+                <li>75 Tersalurkan</li>
+              </div>
+              <div class="h-[1px] w-full bg-[#CCCCCC]/50"></div>
+              <div class="flex justify-between items-center text-[12px]">
+                <p>Q&A Chats</p>
+                <p>WA Calls</p>
+                <p>Email</p>
+                <p>Zoom 1x /Week</p>
+              </div>
+              <div class="h-[1px] w-full bg-[#CCCCCC]/50"></div>
+              <div class="flex flex-col">
+                <p class="font-semibold text-[12px]">Kelas Terbaru</p>
+                <div class="flex mt-4 gap-4">
+                  <div class="flex items-center gap-3">
+                    <img
+                      loading="lazy"
+                      src="./images/kelas-terbaru.png"
+                      alt=""
+                      class="rounded-[5px]"
+                    />
+                    <div class="flex flex-col gap-1">
+                      <h1 class="text-[12px] font-semibold">
+                        Membuat Design System
+                      </h1>
+                      <p class="text-[12px] text-[#303030]">
+                        Front end Developer
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <img
+                      loading="lazy"
+                      src="./images/kelas-terbaru.png"
+                      alt=""
+                      class="rounded-[5px]"
+                    />
+                    <div class="flex flex-col gap-1">
+                      <h1 class="text-[12px] font-semibold">Design Hand-Off</h1>
+                      <p class="text-[12px] text-[#303030]">
+                        Back end Developer
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="flex flex-col gap-4 w-[300px] h-full">
+          <div class="flex flex-col gap-4 w-[300px]">
             <div
-              class="flex flex-col bg-white px-6 py-6 rounded-[10px] shadow-list h-full"
+              x-data="{ tab: window.location.hash ? window.location.hash.substring(1) : 'pengenalan' }"
+              id="tab_wrapper"
+              class="flex flex-col bg-white px-6 py-6 rounded-[10px] shadow-s2 h-full"
             >
-              <div
-                x-data="{ tab: window.location.hash ? window.location.hash.substring(1) : 'pengenalan' }"
-                id="tab_wrapper"
-              >
-                <!-- The tabs navigation -->
-                <nav class="flex gap-4 text-[14px] mb-4">
-                  <a
-                    :class="{ 'text-primary font-semibold': tab === 'pengenalan' }"
-                    @click.prevent="tab = 'pengenalan'; window.location.hash = 'pengenalan'"
-                    href="#"
-                    >Pengenalan</a
-                  >
-                  <a
-                    :class="{ 'text-primary font-semibold': tab === 'skills' }"
-                    @click.prevent="tab = 'skills'; window.location.hash = 'skills'"
-                    href="#"
-                    >Skills</a
-                  >
-                  <a
-                    :class="{ 'text-primary font-semibold': tab === 'events' }"
-                    @click.prevent="tab = 'events'; window.location.hash = 'events'"
-                    href="#"
-                    >Events</a
-                  >
-                </nav>
+              <!-- The tabs navigation -->
+              <nav class="flex gap-4 text-[14px] mb-4">
+                <a
+                  :class="{ 'text-primary font-semibold': tab === 'pengenalan' }"
+                  @click.prevent="tab = 'pengenalan'; window.location.hash = 'pengenalan'"
+                  href="#"
+                  >Pengenalan</a
+                >
+                <a
+                  :class="{ 'text-primary font-semibold': tab === 'skills' }"
+                  @click.prevent="tab = 'skills'; window.location.hash = 'skills'"
+                  href="#"
+                  >Skills</a
+                >
+                <a
+                  :class="{ 'text-primary font-semibold': tab === 'events' }"
+                  @click.prevent="tab = 'events'; window.location.hash = 'events'"
+                  href="#"
+                  >Events</a
+                >
+              </nav>
 
-                <!-- The tabs content -->
-                <div x-show="tab === 'pengenalan'" class="text-[12px]">
-                  I am a general intelligence living in Lisbon. My training and
-                  my primary research interest is software engineering. I
-                  believe that one of the essentials goals of our generation is
-                  to upgrade ...
-                </div>
-                <div x-show="tab === 'skills'" class="text-[12px]">
-                  I am a general intelligence living in Lisbon. My training and
-                  my primary research interest is software engineering. I
-                  believe that one of the essentials goals of our generation is
-                  to upgrade ...
-                </div>
-                <div x-show="tab === 'events'" class="text-[12px]">
-                  I am a general intelligence living in Lisbon. My training and
-                  my primary research interest is software engineering. I
-                  believe that one of the essentials goals of our generation is
-                  to upgrade ...
-                </div>
+              <!-- The tabs content -->
+              <div x-show="tab === 'pengenalan'" class="text-[12px] h-full">
+                I am a general intelligence living in Lisbon. My training and my
+                primary research interest is software engineering. I believe
+                that one of the essentials goals of our generation is to upgrade
+                ...
+              </div>
+              <div x-show="tab === 'skills'" class="text-[12px] h-full">
+                I am a general intelligence living in Lisbon. My training and my
+                primary research interest is software engineering....
+              </div>
+              <div x-show="tab === 'events'" class="text-[12px] h-full">
+                I am a general intelligence living in Lisbon.I believe that one
+                of the essentials goals of our generation is to upgrade ...
               </div>
             </div>
             <button class="bg-primary text-white rounded-[10px] py-3">
@@ -945,119 +978,253 @@
             </button>
           </div>
         </div>
-        <div class="flex gap-[26px] items-start">
-          <img
-            src="./images/pp-pelita.png"
-            alt=""
-            class="rounded-[10px] w-[231px] object-cover shadow-pp"
-          />
-          <div class="flex flex-col gap-[15px]">
-            <div class="flex justify-between items-center">
-              <h1 class="text-[20px] font-semibold">Pelita Nur Najmina</h1>
-              <h1>Save</h1>
-            </div>
-            <div class="flex gap-2">
-              <img src="./favicon.png" alt="" class="h-[42px] w-[42px]" />
-              <div class="flex flex-col">
-                <h1 class="font-semibold text-[14px]">Programmer</h1>
-                <h3 class="text-[14px] text-[#989898]">Eduwork</h3>
+        <div class="flex flex-col md:flex-row gap-[26px]">
+          <div
+            class="flex flex-col md:flex-row gap-[26px] bg-white p-5 rounded-lg shadow-s2"
+          >
+            <img
+              loading="lazy"
+              src="./images/pp-pelita.png"
+              alt=""
+              class="rounded-[10px] w-[231px] object-cover shadow-pp"
+            />
+            <div class="flex flex-col gap-[15px]">
+              <div class="flex justify-between items-center">
+                <h1 class="text-[20px] font-semibold">Pelita Nur Najmina</h1>
+                <img loading="lazy" src="./images/ic-save.png" alt="save" />
               </div>
-            </div>
-            <div class="flex gap-3 text-[12px]">
-              <h1>Start</h1>
-              <p class="font-semibold">4.0</p>
-              <li>100 Siswa</li>
-              <li>75 Tersalurkan</li>
-            </div>
-            <div class="h-[1px] w-full bg-[#CCCCCC]/50"></div>
-            <div class="flex justify-between items-center text-[12px]">
-              <p>Q&A Chats</p>
-              <p>WA Calls</p>
-              <p>Email</p>
-              <p>Zoom 1x /Week</p>
-            </div>
-            <div class="h-[1px] w-full bg-[#CCCCCC]/50"></div>
-            <div class="flex flex-col">
-              <p class="font-semibold text-[12px]">Kelas Terbaru</p>
-              <div class="flex mt-4 gap-4">
-                <div class="flex items-center gap-3">
-                  <img
-                    src="./images/kelas-terbaru.png"
-                    alt=""
-                    class="rounded-[5px]"
-                  />
-                  <div class="flex flex-col gap-1">
-                    <h1 class="text-[12px] font-semibold">
-                      Membuat Design System
-                    </h1>
-                    <p class="text-[12px] text-[#303030]">
-                      Front end Developer
-                    </p>
-                  </div>
+              <div class="flex gap-2">
+                <img
+                  loading="lazy"
+                  src="./favicon.png"
+                  alt=""
+                  class="h-[42px] w-[42px]"
+                />
+                <div class="flex flex-col">
+                  <h1 class="font-semibold text-[14px]">Programmer</h1>
+                  <h3 class="text-[14px] text-[#989898]">Eduwork</h3>
                 </div>
-                <div class="flex items-center gap-3">
-                  <img
-                    src="./images/kelas-terbaru.png"
-                    alt=""
-                    class="rounded-[5px]"
-                  />
-                  <div class="flex flex-col gap-1">
-                    <h1 class="text-[12px] font-semibold">Design Hand-Off</h1>
-                    <p class="text-[12px] text-[#303030]">Back end Developer</p>
+              </div>
+              <div class="flex gap-3 text-[12px]">
+                <h1>Start</h1>
+                <p class="font-semibold">4.0</p>
+                <li>100 Siswa</li>
+                <li>75 Tersalurkan</li>
+              </div>
+              <div class="h-[1px] w-full bg-[#CCCCCC]/50"></div>
+              <div class="flex justify-between items-center text-[12px]">
+                <p>Q&A Chats</p>
+                <p>WA Calls</p>
+                <p>Email</p>
+                <p>Zoom 1x /Week</p>
+              </div>
+              <div class="h-[1px] w-full bg-[#CCCCCC]/50"></div>
+              <div class="flex flex-col">
+                <p class="font-semibold text-[12px]">Kelas Terbaru</p>
+                <div class="flex mt-4 gap-4">
+                  <div class="flex items-center gap-3">
+                    <img
+                      loading="lazy"
+                      src="./images/kelas-terbaru.png"
+                      alt=""
+                      class="rounded-[5px]"
+                    />
+                    <div class="flex flex-col gap-1">
+                      <h1 class="text-[12px] font-semibold">
+                        Membuat Design System
+                      </h1>
+                      <p class="text-[12px] text-[#303030]">
+                        Front end Developer
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <img
+                      loading="lazy"
+                      src="./images/kelas-terbaru.png"
+                      alt=""
+                      class="rounded-[5px]"
+                    />
+                    <div class="flex flex-col gap-1">
+                      <h1 class="text-[12px] font-semibold">Design Hand-Off</h1>
+                      <p class="text-[12px] text-[#303030]">
+                        Back end Developer
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="flex flex-col gap-4 w-[300px] h-full">
+          <div class="flex flex-col gap-4 w-[300px]">
             <div
-              class="flex flex-col bg-white px-6 py-6 rounded-[10px] shadow-list h-full"
+              x-data="{ tab: window.location.hash ? window.location.hash.substring(1) : 'pengenalan' }"
+              id="tab_wrapper"
+              class="flex flex-col bg-white px-6 py-6 rounded-[10px] shadow-s2 h-full"
             >
-              <div
-                x-data="{ tab: window.location.hash ? window.location.hash.substring(1) : 'pengenalan' }"
-                id="tab_wrapper"
-              >
-                <!-- The tabs navigation -->
-                <nav class="flex gap-4 text-[14px] mb-4">
-                  <a
-                    :class="{ 'text-primary font-semibold': tab === 'pengenalan' }"
-                    @click.prevent="tab = 'pengenalan'; window.location.hash = 'pengenalan'"
-                    href="#"
-                    >Pengenalan</a
-                  >
-                  <a
-                    :class="{ 'text-primary font-semibold': tab === 'skills' }"
-                    @click.prevent="tab = 'skills'; window.location.hash = 'skills'"
-                    href="#"
-                    >Skills</a
-                  >
-                  <a
-                    :class="{ 'text-primary font-semibold': tab === 'events' }"
-                    @click.prevent="tab = 'events'; window.location.hash = 'events'"
-                    href="#"
-                    >Events</a
-                  >
-                </nav>
+              <!-- The tabs navigation -->
+              <nav class="flex gap-4 text-[14px] mb-4">
+                <a
+                  :class="{ 'text-primary font-semibold': tab === 'pengenalan' }"
+                  @click.prevent="tab = 'pengenalan'; window.location.hash = 'pengenalan'"
+                  href="#"
+                  >Pengenalan</a
+                >
+                <a
+                  :class="{ 'text-primary font-semibold': tab === 'skills' }"
+                  @click.prevent="tab = 'skills'; window.location.hash = 'skills'"
+                  href="#"
+                  >Skills</a
+                >
+                <a
+                  :class="{ 'text-primary font-semibold': tab === 'events' }"
+                  @click.prevent="tab = 'events'; window.location.hash = 'events'"
+                  href="#"
+                  >Events</a
+                >
+              </nav>
 
-                <!-- The tabs content -->
-                <div x-show="tab === 'pengenalan'" class="text-[12px]">
-                  I am a general intelligence living in Lisbon. My training and
-                  my primary research interest is software engineering. I
-                  believe that one of the essentials goals of our generation is
-                  to upgrade ...
+              <!-- The tabs content -->
+              <div x-show="tab === 'pengenalan'" class="text-[12px] h-full">
+                I am a general intelligence living in Lisbon. My training and my
+                primary research interest is software engineering. I believe
+                that one of the essentials goals of our generation is to upgrade
+                ...
+              </div>
+              <div x-show="tab === 'skills'" class="text-[12px] h-full">
+                I am a general intelligence living in Lisbon. My training and my
+                primary research interest is software engineering....
+              </div>
+              <div x-show="tab === 'events'" class="text-[12px] h-full">
+                I am a general intelligence living in Lisbon.I believe that one
+                of the essentials goals of our generation is to upgrade ...
+              </div>
+            </div>
+            <button class="bg-primary text-white rounded-[10px] py-3">
+              Lihat Profile
+            </button>
+          </div>
+        </div>
+        <div class="flex flex-col md:flex-row gap-[26px]">
+          <div
+            class="flex flex-col md:flex-row gap-[26px] bg-white p-5 rounded-lg shadow-s2"
+          >
+            <img
+              loading="lazy"
+              src="./images/pp-pelita.png"
+              alt=""
+              class="rounded-[10px] w-[231px] object-cover shadow-pp"
+            />
+            <div class="flex flex-col gap-[15px]">
+              <div class="flex justify-between items-center">
+                <h1 class="text-[20px] font-semibold">Pelita Nur Najmina</h1>
+                <img loading="lazy" src="./images/ic-save.png" alt="save" />
+              </div>
+              <div class="flex gap-2">
+                <img
+                  loading="lazy"
+                  src="./favicon.png"
+                  alt=""
+                  class="h-[42px] w-[42px]"
+                />
+                <div class="flex flex-col">
+                  <h1 class="font-semibold text-[14px]">Programmer</h1>
+                  <h3 class="text-[14px] text-[#989898]">Eduwork</h3>
                 </div>
-                <div x-show="tab === 'skills'" class="text-[12px]">
-                  I am a general intelligence living in Lisbon. My training and
-                  my primary research interest is software engineering. I
-                  believe that one of the essentials goals of our generation is
-                  to upgrade ...
+              </div>
+              <div class="flex gap-3 text-[12px]">
+                <h1>Start</h1>
+                <p class="font-semibold">4.0</p>
+                <li>100 Siswa</li>
+                <li>75 Tersalurkan</li>
+              </div>
+              <div class="h-[1px] w-full bg-[#CCCCCC]/50"></div>
+              <div class="flex justify-between items-center text-[12px]">
+                <p>Q&A Chats</p>
+                <p>WA Calls</p>
+                <p>Email</p>
+                <p>Zoom 1x /Week</p>
+              </div>
+              <div class="h-[1px] w-full bg-[#CCCCCC]/50"></div>
+              <div class="flex flex-col">
+                <p class="font-semibold text-[12px]">Kelas Terbaru</p>
+                <div class="flex mt-4 gap-4">
+                  <div class="flex items-center gap-3">
+                    <img
+                      loading="lazy"
+                      src="./images/kelas-terbaru.png"
+                      alt=""
+                      class="rounded-[5px]"
+                    />
+                    <div class="flex flex-col gap-1">
+                      <h1 class="text-[12px] font-semibold">
+                        Membuat Design System
+                      </h1>
+                      <p class="text-[12px] text-[#303030]">
+                        Front end Developer
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <img
+                      loading="lazy"
+                      src="./images/kelas-terbaru.png"
+                      alt=""
+                      class="rounded-[5px]"
+                    />
+                    <div class="flex flex-col gap-1">
+                      <h1 class="text-[12px] font-semibold">Design Hand-Off</h1>
+                      <p class="text-[12px] text-[#303030]">
+                        Back end Developer
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                <div x-show="tab === 'events'" class="text-[12px]">
-                  I am a general intelligence living in Lisbon. My training and
-                  my primary research interest is software engineering. I
-                  believe that one of the essentials goals of our generation is
-                  to upgrade ...
-                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col gap-4 w-[300px]">
+            <div
+              x-data="{ tab: window.location.hash ? window.location.hash.substring(1) : 'pengenalan' }"
+              id="tab_wrapper"
+              class="flex flex-col bg-white px-6 py-6 rounded-[10px] shadow-s2 h-full"
+            >
+              <!-- The tabs navigation -->
+              <nav class="flex gap-4 text-[14px] mb-4">
+                <a
+                  :class="{ 'text-primary font-semibold': tab === 'pengenalan' }"
+                  @click.prevent="tab = 'pengenalan'; window.location.hash = 'pengenalan'"
+                  href="#"
+                  >Pengenalan</a
+                >
+                <a
+                  :class="{ 'text-primary font-semibold': tab === 'skills' }"
+                  @click.prevent="tab = 'skills'; window.location.hash = 'skills'"
+                  href="#"
+                  >Skills</a
+                >
+                <a
+                  :class="{ 'text-primary font-semibold': tab === 'events' }"
+                  @click.prevent="tab = 'events'; window.location.hash = 'events'"
+                  href="#"
+                  >Events</a
+                >
+              </nav>
+
+              <!-- The tabs content -->
+              <div x-show="tab === 'pengenalan'" class="text-[12px] h-full">
+                I am a general intelligence living in Lisbon. My training and my
+                primary research interest is software engineering. I believe
+                that one of the essentials goals of our generation is to upgrade
+                ...
+              </div>
+              <div x-show="tab === 'skills'" class="text-[12px] h-full">
+                I am a general intelligence living in Lisbon. My training and my
+                primary research interest is software engineering....
+              </div>
+              <div x-show="tab === 'events'" class="text-[12px] h-full">
+                I am a general intelligence living in Lisbon.I believe that one
+                of the essentials goals of our generation is to upgrade ...
               </div>
             </div>
             <button class="bg-primary text-white rounded-[10px] py-3">
@@ -1081,6 +1248,7 @@
           <div class="flex flex-col gap-[23px] md:flex-row text-[#ffffff]">
             <div class="md:w-[237.51px]">
               <img
+                loading="lazy"
                 class="w-[250px] h-[48.53px] lg:w-fit md:h-fit mx-auto md:mx-0"
                 src="./images/logo/favicon-white.svg"
                 alt=""
@@ -1095,12 +1263,23 @@
               <div class="flex flex-row mb-[60.08px]">
                 <div class="inline-flex gap-[22px] mx-auto md:mx-0">
                   <img
+                    loading="lazy"
                     src="./images/svg/white-instagram.svg"
                     alt=""
                     srcset=""
                   />
-                  <img src="./images/svg/white-twitter.svg" alt="" srcset="" />
-                  <img src="./images/svg/white-youtube.svg" alt="" srcset="" />
+                  <img
+                    loading="lazy"
+                    src="./images/svg/white-twitter.svg"
+                    alt=""
+                    srcset=""
+                  />
+                  <img
+                    loading="lazy"
+                    src="./images/svg/white-youtube.svg"
+                    alt=""
+                    srcset=""
+                  />
                 </div>
               </div>
             </div>
@@ -1177,6 +1356,7 @@
                     class="w-[50.09px] rounded-r-[5px] h-[55px] mb-5 md:mb-0 bg-[#a1b0c7] border border-white px-[13px]"
                   >
                     <img
+                      loading="lazy"
                       class="w-[28px] h-[28px]"
                       src="./images/svg/mail.svg"
                     />

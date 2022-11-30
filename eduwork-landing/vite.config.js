@@ -12,9 +12,11 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
+        index2: resolve(__dirname, "index2.html"),
         kelas: resolve(__dirname, "kelas.html"),
         detail_kelas: resolve(__dirname, "detail-kelas.html"),
         list_mentor: resolve(__dirname, "list-mentor.html"),
+        detail_mentor: resolve(__dirname, "detail-mentor.html"),
       },
     },
   },
