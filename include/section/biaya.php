@@ -1,5 +1,5 @@
-<div class="container mx-auto">
 <!-- Biaya -->
+<div class="container mx-auto">
     <section class="w-[90%] mx-auto lg:w-[1016px] h-fit mb-[76px] md:mb-[133.3px]">
         <div class="flex flex-col lg:flex-row gap-[35px]">
             <div class="w-fit h-fit md:pt-[202px] mx-auto md:mx-0 text-center lg:text-left">
@@ -77,3 +77,4 @@
     </section>
     <!-- End of Biaya -->
 </div>
+<!-- End Biaya -->

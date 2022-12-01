@@ -14,268 +14,210 @@
   </head>
   <body class="bg-[#f6fcff] text-[#404040] font-poppins">
     <!-- Navabar -->
-    <div class="w-full z-50" id="navbar">
-      <nav
-        class="flex justify-between items-center w-[90%] lg:w-[1016px] container mx-auto py-2 md:py-5"
-      >
-        <a href="/" class="w-[154px] h-[31px]">
-          <img
-            loading="lazy"
-            class=""
-            src="./images/logo/favicon.png"
-            alt="Eduwork Logo"
-          />
-        </a>
-        <button
-          data-collapse-toggle="navbar-cta"
-          type="button"
-          class="navbar-toggle z-10 inline-flex p-2 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 right-0 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-          aria-controls="navbar-cta"
-          aria-expanded="false"
+    <nav class="z-50" id="navbar">
+      <div class="w-[90%] lg:w-[1016px] container mx-auto py-2 md:py-4">
+        <div
+          class="container flex flex-wrap items-center justify-between mx-auto"
         >
-          <span class="sr-only">Open main menu</span>
-          <svg
-            class="w-[37px] h-[37px]"
-            aria-hidden="true"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
+          <a href="index.html" class="flex items-center">
+            <img
+              class="h-6 sm:h-7"
+              src="./images/logo/favicon.png"
+              alt="Eduwork Logo"
+            />
+          </a>
+          <div class="flex gap-3 md:order-2">
+            <button
+              type="button"
+              class="text-white hidden md:block bg-primary hover:bg-primary/80 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0"
+            >
+              Login
+            </button>
+            <button
+              type="button"
+              class="text-white hidden md:block bg-primary hover:bg-primary/80 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0"
+            >
+              Register
+            </button>
+            <button
+              data-collapse-toggle="navbar-sticky"
+              type="button"
+              class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              aria-controls="navbar-sticky"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg
+                class="w-6 h-6"
+                aria-hidden="true"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div
+            class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+            id="navbar-sticky"
           >
-            <path
-              fill-rule="evenodd"
-              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-              clip-rule="evenodd"
-            ></path>
-          </svg>
-        </button>
-        <ul class="hidden md:flex gap-[40px]">
-          <li>
-            <div
-              x-data="{
-              open: false,
-              toggle() {
-                  if (this.open) {
-                      return this.close()
-                  }
-  
-                  this.$refs.button.focus()
-  
-                  this.open = true
-              },
-              close(focusAfter) {
-                  if (! this.open) return
-  
-                  this.open = false
-  
-                  focusAfter && focusAfter.focus()
-              }
-          }"
-              x-on:keydown.escape.prevent.stop="close($refs.button)"
-              x-on:focusin.window="! $refs.panel.contains($event.target) && close()"
-              x-id="['dropdown-button']"
-              class="relative text-sm font-semibold"
+            <ul
+              class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row gap-[10px] md:gap-[40px] md:mt-0 md:text-sm md:font-semibold md:border-0 md:bg-transparent"
             >
               <button
-                x-ref="button"
-                x-on:click="toggle()"
-                :aria-expanded="open"
-                :aria-controls="$id('dropdown-button')"
-                type="button"
-                class="flex gap-[5px] border-none"
+                id="dropdownNavbarLink"
+                data-dropdown-toggle="dropdownNavbar"
+                class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto md:dark:hover:bg-transparent"
               >
                 Kelas
                 <svg
-                  xmlns="../images/arrow.svg"
-                  class="absolute right-0 md:relative md:right-auto md:h-5 md:w-5 h-8 w-8"
-                  viewBox="0 0 20 20"
+                  class="w-5 h-5 ml-1"
+                  aria-hidden="true"
                   fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
                     fill-rule="evenodd"
                     d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                     clip-rule="evenodd"
-                  />
+                  ></path>
                 </svg>
               </button>
               <div
-                x-ref="panel"
-                x-show="open"
-                x-transition.origin.top.left
-                x-on:click.outside="close($refs.button)"
-                :id="$id('dropdown-button')"
-                style="display: none"
-                class="relative md:absolute left-0 mt-[25px] w-full md:w-40 rounded-md bg-white shadow-filter"
+                id="dropdownNavbar"
+                class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
               >
-                <a
-                  href="kelas.html"
-                  class="flex gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left text-[22px] md:text-sm hover:bg-gray-50 disabled:text-gray-500"
-                  >Regular</a
+                <ul
+                  class="py-1 text-sm text-gray-700 dark:text-gray-400"
+                  aria-labelledby="dropdownLargeButton"
                 >
-                <a
-                  href=""
-                  class="flex gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left text-[22px] md:text-sm hover:bg-gray-50 disabled:text-gray-500"
-                  >Kelas</a
-                >
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >Regular</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >Kelas</a
+                    >
+                  </li>
+                </ul>
               </div>
-            </div>
-          </li>
-          <li>
-            <div
-              x-data="{
-              open: false,
-              toggle() {
-                  if (this.open) {
-                      return this.close()
-                  }
-  
-                  this.$refs.button.focus()
-  
-                  this.open = true
-              },
-              close(focusAfter) {
-                  if (! this.open) return
-  
-                  this.open = false
-  
-                  focusAfter && focusAfter.focus()
-              }
-          }"
-              x-on:keydown.escape.prevent.stop="close($refs.button)"
-              x-on:focusin.window="! $refs.panel.contains($event.target) && close()"
-              x-id="['dropdown-button']"
-              class="relative text-sm font-semibold"
-            >
               <button
-                x-ref="button"
-                x-on:click="toggle()"
-                :aria-expanded="open"
-                :aria-controls="$id('dropdown-button')"
-                type="button"
-                class="flex gap-[5px] border-none"
+                id="dropdownNavbarLink"
+                data-dropdown-toggle="dropdownNavbar"
+                class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto md:dark:hover:bg-transparent"
               >
                 Mentor
                 <svg
-                  xmlns="../images/arrow.svg"
-                  class="absolute right-0 md:relative md:right-auto md:h-5 md:w-5 h-8 w-8"
-                  viewBox="0 0 20 20"
+                  class="w-5 h-5 ml-1"
+                  aria-hidden="true"
                   fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
                     fill-rule="evenodd"
                     d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                     clip-rule="evenodd"
-                  />
+                  ></path>
                 </svg>
               </button>
               <div
-                x-ref="panel"
-                x-show="open"
-                x-transition.origin.top.left
-                x-on:click.outside="close($refs.button)"
-                :id="$id('dropdown-button')"
-                style="display: none"
-                class="relative md:absolute left-0 mt-[25px] w-full md:w-40 rounded-md bg-white shadow-filter"
+                id="dropdownNavbar"
+                class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
               >
-                <a
-                  href=""
-                  class="flex gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left text-[22px] md:text-sm hover:bg-gray-50 disabled:text-gray-500"
-                  >Mentor</a
+                <ul
+                  class="py-1 text-sm text-gray-700 dark:text-gray-400"
+                  aria-labelledby="dropdownLargeButton"
                 >
-                <a
-                  href=""
-                  class="flex gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left text-[22px] md:text-sm hover:bg-gray-50 disabled:text-gray-500"
-                  >Mentor</a
-                >
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >Mentor</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >Mentor</a
+                    >
+                  </li>
+                </ul>
               </div>
-            </div>
-          </li>
-          <li>
-            <div
-              x-data="{
-              open: false,
-              toggle() {
-                  if (this.open) {
-                      return this.close()
-                  }
-  
-                  this.$refs.button.focus()
-  
-                  this.open = true
-              },
-              close(focusAfter) {
-                  if (! this.open) return
-  
-                  this.open = false
-  
-                  focusAfter && focusAfter.focus()
-              }
-          }"
-              x-on:keydown.escape.prevent.stop="close($refs.button)"
-              x-on:focusin.window="! $refs.panel.contains($event.target) && close()"
-              x-id="['dropdown-button']"
-              class="relative text-sm font-semibold"
-            >
               <button
-                x-ref="button"
-                x-on:click="toggle()"
-                :aria-expanded="open"
-                :aria-controls="$id('dropdown-button')"
-                type="button"
-                class="flex gap-[5px] border-none items-center"
+                id="dropdownNavbarLink"
+                data-dropdown-toggle="dropdownNavbar"
+                class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto md:dark:hover:bg-transparent"
               >
                 Company
                 <svg
-                  xmlns="../images/arrow.svg"
-                  class="absolute right-0 md:relative md:right-auto md:h-5 md:w-5 h-8 w-8"
-                  viewBox="0 0 20 20"
+                  class="w-5 h-5 ml-1"
+                  aria-hidden="true"
                   fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
                     fill-rule="evenodd"
                     d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                     clip-rule="evenodd"
-                  />
+                  ></path>
                 </svg>
               </button>
               <div
-                x-ref="panel"
-                x-show="open"
-                x-transition.origin.top.left
-                x-on:click.outside="close($refs.button)"
-                :id="$id('dropdown-button')"
-                style="display: none"
-                class="relative md:absolute left-0 mt-[25px] w-full md:w-40 rounded-md bg-white shadow-filter"
+                id="dropdownNavbar"
+                class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
               >
-                <a
-                  href=""
-                  class="flex gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left text-[22px] md:text-sm hover:bg-gray-50 disabled:text-gray-500"
-                  >Start-up</a
+                <ul
+                  class="py-1 text-sm text-gray-700 dark:text-gray-400"
+                  aria-labelledby="dropdownLargeButton"
                 >
-                <a
-                  href=""
-                  class="flex gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left text-[22px] md:text-sm hover:bg-gray-50 disabled:text-gray-500"
-                  >Corporate</a
-                >
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >Partner</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >Partner</a
+                    >
+                  </li>
+                </ul>
               </div>
-            </div>
-          </li>
-        </ul>
-        <div class="hidden w-full lg:flex gap-2 md:w-auto h-fit">
-          <button
-            class="text-white font-[500] bg-primary text-[14px] py-[9.5px] px-[20px] rounded-md"
-            type="button"
-          >
-            Login
-          </button>
-          <button
-            class="text-white font-[500] bg-primary text-[14px] py-[9.5px] px-[20px] rounded-md"
-            type="button"
-          >
-            Register
-          </button>
+              <button
+                type="button"
+                class="text-white block md:hidden bg-primary hover:bg-primary/80 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0"
+              >
+                Login
+              </button>
+              <button
+                type="button"
+                class="text-white block md:hidden bg-primary hover:bg-primary/80 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0"
+              >
+                Register
+              </button>
+            </ul>
+          </div>
         </div>
-      </nav>
-    </div>
+      </div>
+    </nav>
     <!-- End Navbar -->
     <!-- Hero -->
     <div
@@ -1189,7 +1131,7 @@
       if (prevScrollpos > currentScrollPos) {
         document.getElementById("navbar").style.top = "0";
       } else {
-        document.getElementById("navbar").style.top = "-80px";
+        document.getElementById("navbar").style.top = "-90px";
       }
       prevScrollpos = currentScrollPos;
     };
