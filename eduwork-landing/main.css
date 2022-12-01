@@ -18,19 +18,23 @@ html{
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 0.5s;
 }
-#navProf{
-  top: 0;
-  position: sticky;
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 0.5s;
-}
-#ppMentor{
-  top: 0;
-  position: sticky;
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 0.5s;
+
+@media only screen and (min-width: 768px) {
+
+  #navProf{
+    top: 0;
+    position: sticky;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 0.5s;
+  }
+  #ppMentor{
+    top: 0;
+    position: sticky;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 0.5s;
+  }
 }
 #menuCourse{
   top: 0;

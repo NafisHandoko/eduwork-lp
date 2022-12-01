@@ -14,7 +14,7 @@
   </head>
   <body class="bg-[#f6fcff] text-[#404040] font-poppins">
     <!-- Navabar -->
-    <div class="w-full z-50 relative" id="navbar">
+    <div class="w-full z-50" id="navbar">
       <nav
         class="flex justify-between items-center w-[90%] lg:w-[1016px] container mx-auto py-2 md:py-5"
       >
@@ -284,7 +284,7 @@
         class="bg-gradient-to-r from-white via-white to-white/60 w-full h-full absolute"
       ></div>
       <img
-        class="w-full object-cover"
+        class="w-full object-cover h-[200px] md:h-fit"
         src="./images/profile-mentor/bg-hero-mentor.png"
         alt=""
       />
@@ -292,11 +292,11 @@
     <!-- Content -->
     <div class="z-50">
       <nav
-        class="menuChange w-[90%] md:w-full lg:w-[1138px] mt-36 container mx-auto z-50"
+        class="menuChange w-[90%] hidden md:block md:w-full lg:w-[1138px] mt-36 container mx-auto z-50"
         id="navProf"
       >
         <ul
-          class="w-full flex text-[#888888] justify-between bg-white shadow-s2 py-6 px-10 rounded-[10px]"
+          class="w-full flex flex-col md:flex-row text-[#888888] justify-between bg-white shadow-s2 py-6 px-10 rounded-[10px]"
         >
           <li class="tentang text-[16px]">
             <a href="#tentang">Tentang</a>
@@ -320,9 +320,9 @@
         </ul>
       </nav>
       <div
-        class="w-[90%] mt-[50px] lg:w-[1016px] container mx-auto flex gap-8 items-start"
+        class="w-[90%] mt-[100px] md:mt-[50px] lg:w-[1016px] container mx-auto flex flex-col md:flex-row gap-8 items-start"
       >
-        <div class="w-1/3 flex flex-col" id="ppMentor">
+        <div class="w-full md:w-1/3 flex flex-col" id="ppMentor">
           <div
             class="bg-white flex flex-col p-[20px] rounded-[20px] gap-3 shadow-s2"
           >
@@ -477,7 +477,7 @@
           <!-- Skill -->
           <section id="skill" class="skill mt-[50px] flex flex-col gap-6">
             <h1 class="text-primary text-[20px] font-semibold">Skill</h1>
-            <div class="flex justify-between">
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-3">
               <div class="flex gap-3 items-center">
                 <img
                   loading="lazy"
@@ -526,7 +526,7 @@
             class="portofolio mt-[50px] flex flex-col gap-5"
           >
             <h1 class="text-primary text-[20px] font-semibold">Portofolio</h1>
-            <div class="flex justify-between">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
               <div
                 class="flex flex-col shadow-2xl rounded-[10px] overflow-hidden"
               >
@@ -615,12 +615,13 @@
             <h1 class="text-primary text-[20px] font-semibold">
               Murid Yang Bergabung
             </h1>
-            <div class="flex items-center justify-between">
+            <div class="flex flex-col md:flex-row gap-3 justify-between">
               <div class="flex gap-4 items-center">
                 <div class="bg-primary p-3 rounded-lg">
                   <img
                     src="./images/profile-mentor/ic-total-belajar.png"
                     alt=""
+                    class="w-[45px] md:w-fit"
                   />
                 </div>
                 <div class="flex-col flex gap-[2px]">
@@ -630,7 +631,11 @@
               </div>
               <div class="flex gap-4 items-center">
                 <div class="bg-primary p-3 rounded-lg">
-                  <img src="./images/profile-mentor/ic-trsalurkan.png" alt="" />
+                  <img
+                    src="./images/profile-mentor/ic-trsalurkan.png"
+                    alt=""
+                    class="w-[45px] md:w-fit"
+                  />
                 </div>
                 <div class="flex-col flex gap-[2px]">
                   <h1 class="font-semibold text-[16px]">Total Tersalurkan</h1>
@@ -639,7 +644,11 @@
               </div>
               <div class="flex gap-4 items-center">
                 <div class="bg-primary p-3 rounded-lg">
-                  <img src="./images/profile-mentor/ic-penilaian.png" alt="" />
+                  <img
+                    src="./images/profile-mentor/ic-penilaian.png"
+                    alt=""
+                    class="w-[45px] md:w-fit"
+                  />
                 </div>
                 <div class="flex-col flex gap-[2px]">
                   <h1 class="font-semibold text-[16px]">Penilaian</h1>
@@ -710,10 +719,12 @@
             </div>
           </section>
           <!-- Review -->
-          <section id="review" class="review mt-[50px] flex flex-col gap-10">
+          <section id="review" class="review mt-[50px] flex flex-col gap-8">
             <h1 class="text-primary text-[20px] font-semibold">Review</h1>
-            <div class="flex flex-col gap-10">
-              <div class="flex gap-6">
+            <div class="flex flex-col gap-10 md:gap-5">
+              <div
+                class="flex bg-white rounded-[10px] p-4 flex-col md:flex-row gap-6"
+              >
                 <img
                   src="./images/profile-mentor/testi-1.png"
                   alt="Nikita Rombe"
@@ -734,7 +745,7 @@
                       Pharetra, nibh in amet vestibulum pharetra.
                     </p>
                   </div>
-                  <div class="flex flex-col">
+                  <div class="flex flex-col mt-5">
                     <h1 class="text-[20px] font-semibold">Nikita Rombe</h1>
                     <div class="flex items-center gap-4">
                       <p class="text-[16px] text-[#737373]">
@@ -754,7 +765,9 @@
                   </div>
                 </div>
               </div>
-              <div class="flex gap-6">
+              <div
+                class="flex bg-white rounded-[10px] p-4 flex-col md:flex-row gap-6"
+              >
                 <img
                   src="./images/profile-mentor/testi-2.png"
                   alt="Nikita Rombe"
@@ -775,7 +788,7 @@
                       Pharetra, nibh in amet vestibulum pharetra.
                     </p>
                   </div>
-                  <div class="flex flex-col">
+                  <div class="flex flex-col mt-5">
                     <h1 class="text-[20px] font-semibold">Fahmi Azwarin</h1>
                     <div class="flex items-center gap-4">
                       <p class="text-[16px] text-[#737373]">
@@ -795,7 +808,9 @@
                   </div>
                 </div>
               </div>
-              <div class="flex gap-6">
+              <div
+                class="flex bg-white rounded-[10px] p-4 flex-col md:flex-row gap-6"
+              >
                 <img
                   src="./images/profile-mentor/testi-3.png"
                   alt="Nikita Rombe"
@@ -816,7 +831,7 @@
                       Pharetra, nibh in amet vestibulum pharetra.
                     </p>
                   </div>
-                  <div class="flex flex-col">
+                  <div class="flex flex-col mt-5">
                     <h1 class="text-[20px] font-semibold">Helen Silvia</h1>
                     <div class="flex items-center gap-4">
                       <p class="text-[16px] text-[#737373]">
@@ -900,14 +915,16 @@
           <section id="kelas" class="kelas mt-[50px] flex flex-col gap-3">
             <h1 class="text-primary text-[20px] font-semibold">Kelas</h1>
             <div class="flex flex-col gap-5">
-              <div class="flex gap-6 bg-white p-6 shadow-s2 rounded-lg">
+              <div
+                class="flex flex-col md:flex-row gap-6 bg-white p-6 shadow-s2 rounded-lg"
+              >
                 <img
                   src="./images/profile-mentor/kelas-1.png"
                   alt="kelas"
                   loading="lazy"
-                  class="rounded-[10px]"
+                  class="rounded-[10px] h-[150px] md:h-fit object-cover"
                 />
-                <div class="flex flex-col justify-between">
+                <div class="flex flex-col justify-between gap-4">
                   <h1 class="text-[20px] font-semibold">React Js & Node Js</h1>
                   <p class="text-[14px]">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
@@ -915,7 +932,9 @@
                     nibh in amet vestibulum pharetra..
                   </p>
                   <div class="h-[1px] w-full bg-[#D9D9D9]"></div>
-                  <div class="flex justify-between items-center">
+                  <div
+                    class="flex flex-col md:flex-row gap-3 justify-between items-center"
+                  >
                     <div class="flex gap-6">
                       <div class="flex flex-row items-center">
                         <img
@@ -938,97 +957,7 @@
                       </div>
                     </div>
                     <button
-                      class="w-[201px] py-2 bg-primary rounded-md text-white"
-                    >
-                      Daftar Sekarang
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div class="flex gap-6 bg-white p-6 shadow-s2 rounded-lg">
-                <img
-                  src="./images/profile-mentor/kelas-2.png"
-                  alt="kelas"
-                  loading="lazy"
-                  class="rounded-[10px]"
-                />
-                <div class="flex flex-col justify-between">
-                  <h1 class="text-[20px] font-semibold">QA Engineer</h1>
-                  <p class="text-[14px]">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-                    faucibus ut sit est in pharetra nunc vel cras. Pharetra,
-                    nibh in amet vestibulum pharetra..
-                  </p>
-                  <div class="h-[1px] w-full bg-[#D9D9D9]"></div>
-                  <div class="flex justify-between items-center">
-                    <div class="flex gap-6">
-                      <div class="flex flex-row items-center">
-                        <img
-                          loading="lazy"
-                          class="w-[14px] float-left h-[14px] mr-[7px]"
-                          src="./images/svg/Star.svg"
-                          alt=""
-                          srcset=""
-                        />
-                        <span class="text-[14px] text-[#A9A9A9]">4.5</span>
-                      </div>
-                      <div class="flex flex-row items-center gap-2">
-                        <img
-                          src="./images/profile-mentor/ic-students.png"
-                          alt=""
-                        />
-                        <span class="text-[14px] text-[#A9A9A9]"
-                          >100 Orang</span
-                        >
-                      </div>
-                    </div>
-                    <button
-                      class="w-[201px] py-2 bg-primary rounded-md text-white"
-                    >
-                      Daftar Sekarang
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div class="flex gap-6 bg-white p-6 shadow-s2 rounded-lg">
-                <img
-                  src="./images/profile-mentor/kelas-3.png"
-                  alt="kelas"
-                  loading="lazy"
-                  class="rounded-[10px]"
-                />
-                <div class="flex flex-col justify-between">
-                  <h1 class="text-[20px] font-semibold">Golang Developer</h1>
-                  <p class="text-[14px]">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-                    faucibus ut sit est in pharetra nunc vel cras. Pharetra,
-                    nibh in amet vestibulum pharetra..
-                  </p>
-                  <div class="h-[1px] w-full bg-[#D9D9D9]"></div>
-                  <div class="flex justify-between items-center">
-                    <div class="flex gap-6">
-                      <div class="flex flex-row items-center">
-                        <img
-                          loading="lazy"
-                          class="w-[14px] float-left h-[14px] mr-[7px]"
-                          src="./images/svg/Star.svg"
-                          alt=""
-                          srcset=""
-                        />
-                        <span class="text-[14px] text-[#A9A9A9]">4.5</span>
-                      </div>
-                      <div class="flex flex-row items-center gap-2">
-                        <img
-                          src="./images/profile-mentor/ic-students.png"
-                          alt=""
-                        />
-                        <span class="text-[14px] text-[#A9A9A9]"
-                          >100 Orang</span
-                        >
-                      </div>
-                    </div>
-                    <button
-                      class="w-[201px] py-2 bg-primary rounded-md text-white"
+                      class="w-full md:w-[201px] py-2 bg-primary rounded-md text-white"
                     >
                       Daftar Sekarang
                     </button>
