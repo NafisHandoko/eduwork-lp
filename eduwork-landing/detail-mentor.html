@@ -91,7 +91,7 @@
               </button>
               <div
                 id="dropdownNavbar"
-                class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+                class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded shadow w-full md:w-44"
               >
                 <ul
                   class="py-1 text-sm text-gray-700 dark:text-gray-400"
@@ -115,7 +115,7 @@
               </div>
               <button
                 id="dropdownNavbarLink"
-                data-dropdown-toggle="dropdownNavbar"
+                data-dropdown-toggle="dropdownMentor"
                 class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto md:dark:hover:bg-transparent"
               >
                 Mentor
@@ -134,8 +134,8 @@
                 </svg>
               </button>
               <div
-                id="dropdownNavbar"
-                class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+                id="dropdownMentor"
+                class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded shadow w-full md:w-44"
               >
                 <ul
                   class="py-1 text-sm text-gray-700 dark:text-gray-400"
@@ -159,7 +159,7 @@
               </div>
               <button
                 id="dropdownNavbarLink"
-                data-dropdown-toggle="dropdownNavbar"
+                data-dropdown-toggle="dropdownCompany"
                 class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto md:dark:hover:bg-transparent"
               >
                 Company
@@ -178,8 +178,8 @@
                 </svg>
               </button>
               <div
-                id="dropdownNavbar"
-                class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+                id="dropdownCompany"
+                class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded shadow w-full md:w-44 !mb-5"
               >
                 <ul
                   class="py-1 text-sm text-gray-700 dark:text-gray-400"
@@ -671,7 +671,7 @@
                   src="./images/profile-mentor/testi-1.png"
                   alt="Nikita Rombe"
                   loading="lazy"
-                  class="rounded-lg"
+                  class="rounded-full md:rounded-lg w-[200px] self-center md:w-full object-cover"
                 />
                 <div class="flex flex-col justify-between">
                   <div class="flex gap-2 flex-col">
@@ -714,7 +714,7 @@
                   src="./images/profile-mentor/testi-2.png"
                   alt="Nikita Rombe"
                   loading="lazy"
-                  class="rounded-lg"
+                  class="rounded-full md:rounded-lg w-[200px] self-center md:w-full object-cover"
                 />
                 <div class="flex flex-col justify-between">
                   <div class="flex gap-2 flex-col">
@@ -757,7 +757,7 @@
                   src="./images/profile-mentor/testi-3.png"
                   alt="Nikita Rombe"
                   loading="lazy"
-                  class="rounded-lg"
+                  class="rounded-full md:rounded-lg w-[200px] self-center md:w-full object-cover"
                 />
                 <div class="flex flex-col justify-between">
                   <div class="flex gap-2 flex-col">
@@ -800,7 +800,7 @@
             <h1 class="text-primary text-[20px] font-semibold">Perusahaan</h1>
             <!-- Partner -->
             <div
-              class="flex justify-between gap-4 items-center mb-8 overflow-auto mt-6"
+              class="hidden md:flex justify-between gap-4 items-center mb-8 overflow-auto"
             >
               <img loading="lazy" src="./images/partners/flip.png" alt="flip" />
               <img
@@ -825,7 +825,9 @@
               />
             </div>
             <!-- Partner -->
-            <div class="flex justify-between gap-4 items-center overflow-auto">
+            <div
+              class="hidden md:flex justify-between gap-4 items-center overflow-auto"
+            >
               <img
                 loading="lazy"
                 src="./images/partners/linkaja.png"
@@ -850,6 +852,55 @@
                 loading="lazy"
                 src="./images/partners/bukalapak.png"
                 alt="bukalapak"
+              />
+            </div>
+            <!-- Partner -->
+            <div class="md:hidden flex gap-5 mt-10 items-center overflow-auto">
+              <img
+                loading="lazy"
+                src="./images/partners/linkaja.png"
+                alt="linkaja"
+              />
+              <img
+                loading="lazy"
+                src="./images/partners/astra.png"
+                alt="Astra"
+              />
+              <img
+                loading="lazy"
+                src="./images/partners/bizzy.png"
+                alt="bizzy"
+              />
+              <img
+                loading="lazy"
+                src="./images/partners/akulaku.png"
+                alt="akulaku"
+              />
+              <img
+                loading="lazy"
+                src="./images/partners/bukalapak.png"
+                alt="bukalapak"
+              />
+              <img loading="lazy" src="./images/partners/flip.png" alt="flip" />
+              <img
+                loading="lazy"
+                src="./images/partners/gojek.png"
+                alt="gojek"
+              />
+              <img
+                loading="lazy"
+                src="./images/partners/telkom.png"
+                alt="telkom"
+              />
+              <img
+                loading="lazy"
+                src="./images/partners/tokopedia.png"
+                alt="tokopedia"
+              />
+              <img
+                loading="lazy"
+                src="./images/partners/alodokter.png"
+                alt="alodokter"
               />
             </div>
           </section>

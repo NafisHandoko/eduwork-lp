@@ -80,7 +80,7 @@
             id="navbar-sticky"
           >
             <ul
-              class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row gap-[10px] md:gap-[40px] md:mt-0 md:text-sm md:font-semibold md:border-0 md:bg-transparent"
+              class="flex flex-col p-4 mt-4 border border-gray-100 shadow-lg md:shadow-none rounded-lg bg-gray-50 md:flex-row gap-[10px] md:gap-[40px] md:mt-0 md:text-sm md:font-semibold md:border-0 md:bg-transparent"
             >
               <button
                 id="dropdownNavbarLink"
@@ -334,7 +334,9 @@
       </div>
       <div class="w-full md:w-[734px]">
         <!-- Partner -->
-        <div class="flex justify-between gap-4 items-center mb-8 overflow-auto">
+        <div
+          class="hidden md:flex justify-between gap-4 items-center mb-8 overflow-auto"
+        >
           <img loading="lazy" src="./images/partners/flip.png" alt="flip" />
           <img loading="lazy" src="./images/partners/gojek.png" alt="gojek" />
           <img loading="lazy" src="./images/partners/telkom.png" alt="telkom" />
@@ -350,7 +352,9 @@
           />
         </div>
         <!-- Partner -->
-        <div class="flex justify-between gap-4 items-center overflow-auto">
+        <div
+          class="hidden md:flex justify-between gap-4 items-center overflow-auto"
+        >
           <img
             loading="lazy"
             src="./images/partners/linkaja.png"
@@ -369,8 +373,41 @@
             alt="bukalapak"
           />
         </div>
+        <!-- Partner -->
+        <div class="md:hidden flex gap-5 items-center overflow-auto">
+          <img
+            loading="lazy"
+            src="./images/partners/linkaja.png"
+            alt="linkaja"
+          />
+          <img loading="lazy" src="./images/partners/astra.png" alt="Astra" />
+          <img loading="lazy" src="./images/partners/bizzy.png" alt="bizzy" />
+          <img
+            loading="lazy"
+            src="./images/partners/akulaku.png"
+            alt="akulaku"
+          />
+          <img
+            loading="lazy"
+            src="./images/partners/bukalapak.png"
+            alt="bukalapak"
+          />
+          <img loading="lazy" src="./images/partners/flip.png" alt="flip" />
+          <img loading="lazy" src="./images/partners/gojek.png" alt="gojek" />
+          <img loading="lazy" src="./images/partners/telkom.png" alt="telkom" />
+          <img
+            loading="lazy"
+            src="./images/partners/tokopedia.png"
+            alt="tokopedia"
+          />
+          <img
+            loading="lazy"
+            src="./images/partners/alodokter.png"
+            alt="alodokter"
+          />
+        </div>
         <!-- Tentang Program -->
-        <section id="tentang" class="mt-[70px]">
+        <section id="tentang" class="mt-[50px]">
           <p class="text-[18px] font-semibold text-primary">Tentang Program</p>
           <h1 class="text-[24px] font-semibold mb-[30px]">
             Program Laravel & Vue JS
@@ -649,75 +686,95 @@
           <h1 class="text-[24px] font-semibold mb-[30px]">
             Silabus belajar yang ada di Eduwork
           </h1>
-
-          <div
-            class="flex justify-between gap-4 items-center overflow-auto"
-            id="myTab"
-            data-tabs-toggle="#myTabContent"
-            role="tablist"
-          >
-            <button
-              class="bg-[#EBEBEB] py-3 px-3 w-[132px] font-medium text-[14px] rounded-[5px]"
-              id="pembukaan-tab"
-              data-tabs-target="#pembukaan"
-              type="button"
-              role="tab"
-              aria-controls="pembukaan"
-              aria-selected="false"
+          <div class="mb-4">
+            <ul
+              class="flex overflow-y-auto gap-5 text-sm font-medium text-center"
+              id="tabExample"
+              role="tablist"
             >
-              Pembukaan
-            </button>
-            <button
-              class="bg-primary text-white whitespace-nowrap py-3 px-3 w-[132px] font-medium text-[14px] rounded-[5px]"
-              id="materi-tab"
-              data-tabs-target="#materi"
-              type="button"
-              role="tab"
-              aria-controls="materi"
-              aria-selected="false"
-            >
-              Dasar Materi
-            </button>
-            <button
-              class="bg-[#EBEBEB] py-3 px-3 w-[132px] whitespace-nowrap font-medium text-[14px] rounded-[5px]"
-              id="MUtama-tab"
-              data-tabs-target="#MUtama"
-              type="button"
-              role="tab"
-              aria-controls="MUtama"
-              aria-selected="false"
-            >
-              Materi Utama
-            </button>
-            <button
-              class="bg-[#EBEBEB] py-3 px-3 w-[132px] font-medium text-[14px] rounded-[5px]"
-              id="penyaluran-tab"
-              data-tabs-target="#penyaluran"
-              type="button"
-              role="tab"
-              aria-controls="penyaluran"
-              aria-selected="false"
-            >
-              Penyaluran
-            </button>
-            <button
-              class="bg-[#EBEBEB] py-3 px-3 w-[132px] font-medium text-[14px] rounded-[5px]"
-              id="kerja-tab"
-              data-tabs-target="#kerja"
-              type="button"
-              role="tab"
-              aria-controls="kerja"
-              aria-selected="false"
-            >
-              Kerja
-            </button>
+              <li role="presentation">
+                <button
+                  class="bg-[#EBEBEB] hover:bg-primary hover:text-white py-3 px-3 w-[132px] rounded-[5px]"
+                  id="pembukaan-tab"
+                  type="button"
+                  role="tab"
+                  aria-controls="pembukaan"
+                  aria-selected="false"
+                >
+                  Pembukaan
+                </button>
+              </li>
+              <li role="presentation">
+                <button
+                  class="bg-[#EBEBEB] hover:bg-primary hover:text-white py-3 px-3 w-[132px] rounded-[5px]"
+                  id="dasar-materi-tab"
+                  type="button"
+                  role="tab"
+                  aria-controls="dasar-materi"
+                  aria-selected="false"
+                >
+                  Dasar Materi
+                </button>
+              </li>
+              <li role="presentation">
+                <button
+                  class="bg-[#EBEBEB] hover:bg-primary hover:text-white py-3 px-3 w-[132px] rounded-[5px]"
+                  id="materi-utama-tab"
+                  type="button"
+                  role="tab"
+                  aria-controls="materi-utama"
+                  aria-selected="false"
+                >
+                  Materi Utama
+                </button>
+              </li>
+              <li role="presentation">
+                <button
+                  class="bg-[#EBEBEB] hover:bg-primary hover:text-white py-3 px-3 w-[132px] rounded-[5px]"
+                  id="penyaluran-tab"
+                  type="button"
+                  role="tab"
+                  aria-controls="penyaluran"
+                  aria-selected="false"
+                >
+                  Penyaluran
+                </button>
+              </li>
+              <li role="presentation">
+                <button
+                  class="bg-[#EBEBEB] hover:bg-primary hover:text-white py-3 px-3 w-[132px] rounded-[5px]"
+                  id="kerja-tab"
+                  type="button"
+                  role="tab"
+                  aria-controls="kerja"
+                  aria-selected="false"
+                >
+                  Kerja
+                </button>
+              </li>
+            </ul>
           </div>
-          <div id="myTabContent">
+          <div id="tabContentExample">
             <div
-              class="flex flex-col md:flex-row gap-10 mt-10"
+              class="hidden p-4"
               id="pembukaan"
               role="tabpanel"
               aria-labelledby="pembukaan-tab"
+            >
+              <p class="text-sm text-gray-500 dark:text-gray-400">
+                This is some placeholder content the
+                <strong class="font-medium text-gray-800 dark:text-white"
+                  >Pembukaan tab's associated content</strong
+                >. Clicking another tab will toggle the visibility of this one
+                for the next. The tab JavaScript swaps classes to control the
+                content visibility and styling.
+              </p>
+            </div>
+            <div
+              class="flex flex-col md:flex-row gap-10 mt-10"
+              id="dasar-materi"
+              role="tabpanel"
+              aria-labelledby="dasar-materi-tab"
             >
               <div class="w-full md:w-1/2 flex flex-col gap-8">
                 <div class="flex flex-col">
@@ -787,6 +844,51 @@
                 />
               </div>
             </div>
+            <div
+              class="hidden p-4"
+              id="materi-utama"
+              role="tabpanel"
+              aria-labelledby="materi-utama-tab"
+            >
+              <p class="text-sm text-gray-500 dark:text-gray-400">
+                This is some placeholder content the
+                <strong class="font-medium text-gray-800 dark:text-white"
+                  >Materi utama tab's associated content</strong
+                >. Clicking another tab will toggle the visibility of this one
+                for the next. The tab JavaScript swaps classes to control the
+                content visibility and styling.
+              </p>
+            </div>
+            <div
+              class="hidden p-4"
+              id="penyaluran"
+              role="tabpanel"
+              aria-labelledby="penyaluran-tab"
+            >
+              <p class="text-sm text-gray-500 dark:text-gray-400">
+                This is some placeholder content the
+                <strong class="font-medium text-gray-800 dark:text-white"
+                  >Penyaluran tab's associated content</strong
+                >. Clicking another tab will toggle the visibility of this one
+                for the next. The tab JavaScript swaps classes to control the
+                content visibility and styling.
+              </p>
+            </div>
+            <div
+              class="hidden p-4"
+              id="kerja"
+              role="tabpanel"
+              aria-labelledby="kerja-tab"
+            >
+              <p class="text-sm text-gray-500 dark:text-gray-400">
+                This is some placeholder content the
+                <strong class="font-medium text-gray-800 dark:text-white"
+                  >Kerja tab's associated content</strong
+                >. Clicking another tab will toggle the visibility of this one
+                for the next. The tab JavaScript swaps classes to control the
+                content visibility and styling.
+              </p>
+            </div>
           </div>
         </section>
         <!-- Testimoni -->
@@ -801,7 +903,7 @@
                 src="./images/profile-mentor/testi-1.png"
                 alt="Nikita Rombe"
                 loading="lazy"
-                class="rounded-lg"
+                class="rounded-full md:rounded-lg w-[200px] self-center md:w-full object-cover"
               />
               <div class="flex flex-col justify-between gap-4">
                 <div class="flex gap-2 flex-col">
@@ -1228,7 +1330,7 @@
           loading="lazy"
           src="./images/bg-kelas-trial.png"
           alt="bg"
-          class="absolute top-[6120px] right-0 -z-30 hidden md:block"
+          class="absolute top-[5550px] right-0 -z-30 hidden md:block"
         />
         <!-- Kelas Trial -->
         <section id="trial" class="mt-[70px] md:mt-[169px] w-full">
@@ -1615,8 +1717,8 @@
       const tabElements = [
         {
           id: "pembukaan",
-          triggerEl: document.querySelector("#pembukaan-tab-example"),
-          targetEl: document.querySelector("#pembukaan-example"),
+          triggerEl: document.querySelector("#pembukaan-tab"),
+          targetEl: document.querySelector("#pembukaan"),
         },
         {
           id: "dasar-materi",
@@ -1629,35 +1731,29 @@
           targetEl: document.querySelector("#materi-utama"),
         },
         {
-          id: "contacts",
-          triggerEl: document.querySelector("#contacts-tab-example"),
-          targetEl: document.querySelector("#contacts-example"),
+          id: "penyaluran",
+          triggerEl: document.querySelector("#penyaluran-tab"),
+          targetEl: document.querySelector("#penyaluran"),
+        },
+        {
+          id: "kerja",
+          triggerEl: document.querySelector("#kerja-tab"),
+          targetEl: document.querySelector("#kerja"),
         },
       ];
 
       // options with default values
       const options = {
         defaultTabId: "settings",
-        activeClasses:
-          "text-blue-600 hover:text-blue-600 dark:text-blue-500 dark:hover:text-blue-400 border-blue-600 dark:border-blue-500",
-        inactiveClasses:
-          "text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300",
-        onShow: () => {
-          console.log("tab is shown");
-        },
+        activeClasses: "text-white !bg-primary",
+        inactiveClasses: "bg-[#EBEBEB]",
       };
-      /*
-       * tabElements: array of tab objects
-       * options: optional
-       */
+
       const tabs = new Tabs(tabElements, options);
-      // shows another tab element
-      tabs.show("dashboard");
+      tabs.show("dasar-materi");
 
-      // get the tab object based on ID
-      tabs.getTab("contacts");
+      tabs.getTab("kerja");
 
-      // get the current active tab object
       tabs.getActiveTab();
     </script>
     <script>

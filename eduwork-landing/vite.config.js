@@ -17,6 +17,8 @@ export default defineConfig({
         detail_kelas: resolve(__dirname, "detail-kelas.html"),
         list_mentor: resolve(__dirname, "list-mentor.html"),
         detail_mentor: resolve(__dirname, "detail-mentor.html"),
+        alumni_stories: resolve(__dirname, "alumni-stories.html"),
+        alumni_connect: resolve(__dirname, "alumni-connect.html"),
       },
     },
   },

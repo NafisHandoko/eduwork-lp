@@ -19,18 +19,67 @@ html{
   transition-duration: 0.5s;
 }
 
-@media only screen and (min-width: 768px) {
+#dropdownNavbar{
+  position: absolute !important;
+  inset: 0px auto auto 0px;
+  margin: 0px;
+  transform: translate(238px, 62px);;
+}
+
+#dropdownMentor{
+  position: absolute !important;
+  inset: 0px auto auto 0px;
+  margin: 0px;
+  transform: translate(326px, 62px);
+}
+#dropdownCompany{
+  position: absolute !important;
+  inset: 0px auto auto 0px;
+  margin: 0px;
+  transform: translate(488px, 164px);
+}
+#dropdownEduplus{
+  position: absolute !important;
+  inset: 0px auto auto 0px;
+  margin: 0px;
+  transform: translate(488px, 164px);
+}
+
+#navProf{
+  top: 0;
+  position: sticky;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.5s;
+}
+#ppMentor{
+  top: 0;
+  position: sticky;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.5s;
+}
+#menuCourse{
+  top: 0;
+  position: sticky;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.5s;
+}
+
+@media screen and (max-width: 767px) {
 
   #navProf{
     top: 0;
-    position: sticky;
+    position: absolute;
     transition-property: all;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 0.5s;
   }
   #ppMentor{
     top: 0;
-    position: sticky;
+    margin-top: -200px;
+    position: relative;
     transition-property: all;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 0.5s;
@@ -41,6 +90,30 @@ html{
     transition-property: all;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 0.5s;
+  }
+  #dropdownNavbar{
+    position: relative !important;
+    inset: 0px auto auto 0px;
+    margin: 0px;
+    transform: translate3d(0px, 10.1818px, 0px) !important;
+  }
+  #dropdownMentor{
+    position: relative !important;
+    inset: 0px auto auto 0px;
+    margin: 0px;
+    transform: none !important;
+  }
+  #dropdownCompany{
+    position: relative !important;
+    inset: 0px auto auto 0px;
+    margin: 0px;
+    transform: none !important;
+  }
+  #dropdownEduplus{
+    position: relative !important;
+    inset: 0px auto auto 0px;
+    margin: 0px;
+    transform: none !important;
   }
 }
 .shadow-filter {
@@ -274,7 +347,7 @@ html{
   content: '';
   z-index: 0;
   position: absolute;
-  top: -89px;
+  bottom: 0;
   width: 100%;
   height: 266px;
   background: url(./images/Vector.png);
