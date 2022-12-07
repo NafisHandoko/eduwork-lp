@@ -127,6 +127,9 @@ html{
   --tw-shadow-colored: 27.4092px 58.7341px 46.8519px var(--tw-shadow-color), 16.2889px 34.9048px 25.4815px var(--tw-shadow-color), 8.45771px 18.1237px 13px var(--tw-shadow-color), 3.44573px 7.38371px 6.51852px var(--tw-shadow-color), 0.783121px 1.67812px 3.14815px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
+.shadow-contrib {
+  filter: drop-shadow(49.6139px 86.8243px 80px rgba(0, 0, 0, 0.05)) drop-shadow(32.1572px 56.275px 46.8519px rgba(0, 0, 0, 0.037963)) drop-shadow(19.1105px 33.4434px 25.4815px rgba(0, 0, 0, 0.0303704)) drop-shadow(9.92278px 17.3649px 13px rgba(0, 0, 0, 0.025)) drop-shadow(4.04261px 7.07457px 6.51852px rgba(0, 0, 0, 0.0196296)) drop-shadow(0.918776px 1.60786px 3.14815px rgba(0, 0, 0, 0.012037));
+}
 
 .activeMenu{
   color: #187CFF;

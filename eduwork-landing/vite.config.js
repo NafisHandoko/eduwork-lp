@@ -19,6 +19,8 @@ export default defineConfig({
         detail_mentor: resolve(__dirname, "detail-mentor.html"),
         alumni_stories: resolve(__dirname, "alumni-stories.html"),
         alumni_connect: resolve(__dirname, "alumni-connect.html"),
+        testimoni_contributor: resolve(__dirname, "testimoni-contributor.html"),
+        internship: resolve(__dirname, "internship.html"),
       },
     },
   },
