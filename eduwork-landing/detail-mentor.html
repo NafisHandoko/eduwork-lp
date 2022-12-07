@@ -265,6 +265,7 @@
         class="w-[90%] mt-[100px] md:mt-[50px] lg:w-[1016px] container mx-auto flex flex-col md:flex-row gap-8 items-start"
       >
         <div class="w-full md:w-1/3 flex flex-col" id="ppMentor">
+          <!-- Profile -->
           <div
             class="bg-white flex flex-col p-[20px] rounded-[20px] gap-3 shadow-s2"
           >
@@ -332,6 +333,7 @@
               </div>
             </div>
           </div>
+          <!-- Mentorship -->
           <div
             class="bg-white mt-[40px] items-start flex flex-col p-[20px] rounded-[20px] gap-3 shadow-s2"
           >
@@ -1441,11 +1443,15 @@
       if (prevScrollpos > currentScrollPos) {
         document.getElementById("navbar").style.top = "0";
         document.getElementById("navProf").style.top = "100px";
-        document.getElementById("ppMentor").style.top = "200px";
+        if (!window.matchMedia("(max-width: 700px)").matches) {
+          document.getElementById("ppMentor").style.top = "200px";
+        }
       } else {
         document.getElementById("navbar").style.top = "-90px";
         document.getElementById("navProf").style.top = "20px";
-        document.getElementById("ppMentor").style.top = "120px";
+        if (!window.matchMedia("(max-width: 700px)").matches) {
+          document.getElementById("ppMentor").style.top = "120px";
+        }
       }
       prevScrollpos = currentScrollPos;
     };

@@ -80,6 +80,210 @@
     </style>
   </head>
   <body class="bg-[#f6fcff] text-[#404040] font-[Poppins]">
+    <!-- Login modal -->
+    <div
+      id="modalLogin"
+      tabindex="-1"
+      aria-hidden="true"
+      class="fixed top-0 left-0 right-0 z-[1000] hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full"
+    >
+      <div class="relative w-full h-full max-w-2xl md:h-auto">
+        <!-- Modal content -->
+        <div
+          class="relative bg-white rounded-lg shadow py-6 md:py-12 px-7 md:px-24"
+        >
+          <!-- Modal header -->
+          <div class="flex items-start justify-between rounded-t mb-8">
+            <h3 class="text-2xl font-semibold text-gray-900">Login</h3>
+            <button
+              type="button"
+              class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center"
+              data-modal-toggle="modalLogin"
+            >
+              <svg
+                aria-hidden="true"
+                class="w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span class="sr-only">Close modal</span>
+            </button>
+          </div>
+          <!-- Modal body -->
+          <div class="space-y-6">
+            <p class="text-sm md:text-base leading-relaxed text-gray-500">
+              Faster login or register use your social account
+            </p>
+            <button
+              class="bg-primary flex gap-2 items-center w-full justify-center rounded-xl py-3"
+            >
+              <img src="./images/logo-google.png" alt="sign google" />
+              <span class="text-white font-medium">Login with google</span>
+            </button>
+            <div class="flex items-center gap-4">
+              <div class="h-[1px] bg-gray-300 w-full"></div>
+              <p>Or</p>
+              <div class="h-[1px] bg-gray-300 w-full"></div>
+            </div>
+            <form class="flex flex-col gap-4">
+              <div class="flex">
+                <input
+                  type="email"
+                  class="rounded-xl bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm py-3 px-4"
+                  placeholder="Phone Number / Email"
+                />
+              </div>
+              <div class="flex">
+                <input
+                  type="password"
+                  class="rounded-none rounded-l-xl bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm py-3 px-4"
+                  placeholder="Password"
+                />
+                <span
+                  class="inline-flex items-center px-4 text-sm text-gray-900 bg-gray-200 rounded-r-xl border border-l-0 border-gray-300"
+                >
+                  <img src="./images/ic-invisible.png" alt="" />
+                </span>
+              </div>
+              <a href="#" class="font-medium text-primary self-end"
+                >Forgot Password?</a
+              >
+              <button
+                class="bg-primary flex gap-2 items-center w-full justify-center rounded-xl py-3"
+              >
+                <span class="text-white font-medium">Login</span>
+              </button>
+            </form>
+            <h1>
+              Don’t have an account?
+              <a href="#" class="font-medium text-primary">Register Now</a>
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Register Modal -->
+    <div
+      id="modalRegister"
+      tabindex="-1"
+      aria-hidden="true"
+      class="fixed top-0 left-0 right-0 z-[1000] hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full"
+    >
+      <div class="relative w-full h-full max-w-2xl md:h-auto">
+        <!-- Modal content -->
+        <div
+          class="relative bg-white rounded-lg shadow py-6 md:py-12 px-7 md:px-24"
+        >
+          <!-- Modal header -->
+          <div class="flex items-start justify-between rounded-t mb-8">
+            <h3 class="text-2xl font-semibold text-gray-900">Register</h3>
+            <button
+              class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center"
+              type="button"
+              data-modal-toggle="modalRegister"
+            >
+              <svg
+                aria-hidden="true"
+                class="w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span class="sr-only">Close modal</span>
+            </button>
+          </div>
+          <!-- Modal body -->
+          <div class="space-y-6">
+            <p class="text-sm md:text-base leading-relaxed text-gray-500">
+              Faster login or register use your social account
+            </p>
+            <button
+              class="bg-primary flex gap-2 items-center w-full justify-center rounded-xl py-3"
+            >
+              <img src="./images/logo-google.png" alt="sign google" />
+              <span class="text-white font-medium">Register with google</span>
+            </button>
+            <div class="flex items-center gap-4">
+              <div class="h-[1px] bg-gray-300 w-full"></div>
+              <p>Or</p>
+              <div class="h-[1px] bg-gray-300 w-full"></div>
+            </div>
+            <form class="flex flex-col gap-4">
+              <div class="flex">
+                <input
+                  type="text"
+                  class="rounded-xl bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm py-3 px-4"
+                  placeholder="Username"
+                />
+              </div>
+              <div class="flex">
+                <input
+                  type="email"
+                  class="rounded-xl bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm py-3 px-4"
+                  placeholder="Email"
+                />
+              </div>
+              <div class="flex">
+                <input
+                  type="text"
+                  class="rounded-xl bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm py-3 px-4"
+                  placeholder="Phone Number"
+                />
+              </div>
+              <div class="flex">
+                <input
+                  type="password"
+                  class="rounded-none rounded-l-xl bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm py-3 px-4"
+                  placeholder="Password"
+                />
+                <span
+                  class="inline-flex items-center px-4 text-sm text-gray-900 bg-gray-200 rounded-r-xl border border-l-0 border-gray-300"
+                >
+                  <img src="./images/ic-invisible.png" alt="" />
+                </span>
+              </div>
+              <div class="flex">
+                <input
+                  type="password"
+                  class="rounded-none rounded-l-xl bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm py-3 px-4"
+                  placeholder="Confirm Password"
+                />
+                <span
+                  class="inline-flex items-center px-4 text-sm text-gray-900 bg-gray-200 rounded-r-xl border border-l-0 border-gray-300"
+                >
+                  <img src="./images/ic-invisible.png" alt="" />
+                </span>
+              </div>
+              <a href="#" class="font-medium text-primary self-end"
+                >Forgot Password?</a
+              >
+              <button
+                class="bg-primary flex gap-2 items-center w-full justify-center rounded-xl py-3"
+              >
+                <span class="text-white font-medium">Register</span>
+              </button>
+            </form>
+            <h1>
+              Already have an account?
+              <a type="button" class="font-medium text-primary">Login Now</a>
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Navabar -->
     <nav class="z-50" id="navbar">
       <div class="w-[90%] lg:w-[1016px] container mx-auto py-2 md:py-4">
@@ -95,21 +299,23 @@
           </a>
           <div class="flex gap-3 md:order-2">
             <button
-              type="button"
               class="text-white hidden md:block bg-primary hover:bg-primary/80 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0"
+              type="button"
+              data-modal-toggle="modalLogin"
             >
               Login
             </button>
             <button
-              type="button"
               class="text-white hidden md:block bg-primary hover:bg-primary/80 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0"
+              type="button"
+              data-modal-toggle="modalRegister"
             >
               Register
             </button>
             <button
               data-collapse-toggle="navbar-sticky"
               type="button"
-              class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
               aria-controls="navbar-sticky"
               aria-expanded="false"
             >
@@ -139,7 +345,7 @@
               <button
                 id="dropdownNavbarLink"
                 data-dropdown-toggle="dropdownNavbar"
-                class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto md:dark:hover:bg-transparent"
+                class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto"
               >
                 Kelas
                 <svg
@@ -158,23 +364,19 @@
               </button>
               <div
                 id="dropdownNavbar"
-                class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+                class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded shadow w-44"
               >
                 <ul
-                  class="py-1 text-sm text-gray-700 dark:text-gray-400"
+                  class="py-1 text-sm text-gray-700"
                   aria-labelledby="dropdownLargeButton"
                 >
                   <li>
-                    <a
-                      href="#"
-                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100"
                       >Regular</a
                     >
                   </li>
                   <li>
-                    <a
-                      href="#"
-                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100"
                       >Kelas</a
                     >
                   </li>
@@ -183,7 +385,7 @@
               <button
                 id="dropdownNavbarLink"
                 data-dropdown-toggle="dropdownNavbar"
-                class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto md:dark:hover:bg-transparent"
+                class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto"
               >
                 Mentor
                 <svg
@@ -202,23 +404,19 @@
               </button>
               <div
                 id="dropdownNavbar"
-                class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+                class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded shadow w-44"
               >
                 <ul
-                  class="py-1 text-sm text-gray-700 dark:text-gray-400"
+                  class="py-1 text-sm text-gray-700"
                   aria-labelledby="dropdownLargeButton"
                 >
                   <li>
-                    <a
-                      href="#"
-                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100"
                       >Mentor</a
                     >
                   </li>
                   <li>
-                    <a
-                      href="#"
-                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100"
                       >Mentor</a
                     >
                   </li>
@@ -227,7 +425,7 @@
               <button
                 id="dropdownNavbarLink"
                 data-dropdown-toggle="dropdownNavbar"
-                class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto md:dark:hover:bg-transparent"
+                class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto"
               >
                 Company
                 <svg
@@ -246,37 +444,35 @@
               </button>
               <div
                 id="dropdownNavbar"
-                class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+                class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded shadow w-44"
               >
                 <ul
-                  class="py-1 text-sm text-gray-700 dark:text-gray-400"
+                  class="py-1 text-sm text-gray-700"
                   aria-labelledby="dropdownLargeButton"
                 >
                   <li>
-                    <a
-                      href="#"
-                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100"
                       >Partner</a
                     >
                   </li>
                   <li>
-                    <a
-                      href="#"
-                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100"
                       >Partner</a
                     >
                   </li>
                 </ul>
               </div>
               <button
-                type="button"
                 class="text-white block md:hidden bg-primary hover:bg-primary/80 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0"
+                type="button"
+                data-modal-toggle="modalLogin"
               >
                 Login
               </button>
               <button
-                type="button"
                 class="text-white block md:hidden bg-primary hover:bg-primary/80 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0"
+                type="button"
+                data-modal-toggle="modalRegister"
               >
                 Register
               </button>
@@ -1867,7 +2063,7 @@
     </div>
     <!-- End of Program -->
     <!-- Benefit-->
-    <div class="container mx-auto overflow-hidden pb-[161px]">
+    <div class="container mx-auto overflow-hidden pb-[40px] md:pb-[161px]">
       <section
         class="relative w-full mx-auto lg:w-[1016px] h-fit md:h-[484.46px] pt-[108px] md:pt-[97px] mb-[144.7px] md:mb-0"
       >
@@ -1933,7 +2129,7 @@
         class="lg:relative w-[80%] md:w-full mx-auto lg:w-[1016px] h-fit lg:flex lg:flex-row lg:gap-[60px] mb-[90px] md:mb-[129.3px]"
       >
         <h4
-          class="w-full flex items-center lg:w-[204px] text-[20px] font-[500] py-[20px] md:py-0 text-justify mb-0 md:mb-[60px] lg:mb-0 lg:text-left"
+          class="w-full flex items-center lg:w-[204px] text-[20px] font-[500] py-[20px] md:py-0 mb-0 md:mb-[60px] lg:mb-0 lg:text-left"
         >
           Platform Pelatihan & Penyaluran kerja. Kamu bisa belajar dari 0 sampai
           bisa dan dapat kerja, dijamin!

@@ -317,9 +317,9 @@ html{
 
 .label::after {
   content: url(./images/svg/Acc-arrow.svg);
-  position: absolute;
-  top: 15px;
-  right: 19px;
+  /* position: absolute;
+  top: 25px;
+  right: 19px; */
 }
 .labels::after {
   content: url(./images/Collapse-Arrow.png);

@@ -243,7 +243,20 @@
     <div
       class="w-[90%] md:w-full lg:w-[1016px] container mx-auto flex items-start py-[75px] flex-col md:flex-row"
     >
-      <div class="hidden w-1/4 sticky top-6 gap-8 md:flex flex-col z-30">
+      <button
+        class="bg-primary flex items-center text-white gap-2 md:hidden mb-5 px-5 py-2 rounded-lg font-semibold"
+        aria-controls="filter-cta"
+        aria-expanded="true"
+        data-collapse-toggle="filter-cta"
+        type="button"
+      >
+        <img src="./images/ic-filter.svg" alt="" />
+        Filter
+      </button>
+      <div
+        id="filter-cta"
+        class="w-full bg-white p-5 md:p-0 rounded-xl md:bg-transparent md:w-1/4 relative md:sticky md:top-6 mb-5 gap-8 flex flex-col z-30"
+      >
         <div class="flex flex-col gap-1 text-[14px]">
           <h1 class="mb-3 text-[16px] font-medium text-black">Type Class</h1>
           <div class="flex items-center gap-3">
@@ -295,7 +308,7 @@
         </div>
       </div>
       <!-- List Kelas -->
-      <div class="w-full flex flex-col items-center z-30">
+      <div class="w-full flex flex-col md:items-center z-30">
         <div
           class="flex flex-col md:grid items-center md:grid-cols-2 lg:grid-cols-3 gap-[20px] z-30"
         >
