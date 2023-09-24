@@ -113,15 +113,17 @@
         <p class="text-eduwork-text-paragraph w-2/3">Kami menghargai kontribusi dan tujuan kamu. Kami juga memberi
             bimbingan untuk upgrade skill di bidang yang kamu banget!</p>
         <div class="flex flex-row flex-wrap gap-5 items-center justify-center">
-            <div class="rounded-full text-eduwork-main border border-eduwork-main px-5 py-2">All</div>
-            <div class="rounded-full bg-eduwork-main text-white border border-eduwork-main px-5 py-2">Product</div>
-            <div class="rounded-full text-eduwork-main border border-eduwork-main px-5 py-2">Marketing</div>
-            <div class="rounded-full text-eduwork-main border border-eduwork-main px-5 py-2">Business</div>
-            <div class="rounded-full text-eduwork-main border border-eduwork-main px-5 py-2">Human Resource</div>
-            <div class="rounded-full text-eduwork-main border border-eduwork-main px-5 py-2">Programming</div>
-            <div class="rounded-full text-eduwork-main border border-eduwork-main px-5 py-2">UI/UX Design</div>
-            <div class="rounded-full text-eduwork-main border border-eduwork-main px-5 py-2">Quality Assurance</div>
-            <div class="rounded-full text-eduwork-main border border-eduwork-main px-5 py-2">Sales</div>
+            <button class="rounded-full text-eduwork-main border border-eduwork-main px-5 py-2">All</button>
+            <button
+                class="rounded-full bg-eduwork-main text-white border border-eduwork-main px-5 py-2">Product</button>
+            <button class="rounded-full text-eduwork-main border border-eduwork-main px-5 py-2">Marketing</button>
+            <button class="rounded-full text-eduwork-main border border-eduwork-main px-5 py-2">Business</button>
+            <button class="rounded-full text-eduwork-main border border-eduwork-main px-5 py-2">Human Resource</button>
+            <button class="rounded-full text-eduwork-main border border-eduwork-main px-5 py-2">Programming</button>
+            <button class="rounded-full text-eduwork-main border border-eduwork-main px-5 py-2">UI/UX Design</button>
+            <button class="rounded-full text-eduwork-main border border-eduwork-main px-5 py-2">Quality
+                Assurance</button>
+            <button class="rounded-full text-eduwork-main border border-eduwork-main px-5 py-2">Sales</button>
         </div>
         <div class="grid grid-cols-3 gap-5 text-white">
             <div class="bg-center bg-cover rounded-2xl" style="background-image: url('/img/skills/pm.jpeg');">
@@ -289,8 +291,127 @@
         <div class="container mx-auto px-28 flex flex-col gap-5">
             <h2 class="text-eduwork-main font-semibold text-3xl text-center">Bangun Karier Berkelanjutan Bersama Alumni
                 Connect</h2>
-            <p class="text-eduwork-text-paragraph text-center px-48">Setelah jadi alumni, kamu bisa terus beraktivitas bersama Eduwork
+            <p class="text-eduwork-text-paragraph text-center px-48">Setelah jadi alumni, kamu bisa terus beraktivitas
+                bersama Eduwork
                 melalui kegiatan-kegiatan di bawah.</p>
+            <div class="flex flex-row gap-5 items-stretch text-white">
+                <div class="w-1/3 rounded-xl bg-center bg-cover" style="background-image: url('/img/alumni/img1.png');">
+                    <div
+                        class="rounded-xl flex flex-col gap-4 bg-gradient-to-t from-black to-transparent px-7 py-8 h-full justify-end">
+                        <h3 class="font-semibold text-2xl">Alumni Networking</h3>
+                        <p class="text-lg">Kamu bisa meet up dengan ex-kontributor se-Indonesia. Kenalan dengan ribuan
+                            profesional yang
+                            satu visi dan misi denganmu!</p>
+                    </div>
+                </div>
+                <div class="w-2/3 flex flex-col gap-5">
+                    <div class="rounded-xl bg-center bg-cover" style="background-image: url('/img/alumni/img2.png');">
+                        <div
+                            class="rounded-xl flex flex-col gap-4 bg-gradient-to-t from-black to-transparent px-7 py-8 pt-36 h-full justify-end">
+                            <h3 class="font-semibold text-2xl">Bantuan Karir dari Eduwork</h3>
+                            <p class="text-lg">Eduwork menghargai semua perubahan yang telah kamu berikan. Kami
+                                menawarkan layanan lanjutan dimana ex-kontributor terus updates & tips seputar industri.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="rounded-xl bg-center bg-cover" style="background-image: url('/img/alumni/img3.png');">
+                        <div
+                            class="rounded-xl flex flex-col gap-4 bg-gradient-to-t from-black to-transparent px-7 py-8 pt-36 h-full justify-end">
+                            <h3 class="font-semibold text-2xl">Eksklusif Akses: Webinar & Kelas</h3>
+                            <p class="text-lg">Program khusus untuk para Life-long learner yang berdedikasi penuh pada
+                                pengembangan diri. Bedanya dengan kelas biasa, kamu akan berproses bersama
+                                ex-kontributor lainnya.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container mx-auto px-28 flex flex-col gap-10 py-16">
+        <div class="flex flex-row gap-5 items-center justify-between">
+            <div class="flex flex-row items-center gap-4 font-medium">
+                <button class="rounded-lg px-5 py-2 text-white bg-eduwork-main">Semua</button>
+                <button class="rounded-lg px-5 py-2 text-eduwork-text-paragraph bg-[#E7F1FF]">Admin</button>
+                <button class="rounded-lg px-5 py-2 text-eduwork-text-paragraph bg-[#E7F1FF]">Programmer</button>
+                <button class="rounded-lg px-5 py-2 text-eduwork-text-paragraph bg-[#E7F1FF]">Design</button>
+            </div>
+            <div class="flex flex-row items-center gap-3">
+                <span class="text-eduwork-text-base">Profil Terbaru:</span>
+                <select name="talent" id="talent" class="rounded-lg px-5 py-2 text-eduwork-text-paragraph bg-[#E7F1FF]">
+                    <option value="0">Proyek Terbaru</option>
+                </select>
+            </div>
+        </div>
+        <div class="flex flex-row flex-wrap gap-5">
+            <div class="flex flex-col">
+                <img src="/img/talents/img1.png" alt="" class="rounded-lg mb-5 w-[175px]">
+                <span class="text-eduwork-text-base text-lg font-semibold">Salsabilla Putri</span>
+                <span class="text-eduwork-text-paragraph">Kontributor Admin Sales</span>
+            </div>
+            <div class="flex flex-col">
+                <img src="/img/talents/img1.png" alt="" class="rounded-lg mb-5 w-[175px]">
+                <span class="text-eduwork-text-base text-lg font-semibold">Salsabilla Putri</span>
+                <span class="text-eduwork-text-paragraph">Kontributor Admin Sales</span>
+            </div>
+            <div class="flex flex-col">
+                <img src="/img/talents/img1.png" alt="" class="rounded-lg mb-5 w-[175px]">
+                <span class="text-eduwork-text-base text-lg font-semibold">Salsabilla Putri</span>
+                <span class="text-eduwork-text-paragraph">Kontributor Admin Sales</span>
+            </div>
+            <div class="flex flex-col">
+                <img src="/img/talents/img1.png" alt="" class="rounded-lg mb-5 w-[175px]">
+                <span class="text-eduwork-text-base text-lg font-semibold">Salsabilla Putri</span>
+                <span class="text-eduwork-text-paragraph">Kontributor Admin Sales</span>
+            </div>
+            <div class="flex flex-col">
+                <img src="/img/talents/img1.png" alt="" class="rounded-lg mb-5 w-[175px]">
+                <span class="text-eduwork-text-base text-lg font-semibold">Salsabilla Putri</span>
+                <span class="text-eduwork-text-paragraph">Kontributor Admin Sales</span>
+            </div>
+            <div class="flex flex-col">
+                <img src="/img/talents/img1.png" alt="" class="rounded-lg mb-5 w-[175px]">
+                <span class="text-eduwork-text-base text-lg font-semibold">Salsabilla Putri</span>
+                <span class="text-eduwork-text-paragraph">Kontributor Admin Sales</span>
+            </div>
+            <div class="flex flex-col">
+                <img src="/img/talents/img1.png" alt="" class="rounded-lg mb-5 w-[175px]">
+                <span class="text-eduwork-text-base text-lg font-semibold">Salsabilla Putri</span>
+                <span class="text-eduwork-text-paragraph">Kontributor Admin Sales</span>
+            </div>
+        </div>
+        <a href="#" class="bg-eduwork-main text-white rounded-lg px-5 py-2 mt-5 self-center">Lihat Semua</a>
+    </section>
+    <section class="container mx-auto px-28 flex flex-col gap-7 items-center">
+        <h2 class="text-eduwork-main text-3xl font-semibold text-center">Mentor dari Kalangan C-level</h2>
+        <p class="text-eduwork-text-paragraph text-center px-52">Puluhan mentor dengan rata-rata 5+ tahun pengalaman di
+            perusahaan
+            teknologi dan digital siap membimbing kamu sampai bisa.</p>
+        <div class="flex flex-row items-center gap-10">
+            <button class="w-8 h-8 bg-eduwork-main rounded-full text-white flex items-center justify-center"><i
+                    class="bi bi-chevron-left"></i></button>
+            <div class="flex flex-row gap-7">
+                <div class="flex flex-col items-center text-center">
+                    <img src="/img/c-level/dodi.jpeg" alt="" class="rounded-2xl mb-4 w-60 shadow-2xl">
+                    <span class="text-eduwork-text-base text-2xl">Dodi Prakoso Wibowo</span>
+                    <span class="text-eduwork-text-paragraph">CEO Elvron.com</span>
+                    <img src="/img/c-level/elvron-logo.png" alt="" class="w-12">
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <img src="/img/c-level/bayu.jpeg" alt="" class="rounded-2xl mb-4 w-60 shadow-2xl">
+                    <span class="text-eduwork-text-base text-2xl">Bayu Ahmad Baihaqi</span>
+                    <span class="text-eduwork-text-paragraph">COO Eduwork.id</span>
+                    <img src="/img/c-level/eduwork-logo.png" alt="" class="w-20 mt-2">
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <img src="/img/c-level/anita.jpeg" alt="" class="rounded-2xl mb-4 w-60 shadow-2xl">
+                    <span class="text-eduwork-text-base text-2xl">Anita Agustina</span>
+                    <span class="text-eduwork-text-paragraph">VP of Sales and Marketing</span>
+                    <img src="/img/c-level/eduwork-logo.png" alt="" class="w-20 mt-2">
+                </div>
+            </div>
+            <button class="w-8 h-8 bg-eduwork-main rounded-full text-white flex items-center justify-center"><i
+                    class="bi bi-chevron-right"></i></button>
         </div>
     </section>
 </body>
