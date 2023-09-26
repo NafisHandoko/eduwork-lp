@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <nav class="bg-eduwork-bg py-6">
+    <!-- <nav class="bg-eduwork-bg py-6">
         <div class="container mx-auto px-48 2xl:px-60 flex flex-row items-center justify-between gap-2 text-sm">
             <img src="/img//eduwork-logo.png" alt="" class="w-[145px]">
             <ul class="text-eduwork-text-nav font-semibold flex flex-row items-center gap-14">
@@ -29,6 +29,21 @@
             <div class="flex flex-row items-center gap-3 font-medium">
                 <a href="#" class="bg-eduwork-main text-white rounded-lg px-5 py-2">Login</a>
                 <a href="#" class="bg-eduwork-main text-white rounded-lg px-5 py-2">Register</a>
+            </div>
+        </div>
+    </nav> -->
+    <nav class="bg-eduwork-bg py-6">
+        <div class="container mx-auto px-48 2xl:px-60 flex flex-row items-center justify-between gap-2 text-sm">
+            <img src="/img//eduwork-logo.png" alt="" class="w-[145px]">
+            <ul class="text-eduwork-text-nav font-semibold flex flex-row items-center gap-8 2xl:gap-14">
+                <li>Home</li>
+                <li>Community</li>
+                <li>Learning</li>
+                <li>Opportunity</li>
+            </ul>
+            <div class="flex flex-row items-center gap-3 font-medium">
+                <a href="#" class="bg-eduwork-main text-white rounded-full px-5 py-2">Sign In</a>
+                <a href="#" class="bg-eduwork-main text-white rounded-full px-5 py-2">Register</a>
             </div>
         </div>
     </nav>
@@ -86,7 +101,8 @@
         </div>
     </section>
     <section class="relative py-14 max-w-full">
-        <div class="w-[95%] 2xl:w-[85%] h-[70%] absolute h-20 left-0 top-0 -z-10 bg-eduwork-main rounded-tr-[100px]"></div>
+        <div class="w-[90%] 2xl:w-[85%] h-[70%] absolute h-20 left-0 top-0 -z-10 bg-eduwork-main rounded-tr-[100px]">
+        </div>
         <div class="container mx-auto px-48 2xl:px-60 flex flex-row items-stretch gap-8">
             <div class="bg-cover bg-right w-1/3 rounded-2xl shadow-xl" style="background-image: url('/img/img1.jpg');">
             </div>
@@ -108,100 +124,113 @@
             </div>
         </div>
     </section>
-    <section class="container mx-auto px-48 2xl:px-60 flex flex-col gap-7 text-center py-10 items-center">
-        <h2 class="text-eduwork-main font-semibold text-3xl">Pelajari Keahlian Yang Kamu Minati</h2>
-        <p class="text-eduwork-text-paragraph w-2/3">Kami menghargai kontribusi dan tujuan kamu. Kami juga memberi
-            bimbingan untuk upgrade skill di bidang yang kamu banget!</p>
-        <div class="flex flex-row flex-wrap gap-5 items-center justify-center">
-            <button class="rounded-full text-eduwork-main border border-eduwork-main px-5 py-2">All</button>
-            <button
-                class="rounded-full bg-eduwork-main text-white border border-eduwork-main px-5 py-2">Product</button>
-            <button class="rounded-full text-eduwork-main border border-eduwork-main px-5 py-2">Marketing</button>
-            <button class="rounded-full text-eduwork-main border border-eduwork-main px-5 py-2">Business</button>
-            <button class="rounded-full text-eduwork-main border border-eduwork-main px-5 py-2">Human Resource</button>
-            <button class="rounded-full text-eduwork-main border border-eduwork-main px-5 py-2">Programming</button>
-            <button class="rounded-full text-eduwork-main border border-eduwork-main px-5 py-2">UI/UX Design</button>
-            <button class="rounded-full text-eduwork-main border border-eduwork-main px-5 py-2">Quality
-                Assurance</button>
-            <button class="rounded-full text-eduwork-main border border-eduwork-main px-5 py-2">Sales</button>
+    <section class="relative py-10">
+        <img src="/img/blur-bg.svg" alt="" class="absolute top-0 left-0 w-4/5 -z-10 -translate-y-[700px] -translate-x-96">
+        <div class="container mx-auto px-48 2xl:px-60 flex flex-col gap-7 text-center items-center">
+            <h2 class="text-eduwork-main font-semibold text-3xl">Pelajari Keahlian Yang Kamu Minati</h2>
+            <p class="text-eduwork-text-paragraph w-2/3">Kami menghargai kontribusi dan tujuan kamu. Kami juga memberi
+                bimbingan untuk upgrade skill di bidang yang kamu banget!</p>
+            <div class="flex flex-row flex-wrap gap-5 items-center justify-center">
+                <button class="rounded-full text-eduwork-main border border-eduwork-main px-5 py-2">All</button>
+                <button
+                    class="rounded-full bg-eduwork-main text-white border border-eduwork-main px-5 py-2">Product</button>
+                <button class="rounded-full text-eduwork-main border border-eduwork-main px-5 py-2">Marketing</button>
+                <button class="rounded-full text-eduwork-main border border-eduwork-main px-5 py-2">Business</button>
+                <button class="rounded-full text-eduwork-main border border-eduwork-main px-5 py-2">Human
+                    Resource</button>
+                <button class="rounded-full text-eduwork-main border border-eduwork-main px-5 py-2">Programming</button>
+                <button class="rounded-full text-eduwork-main border border-eduwork-main px-5 py-2">UI/UX
+                    Design</button>
+                <button class="rounded-full text-eduwork-main border border-eduwork-main px-5 py-2">Quality
+                    Assurance</button>
+                <button class="rounded-full text-eduwork-main border border-eduwork-main px-5 py-2">Sales</button>
+            </div>
+            <div class="grid grid-cols-3 gap-5 text-white">
+                <div class="bg-center bg-cover rounded-2xl" style="background-image: url('/img/skills/pm.jpg');">
+                    <div
+                        class="rounded-2xl flex flex-col items-center gap-4 bg-gradient-to-t from-black to-transparent px-12 py-8 pt-24 2xl:pt-44 h-full justify-end">
+                        <h4 class="font-bold text-xl">Product Management</h4>
+                        <p>Melakukan ideation, market research, wireframing, prototyping, hingga menyusun user stories.
+                        </p>
+                        <a href="#" class="rounded-3xl bg-eduwork-main px-7 py-2 font-medium">Daftar</a>
+                    </div>
+                </div>
+                <div class="bg-center bg-cover rounded-2xl" style="background-image: url('/img/skills/marketing.jpg');">
+                    <div
+                        class="rounded-2xl flex flex-col items-center gap-4 bg-gradient-to-t from-black to-transparent px-12 py-8 pt-24 2xl:pt-44 h-full justify-end">
+                        <h4 class="font-bold text-xl">Marketing</h4>
+                        <p>Merancang campaign & strategi konten, melakukan market research, dan mengelola media sosial.
+                        </p>
+                        <a href="#" class="rounded-3xl bg-eduwork-main px-7 py-2 font-medium">Daftar</a>
+                    </div>
+                </div>
+                <div class="bg-center bg-cover rounded-2xl" style="background-image: url('/img/skills/business.jpg');">
+                    <div
+                        class="rounded-2xl flex flex-col items-center gap-4 bg-gradient-to-t from-black to-transparent px-12 py-8 pt-24 2xl:pt-44 h-full justify-end">
+                        <h4 class="font-bold text-xl">Business</h4>
+                        <p>Meliputi audit keuangan, melakukan riset kompetitor, serta mengelola purchasing dan legal.
+                        </p>
+                        <a href="#" class="rounded-3xl bg-eduwork-main px-7 py-2 font-medium">Daftar</a>
+                    </div>
+                </div>
+                <div class="bg-center bg-cover rounded-2xl" style="background-image: url('/img/skills/hr.jpg');">
+                    <div
+                        class="rounded-2xl flex flex-col items-center gap-4 bg-gradient-to-t from-black to-transparent px-12 py-8 pt-24 2xl:pt-44 h-full justify-end">
+                        <h4 class="font-bold text-xl">Human Resources</h4>
+                        <p>Meliputi rekrutmen dengan end-to-end process, mengelola dokumen administrasi, dan monitoring.
+                        </p>
+                        <a href="#" class="rounded-3xl bg-eduwork-main px-7 py-2 font-medium">Daftar</a>
+                    </div>
+                </div>
+                <div class="bg-center bg-cover rounded-2xl" style="background-image: url('/img/skills/frontend.jpg');">
+                    <div
+                        class="rounded-2xl flex flex-col items-center gap-4 bg-gradient-to-t from-black to-transparent px-12 py-8 pt-24 2xl:pt-44 h-full justify-end">
+                        <h4 class="font-bold text-xl">Front-End Developer</h4>
+                        <p>Membuat dan bertanggungjawab dalam web programmer Laravel, React JS, dan lain-lain.</p>
+                        <a href="#" class="rounded-3xl bg-eduwork-main px-7 py-2 font-medium">Daftar</a>
+                    </div>
+                </div>
+                <div class="bg-center bg-cover rounded-2xl" style="background-image: url('/img/skills/designer.jpg');">
+                    <div
+                        class="rounded-2xl flex flex-col items-center gap-4 bg-gradient-to-t from-black to-transparent px-12 py-8 pt-24 2xl:pt-44 h-full justify-end">
+                        <h4 class="font-bold text-xl">Designer</h4>
+                        <p>Meliputi desain konten harian dan campaign dan terlibat dalam design sprint untuk UI produk.
+                        </p>
+                        <a href="#" class="rounded-3xl bg-eduwork-main px-7 py-2 font-medium">Daftar</a>
+                    </div>
+                </div>
+                <div class="bg-center bg-cover rounded-2xl" style="background-image: url('/img/skills/qa.jpg');">
+                    <div
+                        class="rounded-2xl flex flex-col items-center gap-4 bg-gradient-to-t from-black to-transparent px-12 py-8 pt-24 2xl:pt-44 h-full justify-end">
+                        <h4 class="font-bold text-xl">Quality Assurance</h4>
+                        <p>Meliputi melakukan improvement Quality Assurance secara teknikal dan teoritis.</p>
+                        <a href="#" class="rounded-3xl bg-eduwork-main px-7 py-2 font-medium">Daftar</a>
+                    </div>
+                </div>
+                <div class="bg-center bg-cover rounded-2xl" style="background-image: url('/img/skills/sales.jpg');">
+                    <div
+                        class="rounded-2xl flex flex-col items-center gap-4 bg-gradient-to-t from-black to-transparent px-12 py-8 pt-24 2xl:pt-44 h-full justify-end">
+                        <h4 class="font-bold text-xl">Sales</h4>
+                        <p>Meliputi mengelola data siswa Bootcamp dan berkomunikasi langsung dengan siswa da mentor.</p>
+                        <a href="#" class="rounded-3xl bg-eduwork-main px-7 py-2 font-medium">Daftar</a>
+                    </div>
+                </div>
+                <div class="bg-center bg-cover rounded-2xl" style="background-image: url('/img/skills/backend.jpg');">
+                    <div
+                        class="rounded-2xl flex flex-col items-center gap-4 bg-gradient-to-t from-black to-transparent px-12 py-8 pt-24 2xl:pt-44 h-full justify-end">
+                        <h4 class="font-bold text-xl">Back-End Developer</h4>
+                        <p>Meliputi menciptakan, mengintegrasikan, dan mengelola database. Melaporkan analisis dan
+                            statistik
+                            produk.</p>
+                        <a href="#" class="rounded-3xl bg-eduwork-main px-7 py-2 font-medium">Daftar</a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="bg-eduwork-main text-white rounded-lg px-5 py-2 mt-5 z-20">Jelajahi Keahlian</a>
         </div>
-        <div class="grid grid-cols-3 gap-5 text-white">
-            <div class="bg-center bg-cover rounded-2xl" style="background-image: url('/img/skills/pm.jpg');">
-                <div
-                    class="rounded-2xl flex flex-col items-center gap-4 bg-gradient-to-t from-black to-transparent px-12 py-8 pt-24 2xl:pt-44 h-full justify-end">
-                    <h4 class="font-bold text-xl">Product Management</h4>
-                    <p>Melakukan ideation, market research, wireframing, prototyping, hingga menyusun user stories.</p>
-                    <a href="#" class="rounded-3xl bg-eduwork-main px-7 py-2 font-medium">Daftar</a>
-                </div>
-            </div>
-            <div class="bg-center bg-cover rounded-2xl" style="background-image: url('/img/skills/marketing.jpg');">
-                <div
-                    class="rounded-2xl flex flex-col items-center gap-4 bg-gradient-to-t from-black to-transparent px-12 py-8 pt-24 2xl:pt-44 h-full justify-end">
-                    <h4 class="font-bold text-xl">Marketing</h4>
-                    <p>Merancang campaign & strategi konten, melakukan market research, dan mengelola media sosial.</p>
-                    <a href="#" class="rounded-3xl bg-eduwork-main px-7 py-2 font-medium">Daftar</a>
-                </div>
-            </div>
-            <div class="bg-center bg-cover rounded-2xl" style="background-image: url('/img/skills/business.jpg');">
-                <div
-                    class="rounded-2xl flex flex-col items-center gap-4 bg-gradient-to-t from-black to-transparent px-12 py-8 pt-24 2xl:pt-44 h-full justify-end">
-                    <h4 class="font-bold text-xl">Business</h4>
-                    <p>Meliputi audit keuangan, melakukan riset kompetitor, serta mengelola purchasing dan legal.</p>
-                    <a href="#" class="rounded-3xl bg-eduwork-main px-7 py-2 font-medium">Daftar</a>
-                </div>
-            </div>
-            <div class="bg-center bg-cover rounded-2xl" style="background-image: url('/img/skills/hr.jpg');">
-                <div
-                    class="rounded-2xl flex flex-col items-center gap-4 bg-gradient-to-t from-black to-transparent px-12 py-8 pt-24 2xl:pt-44 h-full justify-end">
-                    <h4 class="font-bold text-xl">Human Resources</h4>
-                    <p>Meliputi rekrutmen dengan end-to-end process, mengelola dokumen administrasi, dan monitoring.</p>
-                    <a href="#" class="rounded-3xl bg-eduwork-main px-7 py-2 font-medium">Daftar</a>
-                </div>
-            </div>
-            <div class="bg-center bg-cover rounded-2xl" style="background-image: url('/img/skills/frontend.jpg');">
-                <div
-                    class="rounded-2xl flex flex-col items-center gap-4 bg-gradient-to-t from-black to-transparent px-12 py-8 pt-24 2xl:pt-44 h-full justify-end">
-                    <h4 class="font-bold text-xl">Front-End Developer</h4>
-                    <p>Membuat dan bertanggungjawab dalam web programmer Laravel, React JS, dan lain-lain.</p>
-                    <a href="#" class="rounded-3xl bg-eduwork-main px-7 py-2 font-medium">Daftar</a>
-                </div>
-            </div>
-            <div class="bg-center bg-cover rounded-2xl" style="background-image: url('/img/skills/designer.jpg');">
-                <div
-                    class="rounded-2xl flex flex-col items-center gap-4 bg-gradient-to-t from-black to-transparent px-12 py-8 pt-24 2xl:pt-44 h-full justify-end">
-                    <h4 class="font-bold text-xl">Designer</h4>
-                    <p>Meliputi desain konten harian dan campaign dan terlibat dalam design sprint untuk UI produk.</p>
-                    <a href="#" class="rounded-3xl bg-eduwork-main px-7 py-2 font-medium">Daftar</a>
-                </div>
-            </div>
-            <div class="bg-center bg-cover rounded-2xl" style="background-image: url('/img/skills/qa.jpg');">
-                <div
-                    class="rounded-2xl flex flex-col items-center gap-4 bg-gradient-to-t from-black to-transparent px-12 py-8 pt-24 2xl:pt-44 h-full justify-end">
-                    <h4 class="font-bold text-xl">Quality Assurance</h4>
-                    <p>Meliputi melakukan improvement Quality Assurance secara teknikal dan teoritis.</p>
-                    <a href="#" class="rounded-3xl bg-eduwork-main px-7 py-2 font-medium">Daftar</a>
-                </div>
-            </div>
-            <div class="bg-center bg-cover rounded-2xl" style="background-image: url('/img/skills/sales.jpg');">
-                <div
-                    class="rounded-2xl flex flex-col items-center gap-4 bg-gradient-to-t from-black to-transparent px-12 py-8 pt-24 2xl:pt-44 h-full justify-end">
-                    <h4 class="font-bold text-xl">Sales</h4>
-                    <p>Meliputi mengelola data siswa Bootcamp dan berkomunikasi langsung dengan siswa da mentor.</p>
-                    <a href="#" class="rounded-3xl bg-eduwork-main px-7 py-2 font-medium">Daftar</a>
-                </div>
-            </div>
-            <div class="bg-center bg-cover rounded-2xl" style="background-image: url('/img/skills/backend.jpg');">
-                <div
-                    class="rounded-2xl flex flex-col items-center gap-4 bg-gradient-to-t from-black to-transparent px-12 py-8 pt-24 2xl:pt-44 h-full justify-end">
-                    <h4 class="font-bold text-xl">Back-End Developer</h4>
-                    <p>Meliputi menciptakan, mengintegrasikan, dan mengelola database. Melaporkan analisis dan statistik
-                        produk.</p>
-                    <a href="#" class="rounded-3xl bg-eduwork-main px-7 py-2 font-medium">Daftar</a>
-                </div>
-            </div>
-        </div>
-        <a href="#" class="bg-eduwork-main text-white rounded-lg px-5 py-2 mt-5">Jelajahi Keahlian</a>
+        <div class="w-full absolute bottom-32 h-96 bg-gradient-to-t from-white to-transparent z-10"></div>
     </section>
+
     <section class="bg-eduwork-bg py-16">
         <div class="container mx-auto px-48 2xl:px-60 flex flex-row gap-8 2xl:gap-16 items-stretch">
             <div class="flex flex-col gap-7 w-full">
@@ -329,59 +358,64 @@
             </div>
         </div>
     </section>
-    <section class="container mx-auto px-48 2xl:px-60 flex flex-col gap-10 py-16">
-        <div class="flex flex-row gap-5 items-center justify-between">
-            <div class="flex flex-row items-center gap-4 font-medium">
-                <button class="rounded-lg px-5 py-2 text-white bg-eduwork-main">Semua</button>
-                <button class="rounded-lg px-5 py-2 text-eduwork-text-paragraph bg-[#E7F1FF]">Admin</button>
-                <button class="rounded-lg px-5 py-2 text-eduwork-text-paragraph bg-[#E7F1FF]">Programmer</button>
-                <button class="rounded-lg px-5 py-2 text-eduwork-text-paragraph bg-[#E7F1FF]">Design</button>
+    <section class="relative py-16">
+        <div class="container mx-auto px-48 2xl:px-60 flex flex-col gap-10">
+            <div class="flex flex-row gap-5 items-center justify-between">
+                <div class="flex flex-row items-center gap-4 font-medium">
+                    <button class="rounded-lg px-5 py-2 text-white bg-eduwork-main">Semua</button>
+                    <button class="rounded-lg px-5 py-2 text-eduwork-text-paragraph bg-[#E7F1FF]">Admin</button>
+                    <button class="rounded-lg px-5 py-2 text-eduwork-text-paragraph bg-[#E7F1FF]">Programmer</button>
+                    <button class="rounded-lg px-5 py-2 text-eduwork-text-paragraph bg-[#E7F1FF]">Design</button>
+                </div>
+                <div class="flex flex-row items-center gap-3">
+                    <span class="text-eduwork-text-base">Profil Terbaru:</span>
+                    <select name="talent" id="talent"
+                        class="rounded-lg px-5 py-2 text-eduwork-text-paragraph bg-[#E7F1FF]">
+                        <option value="0">Proyek Terbaru</option>
+                    </select>
+                </div>
             </div>
-            <div class="flex flex-row items-center gap-3">
-                <span class="text-eduwork-text-base">Profil Terbaru:</span>
-                <select name="talent" id="talent" class="rounded-lg px-5 py-2 text-eduwork-text-paragraph bg-[#E7F1FF]">
-                    <option value="0">Proyek Terbaru</option>
-                </select>
+            <div class="grid grid-cols-5 gap-8">
+                <div class="flex flex-col">
+                    <img src="/img/talents/img1.png" alt="" class="rounded-lg mb-5 aspect-square object-cover">
+                    <span class="text-eduwork-text-base text-lg font-semibold">Salsabilla Putri</span>
+                    <span class="text-eduwork-text-paragraph">Kontributor Admin Sales</span>
+                </div>
+                <div class="flex flex-col">
+                    <img src="/img/talents/img1.png" alt="" class="rounded-lg mb-5 aspect-square object-cover">
+                    <span class="text-eduwork-text-base text-lg font-semibold">Salsabilla Putri</span>
+                    <span class="text-eduwork-text-paragraph">Kontributor Admin Sales</span>
+                </div>
+                <div class="flex flex-col">
+                    <img src="/img/talents/img1.png" alt="" class="rounded-lg mb-5 aspect-square object-cover">
+                    <span class="text-eduwork-text-base text-lg font-semibold">Salsabilla Putri</span>
+                    <span class="text-eduwork-text-paragraph">Kontributor Admin Sales</span>
+                </div>
+                <div class="flex flex-col">
+                    <img src="/img/talents/img1.png" alt="" class="rounded-lg mb-5 aspect-square object-cover">
+                    <span class="text-eduwork-text-base text-lg font-semibold">Salsabilla Putri</span>
+                    <span class="text-eduwork-text-paragraph">Kontributor Admin Sales</span>
+                </div>
+                <div class="flex flex-col">
+                    <img src="/img/talents/img1.png" alt="" class="rounded-lg mb-5 aspect-square object-cover">
+                    <span class="text-eduwork-text-base text-lg font-semibold">Salsabilla Putri</span>
+                    <span class="text-eduwork-text-paragraph">Kontributor Admin Sales</span>
+                </div>
+                <div class="flex flex-col">
+                    <img src="/img/talents/img1.png" alt="" class="rounded-lg mb-5 aspect-square object-cover">
+                    <span class="text-eduwork-text-base text-lg font-semibold">Salsabilla Putri</span>
+                    <span class="text-eduwork-text-paragraph">Kontributor Admin Sales</span>
+                </div>
+                <div class="flex flex-col">
+                    <img src="/img/talents/img1.png" alt="" class="rounded-lg mb-5 aspect-square object-cover">
+                    <span class="text-eduwork-text-base text-lg font-semibold">Salsabilla Putri</span>
+                    <span class="text-eduwork-text-paragraph">Kontributor Admin Sales</span>
+                </div>
             </div>
+            <a href="community.html" class="bg-eduwork-main text-white rounded-lg px-5 py-2 mt-5 self-center z-30">Lihat Semua</a>
         </div>
-        <div class="flex flex-row flex-wrap gap-5">
-            <div class="flex flex-col">
-                <img src="/img/talents/img1.png" alt="" class="rounded-lg mb-5 w-[175px]">
-                <span class="text-eduwork-text-base text-lg font-semibold">Salsabilla Putri</span>
-                <span class="text-eduwork-text-paragraph">Kontributor Admin Sales</span>
-            </div>
-            <div class="flex flex-col">
-                <img src="/img/talents/img1.png" alt="" class="rounded-lg mb-5 w-[175px]">
-                <span class="text-eduwork-text-base text-lg font-semibold">Salsabilla Putri</span>
-                <span class="text-eduwork-text-paragraph">Kontributor Admin Sales</span>
-            </div>
-            <div class="flex flex-col">
-                <img src="/img/talents/img1.png" alt="" class="rounded-lg mb-5 w-[175px]">
-                <span class="text-eduwork-text-base text-lg font-semibold">Salsabilla Putri</span>
-                <span class="text-eduwork-text-paragraph">Kontributor Admin Sales</span>
-            </div>
-            <div class="flex flex-col">
-                <img src="/img/talents/img1.png" alt="" class="rounded-lg mb-5 w-[175px]">
-                <span class="text-eduwork-text-base text-lg font-semibold">Salsabilla Putri</span>
-                <span class="text-eduwork-text-paragraph">Kontributor Admin Sales</span>
-            </div>
-            <div class="flex flex-col">
-                <img src="/img/talents/img1.png" alt="" class="rounded-lg mb-5 w-[175px]">
-                <span class="text-eduwork-text-base text-lg font-semibold">Salsabilla Putri</span>
-                <span class="text-eduwork-text-paragraph">Kontributor Admin Sales</span>
-            </div>
-            <div class="flex flex-col">
-                <img src="/img/talents/img1.png" alt="" class="rounded-lg mb-5 w-[175px]">
-                <span class="text-eduwork-text-base text-lg font-semibold">Salsabilla Putri</span>
-                <span class="text-eduwork-text-paragraph">Kontributor Admin Sales</span>
-            </div>
-            <div class="flex flex-col">
-                <img src="/img/talents/img1.png" alt="" class="rounded-lg mb-5 w-[175px]">
-                <span class="text-eduwork-text-base text-lg font-semibold">Salsabilla Putri</span>
-                <span class="text-eduwork-text-paragraph">Kontributor Admin Sales</span>
-            </div>
-        </div>
-        <a href="#" class="bg-eduwork-main text-white rounded-lg px-5 py-2 mt-5 self-center">Lihat Semua</a>
+        <img src="/img/wave-bg.svg" alt="" class="w-full absolute bottom-0 z-20">
+        <div class="w-full absolute bottom-0 h-[500px] bg-gradient-to-t from-white to-transparent z-10"></div>
     </section>
     <section class="container mx-auto px-48 2xl:px-60 flex flex-col gap-7 items-center py-16">
         <h2 class="text-eduwork-main text-3xl font-semibold text-center">Mentor dari Kalangan C-level</h2>
@@ -391,7 +425,7 @@
         <div class="flex flex-row items-center gap-10">
             <button class="w-8 h-8 bg-eduwork-main rounded-full text-white flex items-center justify-center"><i
                     class="bi bi-chevron-left"></i></button>
-            <div class="flex flex-row gap-7">
+            <div class="flex flex-row gap-5">
                 <div class="flex flex-col items-center text-center">
                     <img src="/img/c-level/dodi.jpeg" alt="" class="rounded-2xl mb-4 w-60 shadow-2xl">
                     <span class="text-eduwork-text-base text-2xl">Dodi Prakoso Wibowo</span>
@@ -643,7 +677,7 @@
                 </div>
                 <div class="w-1/3 grid grid-cols-2 gap-8">
                     <div class="flex flex-col gap-6">
-                        <span class="text-lg font-semibold">Explore Us</span>
+                        <span class="text-lg font-semibold whitespace-nowrap">Explore Us</span>
                         <div class="flex flex-col gap-4">
                             <a href="#" class="text-xs whitespace-nowrap">Kelas</a>
                             <a href="#" class="text-xs whitespace-nowrap">Our Mentors</a>
@@ -652,7 +686,7 @@
                         </div>
                     </div>
                     <div class="flex flex-col gap-6">
-                        <span class="text-lg font-semibold">Category</span>
+                        <span class="text-lg font-semibold whitespace-nowrap">Category</span>
                         <div class="flex flex-col gap-4">
                             <a href="#" class="text-xs whitespace-nowrap">Mobile Developer</a>
                             <a href="#" class="text-xs whitespace-nowrap">Website Developer</a>
@@ -661,7 +695,7 @@
                         </div>
                     </div>
                     <div class="flex flex-col gap-6">
-                        <span class="text-lg font-semibold">Our Services</span>
+                        <span class="text-lg font-semibold whitespace-nowrap">Our Services</span>
                         <div class="flex flex-col gap-4">
                             <a href="#" class="text-xs whitespace-nowrap">Free Event</a>
                             <a href="#" class="text-xs whitespace-nowrap">Video Course</a>
@@ -670,7 +704,7 @@
                         </div>
                     </div>
                     <div class="flex flex-col gap-6">
-                        <span class="text-lg font-semibold">Office</span>
+                        <span class="text-lg font-semibold whitespace-nowrap">Office</span>
                         <div class="flex flex-col gap-4">
                             <a href="#" class="text-xs whitespace-nowrap">PT Eduwork.id</a>
                             <a href="#" class="flex flex-col gap-4 text-xs">
