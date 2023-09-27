@@ -21,6 +21,7 @@ export default defineConfig({
         alumni_connect: resolve(__dirname, "alumni-connect.html"),
         testimoni_contributor: resolve(__dirname, "testimoni-contributor.html"),
         internship: resolve(__dirname, "internship.html"),
+        contributor: resolve(__dirname, "contributor.html"),
       },
     },
   },
