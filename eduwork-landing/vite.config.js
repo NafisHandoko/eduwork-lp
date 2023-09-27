@@ -22,6 +22,7 @@ export default defineConfig({
         testimoni_contributor: resolve(__dirname, "testimoni-contributor.html"),
         internship: resolve(__dirname, "internship.html"),
         contributor: resolve(__dirname, "contributor.html"),
+        list_contributor: resolve(__dirname, "list_contributor.html"),
       },
     },
   },
