@@ -170,12 +170,12 @@
         </div>
     </nav>
 
-    <header class="container mx-auto px-20 py-12 flex flex-col gap-8 text-center mt-20">
-        <h1 class="text-[#252525] font-bold text-5xl">Eduwork Appreciate All Influence You Bring</h1>
-        <h2 class="text-eduwork-main font-semibold text-2xl px-40">Companies dream of hiring employees like you. Keep
+    <header class="container mx-auto px-5 md:px-20 py-12 flex flex-col gap-8 text-center mt-20">
+        <h1 class="text-[#252525] font-bold text-3xl lg:text-5xl">Eduwork Appreciate All Influence You Bring</h1>
+        <h2 class="text-eduwork-main font-semibold text-xl lg:text-2xl px-7 lg:px-40">Companies dream of hiring employees like you. Keep
             raising the bar of wherever places you land!</h2>
     </header>
-    <section class="bg-white w-full relative">
+    <section class="bg-white w-full relative mb-20">
         <div class="relative flex flex-col container mx-auto z-40 w-[90%] lg:w-[1026px] gap-6">
             <h3 class="text-center text-eduwork-text-base font-medium text-2xl">Temukan Para Community Contributor!</h3>
             <div class="relative w-full">
@@ -184,21 +184,22 @@
                 <div class="flex absolute inset-y-0 right-0 items-center pr-5 cusror pointer"><i
                         class="bi bi-search"></i></div>
             </div>
-            <div class="flex flex-col md:flex-row justify-between items-center mb-[50px] gap-6">
-                <div class="flex gap-5 overflow-auto w-full items-center whitespace-nowrap">
-                    <button class="bg-primary px-5 py-2 text-white rounded-lg font-semibold">
+            <div class="flex flex-col md:flex-row justify-between items-center my-[10px] gap-6">
+                <div class="flex gap-5 overflow-auto w-full items-center whitespace-nowrap py-5 md:py-0">
+                    <button id="category1"
+                        class="category-btn bg-primary hover:bg-primary hover:text-white px-5 py-2 text-white rounded-lg font-medium transition-all">
                         All
                     </button>
-                    <button
-                        class="bg-[#E7F1FF] hover:bg-primary px-5 py-2 text-[#6C6E71] hover:text-white rounded-lg font-medium">
+                    <button id="category2"
+                        class="category-btn bg-[#E7F1FF] hover:bg-primary px-5 py-2 text-[#6C6E71] hover:text-white rounded-lg font-medium transition-all">
                         Laravel
                     </button>
-                    <button
-                        class="bg-[#E7F1FF] hover:bg-primary px-5 py-2 text-[#6C6E71] hover:text-white rounded-lg font-medium">
+                    <button id="category3"
+                        class="category-btn bg-[#E7F1FF] hover:bg-primary px-5 py-2 text-[#6C6E71] hover:text-white rounded-lg font-medium transition-all">
                         React Js
                     </button>
-                    <button
-                        class="bg-[#E7F1FF] hover:bg-primary px-5 py-2 text-[#6C6E71] hover:text-white rounded-lg font-medium">
+                    <button id="category4"
+                        class="category-btn bg-[#E7F1FF] hover:bg-primary px-5 py-2 text-[#6C6E71] hover:text-white rounded-lg font-medium transition-all">
                         UI/UX
                     </button>
                 </div>
@@ -268,7 +269,7 @@
     <section class="relative w-full h-[1270px] md:h-[1070px] pb-[20px] md:pb-0">
         <div class="container mx-auto relative">
             <div
-                class="absolute w-[80%] mx-auto left-1/2 -translate-x-1/2 h-fit lg:w-fit lg:h-[575px] md:pt-[86px] top-[267px]">
+                class="absolute w-[90%] mx-auto left-1/2 -translate-x-1/2 h-fit lg:w-fit lg:h-[575px] md:pt-[86px] top-[267px]">
                 <div class="flex flex-col gap-[23px] md:flex-row text-[#ffffff]">
                     <div class="md:w-[237.51px]">
                         <img loading="lazy" class="w-[250px] h-[48.53px] lg:w-fit md:h-fit mx-auto md:mx-0"
@@ -491,6 +492,20 @@
     //     btnNext.classList.remove("fill-gray-300");
     //   }
     // });
+
+    // Kontributor category code
+    const categoryButtons = document.querySelectorAll('.category-btn')
+    categoryButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault()
+            categoryButtons.forEach(btn => {
+                btn.classList.replace('bg-primary', 'bg-[#E7F1FF]')
+                btn.classList.replace('text-white', 'text-[#6C6E71]')
+            })
+            btn.classList.replace('bg-[#E7F1FF]', 'bg-primary')
+            btn.classList.replace('text-[#6C6E71]', 'text-white')
+        })
+    })
 </script>
 
 </html>
