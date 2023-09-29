@@ -598,19 +598,20 @@
             </h1>
             <div class="flex flex-col md:flex-row justify-between items-center mb-[50px] gap-6">
                 <div class="flex gap-5 overflow-auto w-full items-center whitespace-nowrap">
-                    <button class="bg-primary px-5 py-2 text-white rounded-lg font-semibold">
+                    <button id="category1"
+                        class="category-btn bg-primary px-5 py-2 text-white rounded-lg font-semibold">
                         All
                     </button>
-                    <button
-                        class="bg-[#E7F1FF] hover:bg-primary px-5 py-2 text-[#6C6E71] hover:text-white rounded-lg font-medium">
+                    <button id="category2"
+                        class="category-btn bg-[#E7F1FF] hover:bg-primary px-5 py-2 text-[#6C6E71] hover:text-white rounded-lg font-medium">
                         Laravel
                     </button>
-                    <button
-                        class="bg-[#E7F1FF] hover:bg-primary px-5 py-2 text-[#6C6E71] hover:text-white rounded-lg font-medium">
+                    <button id="category3"
+                        class="category-btn bg-[#E7F1FF] hover:bg-primary px-5 py-2 text-[#6C6E71] hover:text-white rounded-lg font-medium">
                         React Js
                     </button>
-                    <button
-                        class="bg-[#E7F1FF] hover:bg-primary px-5 py-2 text-[#6C6E71] hover:text-white rounded-lg font-medium">
+                    <button id="category4"
+                        class="category-btn bg-[#E7F1FF] hover:bg-primary px-5 py-2 text-[#6C6E71] hover:text-white rounded-lg font-medium">
                         UI/UX
                     </button>
                 </div>
@@ -1233,6 +1234,7 @@
 <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
 <script>
+    // FAQ code
     let label = document.querySelectorAll(".acc");
 
     label.forEach((e) => {
@@ -1269,6 +1271,20 @@
             document.getElementById("navbar").style.boxShadow = "none";
         }
     });
+
+    // Kontributor category code
+    const categoryButtons = document.querySelectorAll('.category-btn')
+    categoryButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault()
+            categoryButtons.forEach(btn => {
+                btn.classList.replace('bg-primary', 'bg-[#E7F1FF]')
+                btn.classList.replace('text-white', 'text-[#6C6E71]')
+            })
+            btn.classList.replace('bg-[#E7F1FF]', 'bg-primary')
+            btn.classList.replace('text-[#6C6E71]', 'text-white')
+        })
+    })
 </script>
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
