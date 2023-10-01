@@ -335,19 +335,24 @@
                 memberi
                 bimbingan untuk upgrade skill di bidang yang kamu banget!</p>
             <div class="flex flex-row flex-wrap gap-5 items-center justify-center pb-14">
-                <button class="rounded-full text-eduwork-main border border-eduwork-main px-5 py-2">All</button>
                 <button
-                    class="rounded-full bg-eduwork-main text-white border border-eduwork-main px-5 py-2">Product</button>
-                <button class="rounded-full text-eduwork-main border border-eduwork-main px-5 py-2">Marketing</button>
-                <button class="rounded-full text-eduwork-main border border-eduwork-main px-5 py-2">Business</button>
-                <button class="rounded-full text-eduwork-main border border-eduwork-main px-5 py-2">Human
+                    class="skill-btn transition-all hover:bg-eduwork-main hover:text-white rounded-full bg-eduwork-main text-white border border-eduwork-main px-5 py-2">All</button>
+                <button
+                    class="skill-btn transition-all hover:bg-eduwork-main hover:text-white rounded-full text-eduwork-main border border-eduwork-main px-5 py-2">Product</button>
+                <button
+                    class="skill-btn transition-all hover:bg-eduwork-main hover:text-white rounded-full text-eduwork-main border border-eduwork-main px-5 py-2">Marketing</button>
+                <button
+                    class="skill-btn transition-all hover:bg-eduwork-main hover:text-white rounded-full text-eduwork-main border border-eduwork-main px-5 py-2">Business</button>
+                <button class="skill-btn transition-all hover:bg-eduwork-main hover:text-white rounded-full text-eduwork-main border border-eduwork-main px-5 py-2">Human
                     Resource</button>
-                <button class="rounded-full text-eduwork-main border border-eduwork-main px-5 py-2">Programming</button>
-                <button class="rounded-full text-eduwork-main border border-eduwork-main px-5 py-2">UI/UX
+                <button
+                    class="skill-btn transition-all hover:bg-eduwork-main hover:text-white rounded-full text-eduwork-main border border-eduwork-main px-5 py-2">Programming</button>
+                <button class="skill-btn transition-all hover:bg-eduwork-main hover:text-white rounded-full text-eduwork-main border border-eduwork-main px-5 py-2">UI/UX
                     Design</button>
-                <button class="rounded-full text-eduwork-main border border-eduwork-main px-5 py-2">Quality
+                <button class="skill-btn transition-all hover:bg-eduwork-main hover:text-white rounded-full text-eduwork-main border border-eduwork-main px-5 py-2">Quality
                     Assurance</button>
-                <button class="rounded-full text-eduwork-main border border-eduwork-main px-5 py-2">Sales</button>
+                <button
+                    class="skill-btn transition-all hover:bg-eduwork-main hover:text-white rounded-full text-eduwork-main border border-eduwork-main px-5 py-2">Sales</button>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 text-white">
                 <div class="bg-center bg-cover rounded-2xl"
@@ -1290,6 +1295,20 @@
             })
             btn.classList.replace('bg-[#E7F1FF]', 'bg-primary')
             btn.classList.replace('text-[#6C6E71]', 'text-white')
+        })
+    })
+
+    // Kontributor category code
+    const skillCategoryButtons = document.querySelectorAll('.skill-btn')
+    skillCategoryButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault()
+            skillCategoryButtons.forEach(btn => {
+                btn.classList.remove('bg-eduwork-main')
+                btn.classList.replace('text-white', 'text-eduwork-main')
+            })
+            btn.classList.add('bg-eduwork-main')
+            btn.classList.replace('text-eduwork-main', 'text-white')
         })
     })
 </script>
