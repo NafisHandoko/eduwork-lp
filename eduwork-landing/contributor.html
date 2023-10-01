@@ -753,7 +753,7 @@
                 </button>
             </div>
         </div>
-        <div class="swiper mySwiper flex flex-col items-center gap-4">
+        <div class="swiper mySwiper flex flex-col items-center gap-4 pb-14">
             <div class="swiper-wrapper gap-5 flex flex-row items-stretch">
                 <div class="swiper-slide h-auto bg-white rounded-xl p-[22px] flex flex-col gap-3 h-full">
                     <img src="./images/contributor/quotes.png" alt="" class="w-[41px]" />
@@ -834,11 +834,12 @@
                     </div>
                 </div>
             </div>
-            <div class="flex md:hidden flex-row gap-2">
+            <!-- <div class="flex md:hidden flex-row gap-2">
                 <div class="w-3 h-3 rounded-full bg-black/[.5]"></div>
                 <div class="w-3 h-3 rounded-full bg-black/[.5]"></div>
                 <div class="w-3 h-3 rounded-full bg-black/[.5]"></div>
-            </div>
+            </div> -->
+            <div class="swiper-pagination md:hidden"></div>
         </div>
     </div>
 
@@ -1315,6 +1316,10 @@
         navigation: {
             nextEl: ".swiper-Button-next",
             prevEl: ".swiper-Button-prev",
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
         },
     });
     // var btnNext = document.querySelector(".btn-next");
