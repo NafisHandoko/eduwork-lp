@@ -688,40 +688,48 @@
 
     <!-- C Level -->
     <section class="bg-white pb-16">
-        <div class="container mx-auto px-5 lg:px-20 xl:px-48 2xl:px-60 flex flex-col gap-7 items-center">
+        <div class="container mx-auto px-5 lg:px-20 xl:px-32 2xl:px-60 flex flex-col gap-7 items-center">
             <h2 class="text-eduwork-main text-3xl font-semibold text-center">Mentor dari Kalangan C-level</h2>
             <p class="text-eduwork-text-paragraph text-center lg:px-52">Puluhan mentor dengan rata-rata 5+ tahun
                 pengalaman
                 di
                 perusahaan
                 teknologi dan digital siap membimbing kamu sampai bisa.</p>
-            <div class="flex flex-row items-center gap-10">
-                <button class="w-8 h-8 bg-eduwork-main rounded-full text-white flex items-center justify-center"><i
-                        class="bi bi-chevron-left"></i></button>
-                <div class="flex flex-row gap-5">
-                    <div class="flex flex-col items-center text-center">
-                        <img src="./images/contributor/lp/c-level/dodi.jpeg" alt=""
-                            class="rounded-2xl mb-4 w-60 h-64 shadow-2xl object-cover">
-                        <span class="text-eduwork-text-base text-2xl">Dodi Prakoso Wibowo</span>
-                        <span class="text-eduwork-text-paragraph">CEO Elvron.com</span>
-                        <img src="./images/contributor/lp/c-level/elvron-logo.png" alt="" class="w-12">
+            <div class="swiper mySwiper-c lg:px-20">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide flex items-center justify-center">
+                        <div class="flex flex-col items-center text-center">
+                            <img src="./images/contributor/lp/c-level/dodi.jpeg" alt=""
+                                class="rounded-2xl mb-4 w-60 h-64 shadow-2xl object-cover">
+                            <span class="text-eduwork-text-base text-2xl">Dodi Prakoso Wibowo</span>
+                            <span class="text-eduwork-text-paragraph">CEO Elvron.com</span>
+                            <img src="./images/contributor/lp/c-level/elvron-logo.png" alt="" class="w-12">
+                        </div>
                     </div>
-                    <div class="hidden lg:flex flex-col items-center text-center">
-                        <img src="./images/contributor/lp/c-level/bayu.jpeg" alt=""
-                            class="rounded-2xl mb-4 w-60 h-64 shadow-2xl object-cover">
-                        <span class="text-eduwork-text-base text-2xl">Bayu Ahmad Baihaqi</span>
-                        <span class="text-eduwork-text-paragraph">COO Eduwork.id</span>
-                        <img src="./images/contributor/lp/c-level/eduwork-logo.png" alt="" class="w-20 mt-2">
+                    <div class="swiper-slide flex items-center justify-center">
+                        <div class="flex flex-col items-center text-center">
+                            <img src="./images/contributor/lp/c-level/bayu.jpeg" alt=""
+                                class="rounded-2xl mb-4 w-60 h-64 shadow-2xl object-cover">
+                            <span class="text-eduwork-text-base text-2xl">Bayu Ahmad Baihaqi</span>
+                            <span class="text-eduwork-text-paragraph">COO Eduwork.id</span>
+                            <img src="./images/contributor/lp/c-level/eduwork-logo.png" alt="" class="w-20 mt-2">
+                        </div>
                     </div>
-                    <div class="hidden lg:flex flex-col items-center text-center">
-                        <img src="./images/contributor/lp/c-level/anita.jpeg" alt=""
-                            class="rounded-2xl mb-4 w-60 h-64 shadow-2xl object-cover">
-                        <span class="text-eduwork-text-base text-2xl">Anita Agustina</span>
-                        <span class="text-eduwork-text-paragraph">VP of Sales and Marketing</span>
-                        <img src="./images/contributor/lp/c-level/eduwork-logo.png" alt="" class="w-20 mt-2">
+                    <div class="swiper-slide flex items-center justify-center">
+                        <div class="flex flex-col items-center text-center">
+                            <img src="./images/contributor/lp/c-level/anita.jpeg" alt=""
+                                class="rounded-2xl mb-4 w-60 h-64 shadow-2xl object-cover">
+                            <span class="text-eduwork-text-base text-2xl">Anita Agustina</span>
+                            <span class="text-eduwork-text-paragraph">VP of Sales and Marketing</span>
+                            <img src="./images/contributor/lp/c-level/eduwork-logo.png" alt="" class="w-20 mt-2">
+                        </div>
                     </div>
                 </div>
-                <button class="w-8 h-8 bg-eduwork-main rounded-full text-white flex items-center justify-center"><i
+                <button
+                    class="swiper-Button-prev-c w-8 h-8 bg-eduwork-main rounded-full text-white flex items-center justify-center absolute top-[40%] left-0 z-20"><i
+                        class="bi bi-chevron-left"></i></button>
+                <button
+                    class="swiper-Button-next-c w-8 h-8 bg-eduwork-main rounded-full text-white flex items-center justify-center absolute top-[40%] right-0 z-20"><i
                         class="bi bi-chevron-right"></i></button>
             </div>
         </div>
@@ -834,11 +842,6 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="flex md:hidden flex-row gap-2">
-                <div class="w-3 h-3 rounded-full bg-black/[.5]"></div>
-                <div class="w-3 h-3 rounded-full bg-black/[.5]"></div>
-                <div class="w-3 h-3 rounded-full bg-black/[.5]"></div>
-            </div> -->
             <div class="swiper-pagination md:hidden"></div>
         </div>
     </div>
@@ -1321,6 +1324,35 @@
             el: '.swiper-pagination',
             type: 'bullets',
         },
+    });
+
+    var swiper_c = new Swiper(".mySwiper-c", {
+        effect: "slide",
+        direction: "horizontal",
+        centerdSlides: true,
+        slideToClickedSlide: true,
+        autoplay: {
+            delay: 5000,
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+            },
+            800: {
+                slidesPerView: 2,
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 30
+            },
+        },
+        grabCursor: true,
+        // slidesPerGroup: 1,
+        navigation: {
+            nextEl: ".swiper-Button-next-c",
+            prevEl: ".swiper-Button-prev-c",
+        },
+        loop: true,
     });
     // var btnNext = document.querySelector(".btn-next");
     // var btnPrev = document.querySelector(".btn-prev");
