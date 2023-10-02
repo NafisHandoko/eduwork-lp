@@ -291,7 +291,8 @@
                     class="flex flex-col gap-3 lg:flex-row lg:gap-[41px] w-full lg:w-[1030px] h-fit lg:h-[387px] bg-[#187cff] rounded-[20px] lg:rounded-none lg:rounded-tr-[100px] py-[35px] px-[25px] lg:pb-0 lg:pr-0 lg:pt-[48.7px] lg:px-auto">
                     <div class="mx-auto lg:mx-0 w-full lg:w-[400px] h-[419px]">
                         <!-- <img loading="lazy" class="ISA-img" src="./images/ISA.png" alt="" srcset="" /> -->
-                        <div class="bg-right bg-cover w-full h-full ISA-img rounded-2xl" style="background-image: url('./images/contributor/lp/img1.jpg');"></div>
+                        <div class="bg-right bg-cover w-full h-full ISA-img rounded-2xl"
+                            style="background-image: url('./images/contributor/lp/img1.jpg');"></div>
                     </div>
                     <div class="mt-0 z-10 relative">
                         <h1 class="font-[700] text-[40px] lg:text-[48px] text-center lg:text-left text-[#ffffff]">
@@ -344,18 +345,21 @@
                     class="skill-btn transition-all hover:bg-eduwork-main hover:text-white rounded-full text-eduwork-main border border-eduwork-main px-5 py-2">Marketing</button>
                 <button
                     class="skill-btn transition-all hover:bg-eduwork-main hover:text-white rounded-full text-eduwork-main border border-eduwork-main px-5 py-2">Business</button>
-                <button class="skill-btn transition-all hover:bg-eduwork-main hover:text-white rounded-full text-eduwork-main border border-eduwork-main px-5 py-2">Human
+                <button
+                    class="skill-btn transition-all hover:bg-eduwork-main hover:text-white rounded-full text-eduwork-main border border-eduwork-main px-5 py-2">Human
                     Resource</button>
                 <button
                     class="skill-btn transition-all hover:bg-eduwork-main hover:text-white rounded-full text-eduwork-main border border-eduwork-main px-5 py-2">Programming</button>
-                <button class="skill-btn transition-all hover:bg-eduwork-main hover:text-white rounded-full text-eduwork-main border border-eduwork-main px-5 py-2">UI/UX
+                <button
+                    class="skill-btn transition-all hover:bg-eduwork-main hover:text-white rounded-full text-eduwork-main border border-eduwork-main px-5 py-2">UI/UX
                     Design</button>
-                <button class="skill-btn transition-all hover:bg-eduwork-main hover:text-white rounded-full text-eduwork-main border border-eduwork-main px-5 py-2">Quality
+                <button
+                    class="skill-btn transition-all hover:bg-eduwork-main hover:text-white rounded-full text-eduwork-main border border-eduwork-main px-5 py-2">Quality
                     Assurance</button>
                 <button
                     class="skill-btn transition-all hover:bg-eduwork-main hover:text-white rounded-full text-eduwork-main border border-eduwork-main px-5 py-2">Sales</button>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 text-white">
+            <div id="skills" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 text-white">
                 <div class="bg-center bg-cover rounded-2xl"
                     style="background-image: url('./images/contributor/lp/skills/pm.jpg');">
                     <div
@@ -415,7 +419,7 @@
                         <a href="#" class="rounded-3xl bg-eduwork-main px-7 py-2 font-medium">Daftar</a>
                     </div>
                 </div>
-                <div class="bg-center bg-cover rounded-2xl"
+                <div class="bg-center bg-cover rounded-2xl hidden"
                     style="background-image: url('./images/contributor/lp/skills/qa.jpg');">
                     <div
                         class="rounded-2xl flex flex-col items-center gap-4 bg-gradient-to-t from-black to-transparent px-12 py-8 pt-24 2xl:pt-44 h-full justify-end">
@@ -424,7 +428,7 @@
                         <a href="#" class="rounded-3xl bg-eduwork-main px-7 py-2 font-medium">Daftar</a>
                     </div>
                 </div>
-                <div class="bg-center bg-cover rounded-2xl"
+                <div class="bg-center bg-cover rounded-2xl hidden"
                     style="background-image: url('./images/contributor/lp/skills/sales.jpg');">
                     <div
                         class="rounded-2xl flex flex-col items-center gap-4 bg-gradient-to-t from-black to-transparent px-12 py-8 pt-24 2xl:pt-44 h-full justify-end">
@@ -433,7 +437,7 @@
                         <a href="#" class="rounded-3xl bg-eduwork-main px-7 py-2 font-medium">Daftar</a>
                     </div>
                 </div>
-                <div class="bg-center bg-cover rounded-2xl"
+                <div class="bg-center bg-cover rounded-2xl hidden"
                     style="background-image: url('./images/contributor/lp/skills/backend.jpg');">
                     <div
                         class="rounded-2xl flex flex-col items-center gap-4 bg-gradient-to-t from-black to-transparent px-12 py-8 pt-24 2xl:pt-44 h-full justify-end">
@@ -445,9 +449,12 @@
                     </div>
                 </div>
             </div>
-            <a href="#" class="bg-eduwork-main text-white rounded-lg px-5 py-2 mt-5 z-20">Buka Semua</a>
+            <button id="open-all-skills-btn" onclick="openAllSkills()"
+                class="bg-eduwork-main text-white rounded-lg px-5 py-2 mt-5 z-20">Buka
+                Semua</button>
         </div>
-        <div class="w-full absolute bottom-28 h-24 bg-gradient-to-t from-white from-90% to-transparent z-10"></div>
+        <div id="skills-overlay"
+            class="w-full absolute bottom-28 h-24 bg-gradient-to-t from-white from-90% to-transparent z-10"></div>
     </section>
     <!-- End of Skills -->
 
@@ -1299,7 +1306,7 @@
         })
     })
 
-    // Kontributor category code
+    // Skill category code
     const skillCategoryButtons = document.querySelectorAll('.skill-btn')
     skillCategoryButtons.forEach(btn => {
         btn.addEventListener('click', (e) => {
@@ -1312,6 +1319,15 @@
             btn.classList.replace('text-eduwork-main', 'text-white')
         })
     })
+
+    function openAllSkills() {
+        let lastThreeElements = Array.from(document.getElementById("skills").children).slice(-3)
+        lastThreeElements.forEach(el => {
+            el.classList.remove('hidden')
+        })
+        document.getElementById('skills-overlay').classList.add('hidden')
+        document.getElementById('open-all-skills-btn').classList.add('hidden')
+    }
 </script>
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
