@@ -14,268 +14,210 @@
   </head>
   <body class="bg-[#f6fcff] text-[#404040] font-poppins">
     <!-- Navabar -->
-    <div class="w-full z-50 relative" id="navbar">
-      <nav
-        class="flex justify-between items-center w-[90%] lg:w-[1016px] container mx-auto py-2 md:py-5"
-      >
-        <a href="/" class="w-[154px] h-[31px]">
-          <img
-            loading="lazy"
-            class=""
-            src="./images/logo/favicon.png"
-            alt="Eduwork Logo"
-          />
-        </a>
-        <button
-          data-collapse-toggle="navbar-cta"
-          type="button"
-          class="navbar-toggle z-10 inline-flex p-2 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 right-0 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-          aria-controls="navbar-cta"
-          aria-expanded="false"
+    <nav class="z-50" id="navbar">
+      <div class="w-[90%] lg:w-[1016px] container mx-auto py-2 md:py-4">
+        <div
+          class="container flex flex-wrap items-center justify-between mx-auto"
         >
-          <span class="sr-only">Open main menu</span>
-          <svg
-            class="w-[37px] h-[37px]"
-            aria-hidden="true"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
+          <a href="index.html" class="flex items-center">
+            <img
+              class="h-6 sm:h-7"
+              src="./images/logo/favicon.png"
+              alt="Eduwork Logo"
+            />
+          </a>
+          <div class="flex gap-3 md:order-2">
+            <button
+              type="button"
+              class="text-white hidden md:block bg-primary hover:bg-primary/80 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0"
+            >
+              Login
+            </button>
+            <button
+              type="button"
+              class="text-white hidden md:block bg-primary hover:bg-primary/80 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0"
+            >
+              Register
+            </button>
+            <button
+              data-collapse-toggle="navbar-sticky"
+              type="button"
+              class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              aria-controls="navbar-sticky"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg
+                class="w-6 h-6"
+                aria-hidden="true"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div
+            class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+            id="navbar-sticky"
           >
-            <path
-              fill-rule="evenodd"
-              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-              clip-rule="evenodd"
-            ></path>
-          </svg>
-        </button>
-        <ul class="hidden md:flex gap-[40px]">
-          <li>
-            <div
-              x-data="{
-              open: false,
-              toggle() {
-                  if (this.open) {
-                      return this.close()
-                  }
-  
-                  this.$refs.button.focus()
-  
-                  this.open = true
-              },
-              close(focusAfter) {
-                  if (! this.open) return
-  
-                  this.open = false
-  
-                  focusAfter && focusAfter.focus()
-              }
-          }"
-              x-on:keydown.escape.prevent.stop="close($refs.button)"
-              x-on:focusin.window="! $refs.panel.contains($event.target) && close()"
-              x-id="['dropdown-button']"
-              class="relative text-sm font-semibold"
+            <ul
+              class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row gap-[10px] md:gap-[40px] md:mt-0 md:text-sm md:font-semibold md:border-0 md:bg-transparent"
             >
               <button
-                x-ref="button"
-                x-on:click="toggle()"
-                :aria-expanded="open"
-                :aria-controls="$id('dropdown-button')"
-                type="button"
-                class="flex gap-[5px] border-none"
+                id="dropdownNavbarLink"
+                data-dropdown-toggle="dropdownNavbar"
+                class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto md:dark:hover:bg-transparent"
               >
                 Kelas
                 <svg
-                  xmlns="../images/arrow.svg"
-                  class="absolute right-0 md:relative md:right-auto md:h-5 md:w-5 h-8 w-8"
-                  viewBox="0 0 20 20"
+                  class="w-5 h-5 ml-1"
+                  aria-hidden="true"
                   fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
                     fill-rule="evenodd"
                     d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                     clip-rule="evenodd"
-                  />
+                  ></path>
                 </svg>
               </button>
               <div
-                x-ref="panel"
-                x-show="open"
-                x-transition.origin.top.left
-                x-on:click.outside="close($refs.button)"
-                :id="$id('dropdown-button')"
-                style="display: none"
-                class="relative md:absolute left-0 mt-[25px] w-full md:w-40 rounded-md bg-white shadow-filter"
+                id="dropdownNavbar"
+                class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
               >
-                <a
-                  href="kelas.html"
-                  class="flex gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left text-[22px] md:text-sm hover:bg-gray-50 disabled:text-gray-500"
-                  >Regular</a
+                <ul
+                  class="py-1 text-sm text-gray-700 dark:text-gray-400"
+                  aria-labelledby="dropdownLargeButton"
                 >
-                <a
-                  href=""
-                  class="flex gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left text-[22px] md:text-sm hover:bg-gray-50 disabled:text-gray-500"
-                  >Kelas</a
-                >
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >Regular</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >Kelas</a
+                    >
+                  </li>
+                </ul>
               </div>
-            </div>
-          </li>
-          <li>
-            <div
-              x-data="{
-              open: false,
-              toggle() {
-                  if (this.open) {
-                      return this.close()
-                  }
-  
-                  this.$refs.button.focus()
-  
-                  this.open = true
-              },
-              close(focusAfter) {
-                  if (! this.open) return
-  
-                  this.open = false
-  
-                  focusAfter && focusAfter.focus()
-              }
-          }"
-              x-on:keydown.escape.prevent.stop="close($refs.button)"
-              x-on:focusin.window="! $refs.panel.contains($event.target) && close()"
-              x-id="['dropdown-button']"
-              class="relative text-sm font-semibold"
-            >
               <button
-                x-ref="button"
-                x-on:click="toggle()"
-                :aria-expanded="open"
-                :aria-controls="$id('dropdown-button')"
-                type="button"
-                class="flex gap-[5px] border-none"
+                id="dropdownNavbarLink"
+                data-dropdown-toggle="dropdownNavbar"
+                class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto md:dark:hover:bg-transparent"
               >
                 Mentor
                 <svg
-                  xmlns="../images/arrow.svg"
-                  class="absolute right-0 md:relative md:right-auto md:h-5 md:w-5 h-8 w-8"
-                  viewBox="0 0 20 20"
+                  class="w-5 h-5 ml-1"
+                  aria-hidden="true"
                   fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
                     fill-rule="evenodd"
                     d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                     clip-rule="evenodd"
-                  />
+                  ></path>
                 </svg>
               </button>
               <div
-                x-ref="panel"
-                x-show="open"
-                x-transition.origin.top.left
-                x-on:click.outside="close($refs.button)"
-                :id="$id('dropdown-button')"
-                style="display: none"
-                class="relative md:absolute left-0 mt-[25px] w-full md:w-40 rounded-md bg-white shadow-filter"
+                id="dropdownNavbar"
+                class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
               >
-                <a
-                  href=""
-                  class="flex gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left text-[22px] md:text-sm hover:bg-gray-50 disabled:text-gray-500"
-                  >Mentor</a
+                <ul
+                  class="py-1 text-sm text-gray-700 dark:text-gray-400"
+                  aria-labelledby="dropdownLargeButton"
                 >
-                <a
-                  href=""
-                  class="flex gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left text-[22px] md:text-sm hover:bg-gray-50 disabled:text-gray-500"
-                  >Mentor</a
-                >
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >Mentor</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >Mentor</a
+                    >
+                  </li>
+                </ul>
               </div>
-            </div>
-          </li>
-          <li>
-            <div
-              x-data="{
-              open: false,
-              toggle() {
-                  if (this.open) {
-                      return this.close()
-                  }
-  
-                  this.$refs.button.focus()
-  
-                  this.open = true
-              },
-              close(focusAfter) {
-                  if (! this.open) return
-  
-                  this.open = false
-  
-                  focusAfter && focusAfter.focus()
-              }
-          }"
-              x-on:keydown.escape.prevent.stop="close($refs.button)"
-              x-on:focusin.window="! $refs.panel.contains($event.target) && close()"
-              x-id="['dropdown-button']"
-              class="relative text-sm font-semibold"
-            >
               <button
-                x-ref="button"
-                x-on:click="toggle()"
-                :aria-expanded="open"
-                :aria-controls="$id('dropdown-button')"
-                type="button"
-                class="flex gap-[5px] border-none items-center"
+                id="dropdownNavbarLink"
+                data-dropdown-toggle="dropdownNavbar"
+                class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto md:dark:hover:bg-transparent"
               >
                 Company
                 <svg
-                  xmlns="../images/arrow.svg"
-                  class="absolute right-0 md:relative md:right-auto md:h-5 md:w-5 h-8 w-8"
-                  viewBox="0 0 20 20"
+                  class="w-5 h-5 ml-1"
+                  aria-hidden="true"
                   fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
                     fill-rule="evenodd"
                     d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                     clip-rule="evenodd"
-                  />
+                  ></path>
                 </svg>
               </button>
               <div
-                x-ref="panel"
-                x-show="open"
-                x-transition.origin.top.left
-                x-on:click.outside="close($refs.button)"
-                :id="$id('dropdown-button')"
-                style="display: none"
-                class="relative md:absolute left-0 mt-[25px] w-full md:w-40 rounded-md bg-white shadow-filter"
+                id="dropdownNavbar"
+                class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
               >
-                <a
-                  href=""
-                  class="flex gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left text-[22px] md:text-sm hover:bg-gray-50 disabled:text-gray-500"
-                  >Start-up</a
+                <ul
+                  class="py-1 text-sm text-gray-700 dark:text-gray-400"
+                  aria-labelledby="dropdownLargeButton"
                 >
-                <a
-                  href=""
-                  class="flex gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left text-[22px] md:text-sm hover:bg-gray-50 disabled:text-gray-500"
-                  >Corporate</a
-                >
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >Partner</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >Partner</a
+                    >
+                  </li>
+                </ul>
               </div>
-            </div>
-          </li>
-        </ul>
-        <div class="hidden w-full lg:flex gap-2 md:w-auto h-fit">
-          <button
-            class="text-white font-[500] bg-primary text-[14px] py-[9.5px] px-[20px] rounded-md"
-            type="button"
-          >
-            Login
-          </button>
-          <button
-            class="text-white font-[500] bg-primary text-[14px] py-[9.5px] px-[20px] rounded-md"
-            type="button"
-          >
-            Register
-          </button>
+              <button
+                type="button"
+                class="text-white block md:hidden bg-primary hover:bg-primary/80 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0"
+              >
+                Login
+              </button>
+              <button
+                type="button"
+                class="text-white block md:hidden bg-primary hover:bg-primary/80 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0"
+              >
+                Register
+              </button>
+            </ul>
+          </div>
         </div>
-      </nav>
-    </div>
+      </div>
+    </nav>
     <!-- End Navbar -->
     <!-- Hero -->
     <div
@@ -315,7 +257,7 @@
       class="w-[80%] lg:w-[1017px] mx-auto h-fit lg:h-[137px] lg:pl-[49px] lg:pr-[51.12px] pl-[17px] pr-[22px] py-[21px] bg-white border border-white rounded-[10px] shadow-filter z-40 relative"
     >
       <h4
-        class="lg:block font-semibold text-[18px] md:text-[16px] leading-[24px] tracking-[0.01em] flex items-center justify-between"
+        class="lg:block z-40 font-semibold text-[18px] md:text-[16px] leading-[24px] tracking-[0.01em] flex items-center justify-between"
       >
         Temukan Mentors!
         <button
@@ -605,7 +547,7 @@
               loading="lazy"
               src="./images/pp-pelita.png"
               alt=""
-              class="rounded-[10px] w-[231px] object-cover shadow-pp"
+              class="rounded-[10px] w-full md:w-[231px] object-cover shadow-pp"
             />
             <div class="flex flex-col gap-[15px]">
               <div class="flex justify-between items-center">
@@ -631,11 +573,25 @@
                 <li>75 Tersalurkan</li>
               </div>
               <div class="h-[1px] w-full bg-[#CCCCCC]/50"></div>
-              <div class="flex justify-between items-center text-[12px]">
-                <p>Q&A Chats</p>
-                <p>WA Calls</p>
-                <p>Email</p>
-                <p>Zoom 1x /Week</p>
+              <div
+                class="grid grid-cols-2 md:grid-cols-4 gap-2 items-center text-[12px]"
+              >
+                <div class="flex items-center gap-1">
+                  <img src="./images/icon/ic-chat.png" alt="" />
+                  <p>Q&A Chats</p>
+                </div>
+                <div class="flex items-center gap-1">
+                  <img src="./images/icon/ic-whatsApp.png" alt="" />
+                  <p>WA Calls</p>
+                </div>
+                <div class="flex items-center gap-1">
+                  <img src="./images/icon/ic-mail.png" alt="" />
+                  <p>Email</p>
+                </div>
+                <div class="flex items-center gap-1">
+                  <img src="./images/icon/ic-zoom.png" alt="" />
+                  <p>Zoom 1x /Week</p>
+                </div>
               </div>
               <div class="h-[1px] w-full bg-[#CCCCCC]/50"></div>
               <div class="flex flex-col">
@@ -675,515 +631,7 @@
               </div>
             </div>
           </div>
-          <div class="flex flex-col gap-4 w-[300px]">
-            <div
-              x-data="{ tab: window.location.hash ? window.location.hash.substring(1) : 'pengenalan' }"
-              id="tab_wrapper"
-              class="flex flex-col bg-white px-6 py-6 rounded-[10px] shadow-s2 h-full"
-            >
-              <!-- The tabs navigation -->
-              <nav class="flex gap-4 text-[14px] mb-4">
-                <a
-                  :class="{ 'text-primary font-semibold': tab === 'pengenalan' }"
-                  @click.prevent="tab = 'pengenalan'; window.location.hash = 'pengenalan'"
-                  href="#"
-                  >Pengenalan</a
-                >
-                <a
-                  :class="{ 'text-primary font-semibold': tab === 'skills' }"
-                  @click.prevent="tab = 'skills'; window.location.hash = 'skills'"
-                  href="#"
-                  >Skills</a
-                >
-                <a
-                  :class="{ 'text-primary font-semibold': tab === 'events' }"
-                  @click.prevent="tab = 'events'; window.location.hash = 'events'"
-                  href="#"
-                  >Events</a
-                >
-              </nav>
-
-              <!-- The tabs content -->
-              <div x-show="tab === 'pengenalan'" class="text-[12px] h-full">
-                I am a general intelligence living in Lisbon. My training and my
-                primary research interest is software engineering. I believe
-                that one of the essentials goals of our generation is to upgrade
-                ...
-              </div>
-              <div x-show="tab === 'skills'" class="text-[12px] h-full">
-                I am a general intelligence living in Lisbon. My training and my
-                primary research interest is software engineering....
-              </div>
-              <div x-show="tab === 'events'" class="text-[12px] h-full">
-                I am a general intelligence living in Lisbon.I believe that one
-                of the essentials goals of our generation is to upgrade ...
-              </div>
-            </div>
-            <button class="bg-primary text-white rounded-[10px] py-3">
-              Lihat Profile
-            </button>
-          </div>
-        </div>
-        <div class="flex flex-col md:flex-row gap-[26px]">
-          <div
-            class="flex flex-col md:flex-row gap-[26px] bg-white p-5 rounded-lg shadow-s2"
-          >
-            <img
-              loading="lazy"
-              src="./images/pp-pelita.png"
-              alt=""
-              class="rounded-[10px] w-[231px] object-cover shadow-pp"
-            />
-            <div class="flex flex-col gap-[15px]">
-              <div class="flex justify-between items-center">
-                <h1 class="text-[20px] font-semibold">Pelita Nur Najmina</h1>
-                <img loading="lazy" src="./images/ic-save.png" alt="save" />
-              </div>
-              <div class="flex gap-2">
-                <img
-                  loading="lazy"
-                  src="./favicon.png"
-                  alt=""
-                  class="h-[42px] w-[42px]"
-                />
-                <div class="flex flex-col">
-                  <h1 class="font-semibold text-[14px]">Programmer</h1>
-                  <h3 class="text-[14px] text-[#989898]">Eduwork</h3>
-                </div>
-              </div>
-              <div class="flex gap-3 text-[12px]">
-                <h1>Start</h1>
-                <p class="font-semibold">4.0</p>
-                <li>100 Siswa</li>
-                <li>75 Tersalurkan</li>
-              </div>
-              <div class="h-[1px] w-full bg-[#CCCCCC]/50"></div>
-              <div class="flex justify-between items-center text-[12px]">
-                <p>Q&A Chats</p>
-                <p>WA Calls</p>
-                <p>Email</p>
-                <p>Zoom 1x /Week</p>
-              </div>
-              <div class="h-[1px] w-full bg-[#CCCCCC]/50"></div>
-              <div class="flex flex-col">
-                <p class="font-semibold text-[12px]">Kelas Terbaru</p>
-                <div class="flex mt-4 gap-4">
-                  <div class="flex items-center gap-3">
-                    <img
-                      loading="lazy"
-                      src="./images/kelas-terbaru.png"
-                      alt=""
-                      class="rounded-[5px]"
-                    />
-                    <div class="flex flex-col gap-1">
-                      <h1 class="text-[12px] font-semibold">
-                        Membuat Design System
-                      </h1>
-                      <p class="text-[12px] text-[#303030]">
-                        Front end Developer
-                      </p>
-                    </div>
-                  </div>
-                  <div class="flex items-center gap-3">
-                    <img
-                      loading="lazy"
-                      src="./images/kelas-terbaru.png"
-                      alt=""
-                      class="rounded-[5px]"
-                    />
-                    <div class="flex flex-col gap-1">
-                      <h1 class="text-[12px] font-semibold">Design Hand-Off</h1>
-                      <p class="text-[12px] text-[#303030]">
-                        Back end Developer
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="flex flex-col gap-4 w-[300px]">
-            <div
-              x-data="{ tab: window.location.hash ? window.location.hash.substring(1) : 'pengenalan' }"
-              id="tab_wrapper"
-              class="flex flex-col bg-white px-6 py-6 rounded-[10px] shadow-s2 h-full"
-            >
-              <!-- The tabs navigation -->
-              <nav class="flex gap-4 text-[14px] mb-4">
-                <a
-                  :class="{ 'text-primary font-semibold': tab === 'pengenalan' }"
-                  @click.prevent="tab = 'pengenalan'; window.location.hash = 'pengenalan'"
-                  href="#"
-                  >Pengenalan</a
-                >
-                <a
-                  :class="{ 'text-primary font-semibold': tab === 'skills' }"
-                  @click.prevent="tab = 'skills'; window.location.hash = 'skills'"
-                  href="#"
-                  >Skills</a
-                >
-                <a
-                  :class="{ 'text-primary font-semibold': tab === 'events' }"
-                  @click.prevent="tab = 'events'; window.location.hash = 'events'"
-                  href="#"
-                  >Events</a
-                >
-              </nav>
-
-              <!-- The tabs content -->
-              <div x-show="tab === 'pengenalan'" class="text-[12px] h-full">
-                I am a general intelligence living in Lisbon. My training and my
-                primary research interest is software engineering. I believe
-                that one of the essentials goals of our generation is to upgrade
-                ...
-              </div>
-              <div x-show="tab === 'skills'" class="text-[12px] h-full">
-                I am a general intelligence living in Lisbon. My training and my
-                primary research interest is software engineering....
-              </div>
-              <div x-show="tab === 'events'" class="text-[12px] h-full">
-                I am a general intelligence living in Lisbon.I believe that one
-                of the essentials goals of our generation is to upgrade ...
-              </div>
-            </div>
-            <button class="bg-primary text-white rounded-[10px] py-3">
-              Lihat Profile
-            </button>
-          </div>
-        </div>
-        <div class="flex flex-col md:flex-row gap-[26px]">
-          <div
-            class="flex flex-col md:flex-row gap-[26px] bg-white p-5 rounded-lg shadow-s2"
-          >
-            <img
-              loading="lazy"
-              src="./images/pp-pelita.png"
-              alt=""
-              class="rounded-[10px] w-[231px] object-cover shadow-pp"
-            />
-            <div class="flex flex-col gap-[15px]">
-              <div class="flex justify-between items-center">
-                <h1 class="text-[20px] font-semibold">Pelita Nur Najmina</h1>
-                <img loading="lazy" src="./images/ic-save.png" alt="save" />
-              </div>
-              <div class="flex gap-2">
-                <img
-                  loading="lazy"
-                  src="./favicon.png"
-                  alt=""
-                  class="h-[42px] w-[42px]"
-                />
-                <div class="flex flex-col">
-                  <h1 class="font-semibold text-[14px]">Programmer</h1>
-                  <h3 class="text-[14px] text-[#989898]">Eduwork</h3>
-                </div>
-              </div>
-              <div class="flex gap-3 text-[12px]">
-                <h1>Start</h1>
-                <p class="font-semibold">4.0</p>
-                <li>100 Siswa</li>
-                <li>75 Tersalurkan</li>
-              </div>
-              <div class="h-[1px] w-full bg-[#CCCCCC]/50"></div>
-              <div class="flex justify-between items-center text-[12px]">
-                <p>Q&A Chats</p>
-                <p>WA Calls</p>
-                <p>Email</p>
-                <p>Zoom 1x /Week</p>
-              </div>
-              <div class="h-[1px] w-full bg-[#CCCCCC]/50"></div>
-              <div class="flex flex-col">
-                <p class="font-semibold text-[12px]">Kelas Terbaru</p>
-                <div class="flex mt-4 gap-4">
-                  <div class="flex items-center gap-3">
-                    <img
-                      loading="lazy"
-                      src="./images/kelas-terbaru.png"
-                      alt=""
-                      class="rounded-[5px]"
-                    />
-                    <div class="flex flex-col gap-1">
-                      <h1 class="text-[12px] font-semibold">
-                        Membuat Design System
-                      </h1>
-                      <p class="text-[12px] text-[#303030]">
-                        Front end Developer
-                      </p>
-                    </div>
-                  </div>
-                  <div class="flex items-center gap-3">
-                    <img
-                      loading="lazy"
-                      src="./images/kelas-terbaru.png"
-                      alt=""
-                      class="rounded-[5px]"
-                    />
-                    <div class="flex flex-col gap-1">
-                      <h1 class="text-[12px] font-semibold">Design Hand-Off</h1>
-                      <p class="text-[12px] text-[#303030]">
-                        Back end Developer
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="flex flex-col gap-4 w-[300px]">
-            <div
-              x-data="{ tab: window.location.hash ? window.location.hash.substring(1) : 'pengenalan' }"
-              id="tab_wrapper"
-              class="flex flex-col bg-white px-6 py-6 rounded-[10px] shadow-s2 h-full"
-            >
-              <!-- The tabs navigation -->
-              <nav class="flex gap-4 text-[14px] mb-4">
-                <a
-                  :class="{ 'text-primary font-semibold': tab === 'pengenalan' }"
-                  @click.prevent="tab = 'pengenalan'; window.location.hash = 'pengenalan'"
-                  href="#"
-                  >Pengenalan</a
-                >
-                <a
-                  :class="{ 'text-primary font-semibold': tab === 'skills' }"
-                  @click.prevent="tab = 'skills'; window.location.hash = 'skills'"
-                  href="#"
-                  >Skills</a
-                >
-                <a
-                  :class="{ 'text-primary font-semibold': tab === 'events' }"
-                  @click.prevent="tab = 'events'; window.location.hash = 'events'"
-                  href="#"
-                  >Events</a
-                >
-              </nav>
-
-              <!-- The tabs content -->
-              <div x-show="tab === 'pengenalan'" class="text-[12px] h-full">
-                I am a general intelligence living in Lisbon. My training and my
-                primary research interest is software engineering. I believe
-                that one of the essentials goals of our generation is to upgrade
-                ...
-              </div>
-              <div x-show="tab === 'skills'" class="text-[12px] h-full">
-                I am a general intelligence living in Lisbon. My training and my
-                primary research interest is software engineering....
-              </div>
-              <div x-show="tab === 'events'" class="text-[12px] h-full">
-                I am a general intelligence living in Lisbon.I believe that one
-                of the essentials goals of our generation is to upgrade ...
-              </div>
-            </div>
-            <button class="bg-primary text-white rounded-[10px] py-3">
-              Lihat Profile
-            </button>
-          </div>
-        </div>
-        <div class="flex flex-col md:flex-row gap-[26px]">
-          <div
-            class="flex flex-col md:flex-row gap-[26px] bg-white p-5 rounded-lg shadow-s2"
-          >
-            <img
-              loading="lazy"
-              src="./images/pp-pelita.png"
-              alt=""
-              class="rounded-[10px] w-[231px] object-cover shadow-pp"
-            />
-            <div class="flex flex-col gap-[15px]">
-              <div class="flex justify-between items-center">
-                <h1 class="text-[20px] font-semibold">Pelita Nur Najmina</h1>
-                <img loading="lazy" src="./images/ic-save.png" alt="save" />
-              </div>
-              <div class="flex gap-2">
-                <img
-                  loading="lazy"
-                  src="./favicon.png"
-                  alt=""
-                  class="h-[42px] w-[42px]"
-                />
-                <div class="flex flex-col">
-                  <h1 class="font-semibold text-[14px]">Programmer</h1>
-                  <h3 class="text-[14px] text-[#989898]">Eduwork</h3>
-                </div>
-              </div>
-              <div class="flex gap-3 text-[12px]">
-                <h1>Start</h1>
-                <p class="font-semibold">4.0</p>
-                <li>100 Siswa</li>
-                <li>75 Tersalurkan</li>
-              </div>
-              <div class="h-[1px] w-full bg-[#CCCCCC]/50"></div>
-              <div class="flex justify-between items-center text-[12px]">
-                <p>Q&A Chats</p>
-                <p>WA Calls</p>
-                <p>Email</p>
-                <p>Zoom 1x /Week</p>
-              </div>
-              <div class="h-[1px] w-full bg-[#CCCCCC]/50"></div>
-              <div class="flex flex-col">
-                <p class="font-semibold text-[12px]">Kelas Terbaru</p>
-                <div class="flex mt-4 gap-4">
-                  <div class="flex items-center gap-3">
-                    <img
-                      loading="lazy"
-                      src="./images/kelas-terbaru.png"
-                      alt=""
-                      class="rounded-[5px]"
-                    />
-                    <div class="flex flex-col gap-1">
-                      <h1 class="text-[12px] font-semibold">
-                        Membuat Design System
-                      </h1>
-                      <p class="text-[12px] text-[#303030]">
-                        Front end Developer
-                      </p>
-                    </div>
-                  </div>
-                  <div class="flex items-center gap-3">
-                    <img
-                      loading="lazy"
-                      src="./images/kelas-terbaru.png"
-                      alt=""
-                      class="rounded-[5px]"
-                    />
-                    <div class="flex flex-col gap-1">
-                      <h1 class="text-[12px] font-semibold">Design Hand-Off</h1>
-                      <p class="text-[12px] text-[#303030]">
-                        Back end Developer
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="flex flex-col gap-4 w-[300px]">
-            <div
-              x-data="{ tab: window.location.hash ? window.location.hash.substring(1) : 'pengenalan' }"
-              id="tab_wrapper"
-              class="flex flex-col bg-white px-6 py-6 rounded-[10px] shadow-s2 h-full"
-            >
-              <!-- The tabs navigation -->
-              <nav class="flex gap-4 text-[14px] mb-4">
-                <a
-                  :class="{ 'text-primary font-semibold': tab === 'pengenalan' }"
-                  @click.prevent="tab = 'pengenalan'; window.location.hash = 'pengenalan'"
-                  href="#"
-                  >Pengenalan</a
-                >
-                <a
-                  :class="{ 'text-primary font-semibold': tab === 'skills' }"
-                  @click.prevent="tab = 'skills'; window.location.hash = 'skills'"
-                  href="#"
-                  >Skills</a
-                >
-                <a
-                  :class="{ 'text-primary font-semibold': tab === 'events' }"
-                  @click.prevent="tab = 'events'; window.location.hash = 'events'"
-                  href="#"
-                  >Events</a
-                >
-              </nav>
-
-              <!-- The tabs content -->
-              <div x-show="tab === 'pengenalan'" class="text-[12px] h-full">
-                I am a general intelligence living in Lisbon. My training and my
-                primary research interest is software engineering. I believe
-                that one of the essentials goals of our generation is to upgrade
-                ...
-              </div>
-              <div x-show="tab === 'skills'" class="text-[12px] h-full">
-                I am a general intelligence living in Lisbon. My training and my
-                primary research interest is software engineering....
-              </div>
-              <div x-show="tab === 'events'" class="text-[12px] h-full">
-                I am a general intelligence living in Lisbon.I believe that one
-                of the essentials goals of our generation is to upgrade ...
-              </div>
-            </div>
-            <button class="bg-primary text-white rounded-[10px] py-3">
-              Lihat Profile
-            </button>
-          </div>
-        </div>
-        <div class="flex flex-col md:flex-row gap-[26px]">
-          <div
-            class="flex flex-col md:flex-row gap-[26px] bg-white p-5 rounded-lg shadow-s2"
-          >
-            <img
-              loading="lazy"
-              src="./images/pp-pelita.png"
-              alt=""
-              class="rounded-[10px] w-[231px] object-cover shadow-pp"
-            />
-            <div class="flex flex-col gap-[15px]">
-              <div class="flex justify-between items-center">
-                <h1 class="text-[20px] font-semibold">Pelita Nur Najmina</h1>
-                <img loading="lazy" src="./images/ic-save.png" alt="save" />
-              </div>
-              <div class="flex gap-2">
-                <img
-                  loading="lazy"
-                  src="./favicon.png"
-                  alt=""
-                  class="h-[42px] w-[42px]"
-                />
-                <div class="flex flex-col">
-                  <h1 class="font-semibold text-[14px]">Programmer</h1>
-                  <h3 class="text-[14px] text-[#989898]">Eduwork</h3>
-                </div>
-              </div>
-              <div class="flex gap-3 text-[12px]">
-                <h1>Start</h1>
-                <p class="font-semibold">4.0</p>
-                <li>100 Siswa</li>
-                <li>75 Tersalurkan</li>
-              </div>
-              <div class="h-[1px] w-full bg-[#CCCCCC]/50"></div>
-              <div class="flex justify-between items-center text-[12px]">
-                <p>Q&A Chats</p>
-                <p>WA Calls</p>
-                <p>Email</p>
-                <p>Zoom 1x /Week</p>
-              </div>
-              <div class="h-[1px] w-full bg-[#CCCCCC]/50"></div>
-              <div class="flex flex-col">
-                <p class="font-semibold text-[12px]">Kelas Terbaru</p>
-                <div class="flex mt-4 gap-4">
-                  <div class="flex items-center gap-3">
-                    <img
-                      loading="lazy"
-                      src="./images/kelas-terbaru.png"
-                      alt=""
-                      class="rounded-[5px]"
-                    />
-                    <div class="flex flex-col gap-1">
-                      <h1 class="text-[12px] font-semibold">
-                        Membuat Design System
-                      </h1>
-                      <p class="text-[12px] text-[#303030]">
-                        Front end Developer
-                      </p>
-                    </div>
-                  </div>
-                  <div class="flex items-center gap-3">
-                    <img
-                      loading="lazy"
-                      src="./images/kelas-terbaru.png"
-                      alt=""
-                      class="rounded-[5px]"
-                    />
-                    <div class="flex flex-col gap-1">
-                      <h1 class="text-[12px] font-semibold">Design Hand-Off</h1>
-                      <p class="text-[12px] text-[#303030]">
-                        Back end Developer
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="flex flex-col gap-4 w-[300px]">
+          <div class="flex flex-col gap-4 w-full md:w-[300px]">
             <div
               x-data="{ tab: window.location.hash ? window.location.hash.substring(1) : 'pengenalan' }"
               id="tab_wrapper"
@@ -1407,7 +855,7 @@
       if (prevScrollpos > currentScrollPos) {
         document.getElementById("navbar").style.top = "0";
       } else {
-        document.getElementById("navbar").style.top = "-80px";
+        document.getElementById("navbar").style.top = "-90px";
       }
       prevScrollpos = currentScrollPos;
     };

@@ -18,6 +18,33 @@ html{
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 0.5s;
 }
+
+#dropdownNavbar{
+  position: absolute !important;
+  inset: 0px auto auto 0px;
+  margin: 0px;
+  transform: translate(238px, 62px);;
+}
+
+#dropdownMentor{
+  position: absolute !important;
+  inset: 0px auto auto 0px;
+  margin: 0px;
+  transform: translate(326px, 62px);
+}
+#dropdownCompany{
+  position: absolute !important;
+  inset: 0px auto auto 0px;
+  margin: 0px;
+  transform: translate(488px, 164px);
+}
+#dropdownEduplus{
+  position: absolute !important;
+  inset: 0px auto auto 0px;
+  margin: 0px;
+  transform: translate(488px, 164px);
+}
+
 #navProf{
   top: 0;
   position: sticky;
@@ -39,6 +66,56 @@ html{
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 0.5s;
 }
+
+@media screen and (max-width: 767px) {
+
+  #navProf{
+    top: 0;
+    position: absolute;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 0.5s;
+  }
+  #ppMentor{
+    top: 0;
+    margin-top: -200px;
+    position: relative;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 0.5s;
+  }
+  #menuCourse{
+    top: 0;
+    position: sticky;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 0.5s;
+  }
+  #dropdownNavbar{
+    position: relative !important;
+    inset: 0px auto auto 0px;
+    margin: 0px;
+    transform: translate3d(0px, 10.1818px, 0px) !important;
+  }
+  #dropdownMentor{
+    position: relative !important;
+    inset: 0px auto auto 0px;
+    margin: 0px;
+    transform: none !important;
+  }
+  #dropdownCompany{
+    position: relative !important;
+    inset: 0px auto auto 0px;
+    margin: 0px;
+    transform: none !important;
+  }
+  #dropdownEduplus{
+    position: relative !important;
+    inset: 0px auto auto 0px;
+    margin: 0px;
+    transform: none !important;
+  }
+}
 .shadow-filter {
   --tw-shadow: 16.1194px 29.936px 110px rgba(0, 0, 0, 0.04), 10.4478px 19.403px 64.4213px rgba(0, 0, 0, 0.0303704), 6.20895px 11.5309px 35.037px rgba(0, 0, 0, 0.0242963), 3.22388px 5.9872px 17.875px rgba(0, 0, 0, 0.02), 1.31343px 2.43923px 8.96296px rgba(0, 0, 0, 0.0157037), 0.298507px 0.554371px 4.3287px rgba(0, 0, 0, 0.00962963);
   --tw-shadow-colored: 16.1194px 29.936px 110px var(--tw-shadow-color), 10.4478px 19.403px 64.4213px var(--tw-shadow-color), 6.20895px 11.5309px 35.037px var(--tw-shadow-color), 3.22388px 5.9872px 17.875px var(--tw-shadow-color), 1.31343px 2.43923px 8.96296px var(--tw-shadow-color), 0.298507px 0.554371px 4.3287px var(--tw-shadow-color);
@@ -49,6 +126,9 @@ html{
   --tw-shadow: 27.4092px 58.7341px 46.8519px rgba(0, 0, 0, 0.0911111), 16.2889px 34.9048px 25.4815px rgba(0, 0, 0, 0.0728889), 8.45771px 18.1237px 13px rgba(0, 0, 0, 0.06), 3.44573px 7.38371px 6.51852px rgba(0, 0, 0, 0.0471111), 0.783121px 1.67812px 3.14815px rgba(0, 0, 0, 0.0288889);
   --tw-shadow-colored: 27.4092px 58.7341px 46.8519px var(--tw-shadow-color), 16.2889px 34.9048px 25.4815px var(--tw-shadow-color), 8.45771px 18.1237px 13px var(--tw-shadow-color), 3.44573px 7.38371px 6.51852px var(--tw-shadow-color), 0.783121px 1.67812px 3.14815px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.shadow-contrib {
+  filter: drop-shadow(49.6139px 86.8243px 80px rgba(0, 0, 0, 0.05)) drop-shadow(32.1572px 56.275px 46.8519px rgba(0, 0, 0, 0.037963)) drop-shadow(19.1105px 33.4434px 25.4815px rgba(0, 0, 0, 0.0303704)) drop-shadow(9.92278px 17.3649px 13px rgba(0, 0, 0, 0.025)) drop-shadow(4.04261px 7.07457px 6.51852px rgba(0, 0, 0, 0.0196296)) drop-shadow(0.918776px 1.60786px 3.14815px rgba(0, 0, 0, 0.012037));
 }
 
 .activeMenu{
@@ -237,9 +317,9 @@ html{
 
 .label::after {
   content: url(./images/svg/Acc-arrow.svg);
-  position: absolute;
-  top: 15px;
-  right: 19px;
+  /* position: absolute;
+  top: 25px;
+  right: 19px; */
 }
 .labels::after {
   content: url(./images/Collapse-Arrow.png);
@@ -270,7 +350,7 @@ html{
   content: '';
   z-index: 0;
   position: absolute;
-  top: -89px;
+  bottom: 0;
   width: 100%;
   height: 266px;
   background: url(./images/Vector.png);
