@@ -263,7 +263,7 @@ html{
   z-index: 0;
   width: 100%;
   height: 265.28px;
-  background: url(./images/waveLayer3.svg);
+  background: url(./images/detail-mentor/waveLayer3.svg);
   animation: animate-footer 8s linear infinite;
 }
 .wave-footer::before {
@@ -273,7 +273,7 @@ html{
   top: -89px;
   width: 100%;
   height: 266px;
-  background: url(./images/Vector.png);
+  background: url(./images/detail-mentor/Vector.png);
   animation: animate-footer-re 8s linear infinite;
 }
 @keyframes animate-footer {
