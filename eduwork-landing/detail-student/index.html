@@ -479,13 +479,39 @@
                                         </p>
                                     </div>
                                 </div>
+                                <div class="swiper-slide flex flex-col shadow-xl rounded-[10px] overflow-hidden">
+                                    <div class="relative">
+                                        <div class="absolute bg-gradient-to-t from-black/10 to-black/0 w-full h-full">
+                                        </div>
+                                        <img loading="lazy" src="./images/detail-mentor/sertifikat/sertif-2.png" alt=""
+                                            class="w-full object-cover" />
+                                    </div>
+                                    <div
+                                        class="bg-white relative p-[10px] flex flex-col rounded-[10px] -mt-8 items-center text-center">
+                                        <h1 class="text-[16px] font-semibold text-eduwork-text-heading">
+                                            Head Product Manager
+                                        </h1>
+                                        <p class="mt-[2px] text-[14px] font-medium text-eduwork-text-paragraph">
+                                            Eduwork
+                                        </p>
+                                        <p class="mt-[4px] text-[14px] text-eduwork-text-paragraph">
+                                            Diterbitkan September 2023
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                             <div class="flex flex-row items-center justify-between mt-3 relative">
-                                <button class="swiper-Button-prev text-eduwork-main text-2xl"><i
-                                        class="bi bi-chevron-left"></i></button>
-                                <div class="swiper-pagination !static !mx-3"></div>
-                                <button class="swiper-Button-next text-eduwork-main text-2xl"><i
-                                        class="bi bi-chevron-right"></i></button>
+                                <div class="w-1/6">
+                                    <button id="swiper-Button-prev"
+                                        class="swiper-Button-prev text-eduwork-main text-2xl"><i
+                                            class="bi bi-chevron-left"></i></button>
+                                </div>
+                                <div class="swiper-pagination !static !w-4/6"></div>
+                                <div class="w-1/6 flex flex-col items-end">
+                                    <button id="swiper-Button-next"
+                                        class="swiper-Button-next text-eduwork-main text-2xl"><i
+                                            class="bi bi-chevron-right"></i></button>
+                                </div>
                             </div>
                         </div>
                     </section>
@@ -1126,8 +1152,24 @@
         pagination: {
             el: '.swiper-pagination',
             type: 'bullets',
+            clickable: true
         },
     });
+
+    swiper.on('slideChange', () => {
+        if (swiper.isBeginning) {
+            document.getElementById('swiper-Button-prev').classList.add('hidden')
+        }
+        if (!swiper.isBeginning) {
+            document.getElementById('swiper-Button-prev').classList.remove('hidden')
+        }
+        if (swiper.isEnd) {
+            document.getElementById('swiper-Button-next').classList.add('hidden')
+        }
+        if (!swiper.isEnd) {
+            document.getElementById('swiper-Button-next').classList.remove('hidden')
+        }
+    })
 </script>
 
 </html>
