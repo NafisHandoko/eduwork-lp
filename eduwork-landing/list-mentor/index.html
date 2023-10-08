@@ -23,7 +23,16 @@
             display: flex;
             flex-direction: row;
             margin-top: 34px;
+            /* max-height: 100%; */
         }
+
+        /* .swiper-slide {
+            width: auto;
+            flex-shrink: 0;
+            display: block;
+            height: 100%;
+            max-height: 100%;
+        } */
     </style>
 </head>
 
@@ -412,9 +421,9 @@
         </div>
         <div class="flex flex-col mt-[50px] gap-[50px]">
             <div class="flex flex-col md:flex-row gap-[26px]">
-                <div class="flex flex-col md:flex-row gap-[26px] bg-white p-5 rounded-lg shadow-s2">
+                <div class="md:w-3/4 flex flex-col md:flex-row gap-[26px] bg-white p-5 rounded-lg shadow-s2">
                     <img loading="lazy" src="./images/list-mentor/pp-pelita.png" alt=""
-                        class="rounded-[10px] w-[231px] object-cover shadow-pp" />
+                        class="rounded-[10px] md:w-[231px] object-cover shadow-pp" />
                     <div class="flex flex-col gap-[15px] w-full">
                         <div class="flex justify-between items-center">
                             <h1 class="text-[20px] font-semibold">Pelita Nur Najmina</h1>
@@ -488,7 +497,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex flex-col gap-4 w-[300px]">
+                <div class="flex flex-col gap-4 md:w-1/4">
                     <div x-data="{ tab: window.location.hash ? window.location.hash.substring(1) : 'pengenalan' }"
                         id="tab_wrapper" class="flex flex-col bg-white px-6 py-6 rounded-[10px] shadow-s2 h-full">
                         <!-- The tabs navigation -->
@@ -524,9 +533,9 @@
                 </div>
             </div>
             <div class="flex flex-col md:flex-row gap-[26px]">
-                <div class="flex flex-col md:flex-row gap-[26px] bg-white p-5 rounded-lg shadow-s2">
+                <div class="md:w-3/4 flex flex-col md:flex-row gap-[26px] bg-white p-5 rounded-lg shadow-s2">
                     <img loading="lazy" src="./images/list-mentor/pp-pelita.png" alt=""
-                        class="rounded-[10px] w-[231px] object-cover shadow-pp" />
+                        class="rounded-[10px] md:w-[231px] object-cover shadow-pp" />
                     <div class="flex flex-col gap-[15px] w-full">
                         <div class="flex justify-between items-center">
                             <h1 class="text-[20px] font-semibold">Pelita Nur Najmina</h1>
@@ -594,7 +603,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex flex-col gap-4 w-[300px]">
+                <div class="flex flex-col gap-4 md:w-1/4 max-w-[300px]">
                     <div x-data="{ tab: window.location.hash ? window.location.hash.substring(1) : 'kelas' }"
                         id="tab_wrapper" class="flex flex-col bg-white py-6 rounded-[10px] shadow-s2 h-full">
                         <!-- The tabs navigation -->
@@ -633,7 +642,7 @@
                                         class="bi bi-chevron-right"></i></button>
                             </div>
                         </div>
-                        <div x-show="tab === 'events'" class="text-[12px] h-full mt-4 px-6">
+                        <div x-show="tab === 'events'" class="text-[12px] h-full my-4 px-6">
                             I am a general intelligence living in Lisbon.I believe that one
                             of the essentials goals of our generation is to upgrade ...
                         </div>
@@ -647,33 +656,40 @@
                 </div>
             </div>
             <div class="flex flex-col md:flex-row gap-[26px]">
-                <div class="flex flex-col md:flex-row gap-[26px] bg-white p-5 rounded-lg shadow-s2">
+                <div class="md:w-3/4 flex flex-col md:flex-row gap-[26px] bg-white p-5 rounded-lg shadow-s2">
                     <img loading="lazy" src="./images/list-mentor/pp-pelita.png" alt=""
-                        class="rounded-[10px] w-[231px] object-cover shadow-pp" />
+                        class="rounded-[10px] md:w-[231px] object-cover shadow-pp" />
                     <div class="flex flex-col gap-[15px] w-full">
-                        <div class="flex justify-between items-center">
+                        <div class="flex flex-row items-center gap-2">
                             <h1 class="text-[20px] font-semibold">Pelita Nur Najmina</h1>
-                            <img loading="lazy" src="./images/list-mentor/ic-save.png" alt="save" />
-                        </div>
-                        <div class="flex gap-2">
-                            <img loading="lazy" src="./images/favicon.png" alt="" class="h-[42px] w-[42px]" />
-                            <div class="flex flex-col">
-                                <h1 class="font-semibold text-[14px]">Programmer</h1>
-                                <h3 class="text-[14px] text-[#989898]">Eduwork</h3>
+                            <img src="./images/svg/verified.svg" alt="">
+                            <div class="flex flex-row items-center gap-1 rounded-3xl bg-eduwork-main px-5 py-[1px]">
+                                <i class="bi bi-star-fill text-[#FFCE4F]"></i>
+                                <span class="text-white text-sm font-medium">Expert</span>
                             </div>
                         </div>
-                        <div class="flex gap-3 text-[12px] items-center">
-                            <div class="flex flex-row gap-1 items-center">
-                                <i class="bi bi-star-fill text-eduwork-star"></i>
-                                <i class="bi bi-star-fill text-eduwork-star"></i>
-                                <i class="bi bi-star-fill text-eduwork-star"></i>
-                                <i class="bi bi-star-fill text-eduwork-star"></i>
-                                <i class="bi bi-star-fill text-eduwork-neutral-40"></i>
+                        <div class="flex flex-row items-start gap-2">
+                            <div class="flex gap-2">
+                                <img loading="lazy" src="./images/favicon.png" alt="" class="h-[42px] w-[42px]" />
+                                <div class="flex flex-col">
+                                    <h1 class="font-semibold text-[14px]">Programmer</h1>
+                                    <h3 class="text-[14px] text-[#989898]">Eduwork</h3>
+                                </div>
                             </div>
-                            <p class="font-semibold">4.0</p>
-                            <li>100 Siswa</li>
-                            <li>75 Tersalurkan</li>
+                            <div class="flex flex-row gap-2 items-center text-xs mt-1">
+                                <div class="flex flex-row gap-1 items-center">
+                                    <i class="bi bi-star-fill text-eduwork-star"></i>
+                                    <i class="bi bi-star-fill text-eduwork-star"></i>
+                                    <i class="bi bi-star-fill text-eduwork-star"></i>
+                                    <i class="bi bi-star-fill text-eduwork-star"></i>
+                                    <i class="bi bi-star-fill text-eduwork-neutral-40"></i>
+                                </div>
+                                <p class="font-semibold">4.0</p>
+                            </div>
                         </div>
+                        <p class="text-xs">I am a general intelligence living in Lisbon. My training and my primary
+                            research interest is software engineering. <span class="text-eduwork-main">Read
+                                More...</span></p>
                         <div class="h-[1px] w-full bg-[#CCCCCC]/50"></div>
                         <div class="flex gap-4 items-center text-[12px]">
                             <div class="flex flex-row gap-2 items-center">
@@ -723,12 +739,117 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex flex-col gap-4 w-[300px]">
+                <div class="flex flex-col gap-4 md:w-1/4">
                     <div class="bg-cover bg-center rounded-[10px] shadow-s2 h-full"
                         style="background-image: url('./images/list-mentor/event.png');">
-                        <div class="bg-[#383838CC] w-full h-full rounded-[10px] flex flex-col items-center justify-center text-center text-white">
+                        <div
+                            class="bg-[#383838CC] w-full h-full py-20 md:py-0 rounded-[10px] flex flex-col items-center justify-center text-center text-white">
                             <span>23 Agustus 2023</span>
                             <span>09.00 WIB - 11.00 WIB</span>
+                            <span class="font-bold text-2xl">Webinar Series</span>
+                            <span class="font-bold text-2xl">UI/UX Design</span>
+                        </div>
+                    </div>
+                    <button class="bg-primary text-white rounded-[10px] py-3">
+                        Follow
+                    </button>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row gap-[26px]">
+                <div class="md:w-3/4 flex flex-col md:flex-row gap-[26px] bg-white p-5 rounded-lg shadow-s2">
+                    <img loading="lazy" src="./images/list-mentor/pp-pelita.png" alt=""
+                        class="rounded-[10px] md:w-[231px] object-cover shadow-pp" />
+                    <div class="flex flex-col gap-[15px] w-full">
+                        <div class="flex flex-row items-center gap-2">
+                            <h1 class="text-[20px] font-semibold">Pelita Nur Najmina</h1>
+                            <img src="./images/svg/verified.svg" alt="">
+                            <div class="flex flex-row items-center gap-1 rounded-3xl bg-eduwork-main px-5 py-[1px]">
+                                <i class="bi bi-star-fill text-[#FFCE4F]"></i>
+                                <span class="text-white text-sm font-medium">Expert</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-row justify-between gap-2">
+                            <div class="flex gap-2">
+                                <img loading="lazy" src="./images/favicon.png" alt="" class="h-[42px] w-[42px]" />
+                                <div class="flex flex-col">
+                                    <h1 class="font-semibold text-[14px]">Programmer</h1>
+                                    <h3 class="text-[14px] text-[#989898]">Eduwork</h3>
+                                </div>
+                            </div>
+                            <div class="flex flex-col items-end justify-between">
+                                <div class="flex flex-row gap-2 items-center text-xs">
+                                    <div class="flex flex-row gap-1 items-center">
+                                        <i class="bi bi-star-fill text-eduwork-star"></i>
+                                        <i class="bi bi-star-fill text-eduwork-star"></i>
+                                        <i class="bi bi-star-fill text-eduwork-star"></i>
+                                        <i class="bi bi-star-fill text-eduwork-star"></i>
+                                        <i class="bi bi-star-fill text-eduwork-neutral-40"></i>
+                                    </div>
+                                    <p class="font-semibold">4.0</p>
+                                </div>
+                                <div class="flex flex-row gap-3 text-[12px] items-center">
+                                    <li>100 Siswa</li>
+                                    <li>75 Tersalurkan</li>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-xs">I am a general intelligence living in Lisbon. My training and my primary
+                            research interest is software engineering. I believe that one of the essentials goals of our
+                            generation is to upgrade ...</p>
+                        <div class="h-[1px] w-full bg-[#CCCCCC]/50"></div>
+                        <div class="flex gap-4 items-center text-[12px]">
+                            <div class="flex flex-row gap-2 items-center">
+                                <img src="./images/list-mentor/skills/laravel.png" alt="">
+                                <span class="text-[#252525]">Laravel</span>
+                            </div>
+                            <div class="flex flex-row gap-2 items-center">
+                                <img src="./images/list-mentor/skills/react.png" alt="">
+                                <span class="text-[#252525]">React Js</span>
+                            </div>
+                            <div class="flex flex-row gap-2 items-center">
+                                <img src="./images/list-mentor/skills/html.png" alt="">
+                                <span class="text-[#252525]">HTML</span>
+                            </div>
+                            <div class="flex flex-row gap-2 items-center">
+                                <img src="./images/list-mentor/skills/css.png" alt="">
+                                <span class="text-[#252525]">CSS</span>
+                            </div>
+                        </div>
+                        <div class="h-[1px] w-full bg-[#CCCCCC]/50"></div>
+                        <div class="flex flex-col">
+                            <p class="font-semibold text-[12px]">Kelas Terbaru</p>
+                            <div class="flex mt-4 gap-4">
+                                <div class="flex items-center gap-3">
+                                    <img loading="lazy" src="./images/list-mentor/kelas-terbaru.png" alt=""
+                                        class="rounded-[5px]" />
+                                    <div class="flex flex-col gap-1">
+                                        <h1 class="text-[12px] font-semibold">
+                                            Membuat Design System
+                                        </h1>
+                                        <p class="text-[12px] text-[#303030]">
+                                            Front end Developer
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <img loading="lazy" src="./images/list-mentor/kelas-terbaru.png" alt=""
+                                        class="rounded-[5px]" />
+                                    <div class="flex flex-col gap-1">
+                                        <h1 class="text-[12px] font-semibold">Design Hand-Off</h1>
+                                        <p class="text-[12px] text-[#303030]">
+                                            Back end Developer
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-4 md:w-1/4">
+                    <div class="bg-cover bg-center rounded-[10px] shadow-s2 h-full"
+                        style="background-image: url('./images/list-mentor/event.png');">
+                        <div
+                            class="bg-[#30303080] w-full h-full py-20 md:py-0 rounded-[10px] flex flex-col items-center justify-center text-center text-white">
                             <span class="font-bold text-2xl">Webinar Series</span>
                             <span class="font-bold text-2xl">UI/UX Design</span>
                         </div>
