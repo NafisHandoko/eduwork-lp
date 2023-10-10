@@ -28,7 +28,7 @@
 </head>
 
 <body class="bg-[#f6fcff] text-[#404040] font-poppins">
-    <nav class="z-50" id="navbar">
+    <nav class="z-50 bg-white" id="navbar">
         <div class="w-[90%] lg:w-[1016px] container mx-auto py-2 md:py-4">
             <div class="container flex flex-wrap items-center justify-between mx-auto">
                 <a href="index.html" class="flex items-center">
@@ -143,7 +143,235 @@
             </div>
         </div>
     </nav>
-    
+    <div class="container mx-auto px-20 flex flex-row gap-3 mt-[100px]">
+        <div class="w-1/3 flex flex-col gap-3">
+            <div class="bg-white rounded-2xl flex flex-col p-5 gap-3">
+                <span class="text-[#05060F7A] font-semibold text-sm">DITERBITKAN UNTUK</span>
+                <div class="flex flex-row items-center gap-3">
+                    <div class="bg-center bg-cover rounded-full w-16 h-16"
+                        style="background-image: url('https://source.unsplash.com/random/?person');"></div>
+                    <div class="flex flex-col gap-1">
+                        <span class="text-[#05060F] font-bold">Pelita Nur Najmina</span>
+                        <span class="text-[#05060F99] text-sm">Contributor</span>
+                    </div>
+                </div>
+                <p class="text-[#05060F99]">Sertifikasi ini diberikan kepada Pelita Nur Najmina pada 11 Februari 2022.
+                </p>
+                <div
+                    class="flex flex-row items-center justify-center gap-1 rounded-md bg-[#D1FFD5] text-[#12B823] py-2">
+                    <i class="bi bi-patch-check-fill"></i>
+                    <span class="text-sm">Kredensial Diverifikasi</span>
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl flex flex-col p-5 gap-4">
+                <div class="flex flex-col gap-2">
+                    <span class="text-[#05060F7A] font-semibold text-sm">TENTANG MAGANG</span>
+                    <p class="text-[#05060F99]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc hendrerit,
+                        leo id finibus aliquam, orci metus iaculis turpis, vel vestibulum dui enim at nunc.</p>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <span class="text-[#05060F7A] font-semibold text-sm">SKILL YANG DIDAPATKAN</span>
+                    <div class="flex flex-row flex-wrap gap-2">
+                        <span class="rounded-3xl px-3 py-1 border border-eduwork-main text-eduwork-main">Trello</span>
+                        <span class="rounded-3xl px-3 py-1 border border-eduwork-main text-eduwork-main">Project
+                            Management</span>
+                        <span
+                            class="rounded-3xl px-3 py-1 border border-eduwork-main text-eduwork-main">Leaderships</span>
+                        <span
+                            class="rounded-3xl px-3 py-1 border border-eduwork-main text-eduwork-main">Communication</span>
+                        <span class="rounded-3xl px-3 py-1 border border-eduwork-main text-eduwork-main">Teamwork</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-2/3 flex flex-col gap-5">
+            <div class="bg-white rounded-2xl flex flex-col p-4 gap-4 text-center items-center">
+                <span class="text-[#05060F7A] font-semibold text-sm">SERTIFIKAT MAGANG</span>
+                <h1 class="text-[#05060F] font-bold text-4xl">HEAD OF PRODUCT MANAGER</h1>
+                <img src="./images/sertifikat/sertifikat-1.png" alt="" class="object-cover rounded-2xl">
+                <div class="flex flex-row gap-2">
+                    <button class="text-eduwork-main flex flex-row gap-2 items-center rounded-md px-4 py-2 border border-eduwork-main">
+                        <img src="./images/sertifikat/ri_linkedin-fill.png" alt="">
+                        <span class="text-sm font-semibold">Tambahkan ke LinkedIn</span>
+                    </button>
+                    <button class="text-eduwork-main flex flex-row gap-2 items-center rounded-md px-4 py-2 border border-eduwork-main">
+                        <img src="./images/sertifikat/tabler_download.png" alt="">
+                        <span class="text-sm font-semibold">Download</span>
+                    </button>
+                    <button class="text-eduwork-main flex flex-row gap-2 items-center rounded-md px-4 py-2 border border-eduwork-main">
+                        <img src="./images/sertifikat/tabler_link.png" alt="">
+                        <span class="text-sm font-semibold">Salin Link</span>
+                    </button>
+                    <button class="rounded-md border border-eduwork-main text-eduwork-main py-2 px-3">
+                        <i class="bi bi-three-dots"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
+
+<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+<script>
+    // FAQ code
+    let label = document.querySelectorAll(".acc");
+
+    label.forEach((e) => {
+        e.addEventListener("click", () => {
+            removeClass();
+            e.classList.toggle("active");
+        });
+    });
+
+    function removeClass() {
+        label.forEach((e) => {
+            e.classList.remove("active");
+        });
+    }
+    // Event Scroll
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function () {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+            document.getElementById("navbar").style.top = "0";
+        } else {
+            document.getElementById("navbar").style.top = "-90px";
+        }
+        prevScrollpos = currentScrollPos;
+    };
+
+    window.addEventListener("scroll", function () {
+        if (window.scrollY >= 100) {
+            document.getElementById("navbar").style.backgroundColor = "#ffffff";
+            document.getElementById("navbar").style.boxShadow =
+                "0 0 10px rgba(0,0,0,0.1)";
+        } else {
+            // document.getElementById("navbar").style.backgroundColor = "transparent";
+            document.getElementById("navbar").style.backgroundColor = "white";
+            // document.getElementById("navbar").style.boxShadow = "none";
+        }
+    });
+
+    // Kontributor category code
+    const categoryButtons = document.querySelectorAll('.category-btn')
+    categoryButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault()
+            categoryButtons.forEach(btn => {
+                btn.classList.replace('bg-primary', 'bg-[#E7F1FF]')
+                btn.classList.replace('text-white', 'text-[#6C6E71]')
+            })
+            btn.classList.replace('bg-[#E7F1FF]', 'bg-primary')
+            btn.classList.replace('text-[#6C6E71]', 'text-white')
+        })
+    })
+
+    // Skill category code
+    const skillCategoryButtons = document.querySelectorAll('.skill-btn')
+    skillCategoryButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault()
+            skillCategoryButtons.forEach(btn => {
+                btn.classList.remove('bg-eduwork-main')
+                btn.classList.replace('text-white', 'text-eduwork-main')
+            })
+            btn.classList.add('bg-eduwork-main')
+            btn.classList.replace('text-eduwork-main', 'text-white')
+        })
+    })
+
+    function openAllSkills() {
+        let lastThreeElements = Array.from(document.getElementById("skills").children).slice(-3)
+        lastThreeElements.forEach(el => {
+            el.classList.remove('hidden')
+        })
+        document.getElementById('skills-overlay').classList.add('hidden')
+        document.getElementById('open-all-skills-btn').classList.add('hidden')
+    }
+</script>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        effect: "slide",
+        direction: "horizontal",
+        centerdSlides: true,
+        slideToClickedSlide: true,
+        autoplay: {
+            delay: 5000,
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+            },
+            520: {
+                slidesPerView: 1,
+            },
+            720: {
+                slidesPerView: 2,
+            },
+        },
+        grabCursor: true,
+        slidesPerGroup: 1,
+        navigation: {
+            nextEl: ".swiper-Button-next",
+            prevEl: ".swiper-Button-prev",
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+        },
+    });
+
+    var swiper_c = new Swiper(".mySwiper-c", {
+        effect: "slide",
+        direction: "horizontal",
+        centerdSlides: true,
+        slideToClickedSlide: true,
+        autoplay: {
+            delay: 5000,
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+            },
+            800: {
+                slidesPerView: 2,
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 30
+            },
+        },
+        grabCursor: true,
+        // slidesPerGroup: 1,
+        navigation: {
+            nextEl: ".swiper-Button-next-c",
+            prevEl: ".swiper-Button-prev-c",
+        },
+        loop: true,
+    });
+    // var btnNext = document.querySelector(".btn-next");
+    // var btnPrev = document.querySelector(".btn-prev");
+    // btnPrev.classList.add("fill-gray-300");
+    // console.log(swiper.slides.length);
+    // swiper.on("slideChange", function () {
+    //   var realIndex = swiper.realIndex;
+    //   if (realIndex == 0) {
+    //     btnPrev.classList.add("fill-gray-300");
+    //   } else {
+    //     btnPrev.classList.remove("fill-gray-300");
+    //   }
+    //   if (realIndex == swiper.slides.length - 1) {
+    //     btnNext.classList.add("fill-gray-300");
+    //   } else {
+    //     btnNext.classList.remove("fill-gray-300");
+    //   }
+    // });
+</script>
 
 </html>
