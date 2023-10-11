@@ -493,7 +493,7 @@
                     </button>
                 </div>
             </div>
-            <div class="flex flex-col md:flex-row gap-[26px] items-center md:items-stretch">
+            <div class="flex flex-col md:flex-row gap-[26px] items-stretch">
                 <div class="md:w-3/4 flex flex-col md:flex-row gap-[26px] p-5 rounded-lg">
                     <img loading="lazy" src="./images/list-mentor/pp-pelita.png" alt=""
                         class="rounded-[10px] md:w-[231px] object-cover shadow-pp" />
@@ -569,9 +569,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex flex-col gap-4 md:w-1/4 max-w-[300px]">
+                <div class="flex flex-col gap-4 md:w-1/4 px-3 md:px-0">
                     <div x-data="{ tab: window.location.hash ? window.location.hash.substring(1) : 'kelas' }"
-                        id="tab_wrapper" class="flex flex-col bg-white py-6 rounded-[10px] shadow-s2 h-full">
+                        id="tab_wrapper" class="flex flex-col items-center bg-white py-6 rounded-[10px] shadow-s2 h-full">
                         <!-- The tabs navigation -->
                         <nav class="flex gap-4 text-[14px] px-6 justify-center">
                             <!-- <a :class="{ 'text-primary font-semibold': tab === 'pengenalan' }"
@@ -590,7 +590,7 @@
                             that one of the essentials goals of our generation is to upgrade
                             ...
                         </div> -->
-                        <div x-show="tab === 'kelas'" class="text-[12px] px-2 pb-5">
+                        <div x-show="tab === 'kelas'" class="text-[12px] px-2 pb-5 max-w-[300px] md:max-w-[250px]">
                             <div class="swiper mySwiper">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide px-7">
@@ -612,7 +612,7 @@
                             I am a general intelligence living in Lisbon.I believe that one
                             of the essentials goals of our generation is to upgrade ...
                         </div>
-                        <button class="bg-primary text-white rounded-[10px] py-3 mx-6 mt-auto">
+                        <button class="bg-primary text-white rounded-[10px] py-3 mx-6 mt-auto self-stretch">
                             Lihat Profile
                         </button>
                     </div>
@@ -825,7 +825,7 @@
                     </button>
                 </div>
             </div>
-            <div class="flex flex-col md:flex-row gap-[26px] items-center md:items-stretch">
+            <div class="flex flex-col md:flex-row gap-[26px] items-stretch">
                 <div class="md:w-3/4 flex flex-col md:flex-row gap-[26px] bg-white p-5 rounded-lg shadow-s2">
                     <img loading="lazy" src="./images/list-mentor/pp-pelita.png" alt=""
                         class="rounded-[10px] md:w-[231px] object-cover shadow-pp" />
@@ -919,11 +919,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex flex-col gap-4 md:w-1/4 max-w-[300px]">
+                <div class="flex flex-col gap-4 md:w-1/4 px-3 md:px-0">
                     <div x-data="{ tab: window.location.hash ? window.location.hash.substring(1) : 'kelas' }"
                         id="tab_wrapper" class="flex flex-col bg-white py-6 rounded-[10px] shadow-s2 h-full">
                         <span class="px-6 text-sm">Upcoming Events</span>
-                        <div class="swiper mySwiper">
+                        <div class="swiper mySwiper max-w-[300px] md:max-w-[250px]">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide px-7">
                                     <img src="./images/list-mentor/kelas-terbaru-big1.png" alt="">
@@ -946,7 +946,7 @@
                 </div>
             </div>
         </div>
-        <button class="mt-[50px] text-[18px] font-medium w-[90%] md:w-[304px] py-4 text-white bg-primary rounded-[10px]">
+        <button class="mt-[50px] text-[18px] font-medium w-[95%] md:w-[304px] py-4 text-white bg-primary rounded-[10px]">
             Lihat Semuanya
         </button>
     </div>
