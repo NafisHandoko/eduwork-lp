@@ -183,21 +183,22 @@
         </div>
     </div>
     <!-- Filter -->
-    <div id="filter-bar"
-        class="sticky md:relative top-0 w-full lg:w-[1017px] mx-auto h-fit lg:h-[137px] lg:pl-[49px] lg:pr-[51.12px] pl-[17px] pr-[22px] py-[21px] bg-white border border-white md:rounded-[10px] shadow-filter z-40">
+    <div id="filter-bar" data-collapse-toggle="filter-cta"
+        class="sticky md:relative top-0 w-full lg:w-[1017px] mx-auto h-fit lg:h-[137px] lg:pl-[49px] lg:pr-[51.12px] pl-[17px] pr-[22px] py-[12px] bg-white border border-white md:rounded-[10px] shadow-filter z-40">
         <h4
             class="lg:block font-semibold text-[18px] md:text-[16px] leading-[24px] tracking-[0.01em] flex items-center justify-between">
-            Temukan Mentors!
+            <span class="bg-eduwork-main text-white px-5 py-2 rounded-lg">Temukan Mentors!</span>
             <button data-collapse-toggle="filter-cta" type="button"
                 class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg lg:hidden"
                 aria-controls="filter-cta" aria-expanded="false">
                 <span class="sr-only">Open main menu</span>
-                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                <!-- <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd"
                         d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
                         clip-rule="evenodd"></path>
-                </svg>
+                </svg> -->
+                <i class="bi bi-caret-down-fill text-xl"></i>
             </button>
         </h4>
         <div id="filter-cta" class="hidden lg:flex md:flex-row justify-between p-0 mt-[17px] gap-[13px] w-full h-fit">
