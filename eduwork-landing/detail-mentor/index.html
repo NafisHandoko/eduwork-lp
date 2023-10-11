@@ -261,12 +261,12 @@
 
                 <div id="sticky-tab-switch" class="md:hidden bg-gradient-to-r from-[#EBEEFE] to-[#D7ECFF] p-3 fixed left-0 w-full z-50 transition-all duration-300">
                     <div class="relative flex flex-row">
-                        <div id="tabBg"
+                        <div id="tabBg2"
                             class="transition-all duration-300 absolute top-0 left-0 w-1/2 h-full rounded-xl bg-eduwork-main -z-10">
                         </div>
-                        <button id="profileTab"
+                        <button id="profileTab2"
                             class="text-white w-full py-3 flex items-center justify-center">Profil</button>
-                        <button id="programTab" class="text-black w-full py-3 flex items-center justify-center">Kelas
+                        <button id="programTab2" class="text-black w-full py-3 flex items-center justify-center">Kelas
                             dan Program</button>
                     </div>
                 </div>
@@ -1920,20 +1920,53 @@
     let tabBg = document.getElementById('tabBg')
     let profileTab = document.getElementById('profileTab')
     let programTab = document.getElementById('programTab')
+    let tabBg2 = document.getElementById('tabBg2')
+    let profileTab2 = document.getElementById('profileTab2')
+    let programTab2 = document.getElementById('programTab2')
     let profileSection = document.getElementById('profileSection')
     let programSection = document.getElementById('programSection')
     profileTab.addEventListener('click', (e) => {
         profileTab.classList.replace('text-black', 'text-white')
         programTab.classList.replace('text-white', 'text-black')
+        profileTab2.classList.replace('text-black', 'text-white')
+        programTab2.classList.replace('text-white', 'text-black')
         tabBg.classList.replace('md:left-[50%]', 'md:left-0')
         tabBg.classList.replace('top-[50%]', 'top-0')
+        tabBg2.classList.replace('left-[50%]', 'left-0')
+        // tabBg2.classList.replace('top-[50%]', 'top-0')
         profileSection.classList.replace('hidden', 'block')
         programSection.classList.replace('block', 'hidden')
     })
     programTab.addEventListener('click', (e) => {
         programTab.classList.replace('text-black', 'text-white')
         profileTab.classList.replace('text-white', 'text-black')
+        programTab2.classList.replace('text-black', 'text-white')
+        profileTab2.classList.replace('text-white', 'text-black')
         tabBg.classList.replace('md:left-0', 'md:left-[50%]')
+        tabBg2.classList.replace('left-0', 'left-[50%]')
+        tabBg.classList.replace('top-0', 'top-[50%]')
+        programSection.classList.replace('hidden', 'block')
+        profileSection.classList.replace('block', 'hidden')
+    })
+    profileTab2.addEventListener('click', (e) => {
+        profileTab.classList.replace('text-black', 'text-white')
+        programTab.classList.replace('text-white', 'text-black')
+        profileTab2.classList.replace('text-black', 'text-white')
+        programTab2.classList.replace('text-white', 'text-black')
+        tabBg.classList.replace('md:left-[50%]', 'md:left-0')
+        tabBg.classList.replace('top-[50%]', 'top-0')
+        tabBg2.classList.replace('left-[50%]', 'left-0')
+        // tabBg2.classList.replace('top-[50%]', 'top-0')
+        profileSection.classList.replace('hidden', 'block')
+        programSection.classList.replace('block', 'hidden')
+    })
+    programTab2.addEventListener('click', (e) => {
+        programTab.classList.replace('text-black', 'text-white')
+        profileTab.classList.replace('text-white', 'text-black')
+        programTab2.classList.replace('text-black', 'text-white')
+        profileTab2.classList.replace('text-white', 'text-black')
+        tabBg.classList.replace('md:left-0', 'md:left-[50%]')
+        tabBg2.classList.replace('left-0', 'left-[50%]')
         tabBg.classList.replace('top-0', 'top-[50%]')
         programSection.classList.replace('hidden', 'block')
         profileSection.classList.replace('block', 'hidden')
