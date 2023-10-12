@@ -179,7 +179,7 @@
             class="w-[90%] mt-[100px] md:mt-[50px] lg:w-[1016px] container mx-auto flex flex-col md:flex-row gap-8 items-start">
             <div class="w-full md:w-1/3 flex flex-col" id="ppMentor">
                 <!-- Profile -->
-                <div class="bg-white flex flex-col p-[20px] rounded-[20px] gap-3 shadow-s2">
+                <div id="profile" class="bg-white flex flex-col p-[20px] rounded-[20px] gap-3 shadow-s2">
                     <div class="w-full relative rounded-[15px] overflow-hidden">
                         <div class="absolute bg-gradient-to-t from-black/50 to-black/0 w-full h-full"></div>
                         <img loading="lazy" src="./images/detail-mentor/pp-pelita.png" alt=""
@@ -259,15 +259,16 @@
                     </div>
                 </div>
 
-                <div id="sticky-tab-switch" class="md:hidden bg-gradient-to-r from-[#EBEEFE] to-[#D7ECFF] p-3 fixed left-0 w-full z-50 transition-all duration-300">
+                <div id="sticky-tab-switch"
+                    class="md:hidden bg-gradient-to-r from-[#EBEEFE] to-[#D7ECFF] p-3 fixed left-0 w-full z-50 transition-all duration-300">
                     <div class="relative flex flex-row">
                         <div id="tabBg2"
                             class="transition-all duration-300 absolute top-0 left-0 w-1/2 h-full rounded-xl bg-eduwork-main -z-10">
                         </div>
                         <button id="profileTab2"
                             class="text-white w-full py-3 flex items-center justify-center">Profil</button>
-                        <button id="programTab2" class="text-black w-full py-3 flex items-center justify-center">Kelas
-                            dan Program</button>
+                        <button id="programTab2" class="text-black w-full py-3 flex items-center justify-center">Kelas /
+                            Program</button>
                     </div>
                 </div>
 
@@ -1959,6 +1960,9 @@
         // tabBg2.classList.replace('top-[50%]', 'top-0')
         profileSection.classList.replace('hidden', 'block')
         programSection.classList.replace('block', 'hidden')
+        document.getElementById('profile').scrollIntoView({
+            behavior: 'smooth'
+        });
     })
     programTab2.addEventListener('click', (e) => {
         programTab.classList.replace('text-black', 'text-white')
@@ -1970,6 +1974,9 @@
         tabBg.classList.replace('top-0', 'top-[50%]')
         programSection.classList.replace('hidden', 'block')
         profileSection.classList.replace('block', 'hidden')
+        document.getElementById('kelas2').scrollIntoView({
+            behavior: 'smooth'
+        });
     })
 </script>
 
