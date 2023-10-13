@@ -25,6 +25,25 @@
             margin-top: 34px;
         }
     </style>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            @variants responsive {
+
+                /* Hide scrollbar for Chrome, Safari and Opera */
+                .no-scrollbar::-webkit-scrollbar {
+                    display: none;
+                }
+
+                /* Hide scrollbar for IE, Edge and Firefox */
+                .no-scrollbar {
+                    -ms-overflow-style: none;
+                    /* IE and Edge */
+                    scrollbar-width: none;
+                    /* Firefox */
+                }
+            }
+        }
+    </style>
 </head>
 
 <body class="bg-[#F6FCFF] text-[#404040] font-poppins">
@@ -261,8 +280,14 @@
                     <div class="flex flex-col gap-1">
                         <span class="text-eduwork-neutral-100 font-medium">Pelita Nur Najmina</span>
                         <span class="text-xs text-eduwork-neutral-80">CTO Eduwork</span>
+                        <div class="text-xs text-eduwork-neutral-80 flex flex-row gap-1">
+                            <span>3w</span>
+                            •
+                            <i class="bi bi-globe"></i>
+                        </div>
                     </div>
-                    <button class="ml-auto bg-eduwork-main text-white flex flex-row gap-1 items-center rounded-3xl px-4 py-1">
+                    <button
+                        class="ml-auto bg-eduwork-main text-white flex flex-row gap-1 items-center rounded-3xl px-4 py-1">
                         <span>Follow</span>
                         <i class="bi bi-plus-lg"></i>
                     </button>
@@ -288,7 +313,77 @@
                 </div>
             </div>
         </div>
-        <div class="w-full md:w-1/4 flex flex-col gap-3"></div>
+        <div class="w-full md:w-1/4 flex flex-col gap-3">
+            <div class="bg-white rounded-2xl shadow-lg flex flex-col gap-4 p-5">
+                <div class="flex flex-row justify-between gap-2 items-center">
+                    <h3 class="text-lg text-eduwork-text-heading">July 2023</h3>
+                    <div class="flex flex-row items-center gap-3">
+                        <i class="bi bi-chevron-left"></i>
+                        <i class="bi bi-chevron-right"></i>
+                    </div>
+                </div>
+                <div class="flex flex-row gap-2 h-[51px] overflow-x-scroll no-scrollbar">
+                    <div
+                        class="bg-eduwork-main text-white flex flex-col items-center justify-center rounded-md min-w-[40px]">
+                        <span class="text-xs">Mon</span>
+                        <span class="font-medium">24</span>
+                    </div>
+                    <div
+                        class="bg-[#F9FAFB] text-eduwork-text-paragraph flex flex-col items-center justify-center rounded-md min-w-[40px]">
+                        <span class="text-xs">Tue</span>
+                        <span class="font-medium">25</span>
+                    </div>
+                    <div
+                        class="bg-[#F9FAFB] text-eduwork-text-paragraph flex flex-col items-center justify-center rounded-md min-w-[40px]">
+                        <span class="text-xs">Wed</span>
+                        <span class="font-medium">26</span>
+                    </div>
+                    <div
+                        class="bg-[#F9FAFB] text-eduwork-text-paragraph flex flex-col items-center justify-center rounded-md min-w-[40px]">
+                        <span class="text-xs">Thu</span>
+                        <span class="font-medium">27</span>
+                    </div>
+                    <div
+                        class="bg-[#F9FAFB] text-eduwork-text-paragraph flex flex-col items-center justify-center rounded-md min-w-[40px]">
+                        <span class="text-xs">Fri</span>
+                        <span class="font-medium">28</span>
+                    </div>
+                    <div
+                        class="bg-[#F9FAFB] text-eduwork-text-paragraph flex flex-col items-center justify-center rounded-md min-w-[40px]">
+                        <span class="text-xs">Sat</span>
+                        <span class="font-medium">29</span>
+                    </div>
+                    <div
+                        class="bg-[#F9FAFB] text-eduwork-text-paragraph flex flex-col items-center justify-center rounded-md min-w-[40px]">
+                        <span class="text-xs">Sun</span>
+                        <span class="font-medium">30</span>
+                    </div>
+                </div>
+                <hr>
+                <div class="flex flex-col gap-5">
+                    <div class="flex flex-row gap-2 items-center">
+                        <img src="./images/feed/event-1.png" alt="">
+                        <div class="flex flex-col gap-1">
+                            <h4 class="text-eduwork-neutral-100 font-medium">Webinar - Programmer</h4>
+                            <span class="text-xs text-eduwork-neutral-90">Pelita Nur Najmina</span>
+                            <span class="text-xs text-eduwork-neutral-90">09:00 - 10:00 WIB</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-row gap-2 items-center">
+                        <img src="./images/feed/event-2.png" alt="">
+                        <div class="flex flex-col gap-1">
+                            <h4 class="text-eduwork-neutral-100 font-medium">Webinar - UI/UX Design</h4>
+                            <span class="text-xs text-eduwork-neutral-90">Pelita Nur Najmina</span>
+                            <span class="text-xs text-eduwork-neutral-90">09:00 - 10:00 WIB</span>
+                        </div>
+                    </div>
+                </div>
+                <button
+                    class="bg-eduwork-main text-white text-sm flex flex-row gap-1 items-center rounded-3xl px-4 py-1 self-center">
+                    See All
+                </button>
+            </div>
+        </div>
     </div>
 
 </body>
