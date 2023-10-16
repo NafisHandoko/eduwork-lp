@@ -406,6 +406,58 @@
             </div>
             <!-- End of Event Calendar (Mobile) -->
 
+            <!-- Upcomming Event (Mobile) -->
+            <div class="md:hidden bg-white rounded-2xl shadow-lg flex flex-col py-5">
+                <div class="flex flex-col px-5 gap-4">
+                    <h3 class="text-eduwork-text-heading text-lg font-medium">Upcoming Event</h3>
+                    <hr>
+                </div>
+                <div class="swiper mySwiper-event">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide px-14 flex flex-row gap-2">
+                            <div class="flex flex-col items-center gap-1 justify-center">
+                                <span class="text-eduwork-text-paragraph text-xs">Tue</span>
+                                <span class="text-eduwork-text-heading font-medium">25</span>
+                            </div>
+                            <div class="flex flex-col gap-1 border-l-[3px] border-eduwork-main pl-3">
+                                <h4 class="text-eduwork-neutral-100 font-medium">Webinar - Programmer</h4>
+                                <span class="text-xs text-eduwork-neutral-90">Pelita Nur Najmina</span>
+                                <span class="text-xs text-eduwork-neutral-90">Zoom Meeting</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide px-14 flex flex-row gap-2">
+                            <div class="flex flex-col items-center gap-1 justify-center">
+                                <span class="text-eduwork-text-paragraph text-xs">Tue</span>
+                                <span class="text-eduwork-text-heading font-medium">25</span>
+                            </div>
+                            <div class="flex flex-col gap-1 border-l-[3px] border-eduwork-main pl-3">
+                                <h4 class="text-eduwork-neutral-100 font-medium">Webinar - UI/UX Designer</h4>
+                                <span class="text-xs text-eduwork-neutral-90">Pelita Nur Najmina</span>
+                                <span class="text-xs text-eduwork-neutral-90">Zoom Meeting</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide px-14 flex flex-row gap-2">
+                            <div class="flex flex-col items-center gap-1 justify-center">
+                                <span class="text-eduwork-text-paragraph text-xs">Wed</span>
+                                <span class="text-eduwork-text-heading font-medium">26</span>
+                            </div>
+                            <div class="flex flex-col gap-1 border-l-[3px] border-eduwork-main pl-3">
+                                <h4 class="text-eduwork-neutral-100 font-medium">Webinar - Laravel</h4>
+                                <span class="text-xs text-eduwork-neutral-90">Pelita Nur Najmina</span>
+                                <span class="text-xs text-eduwork-neutral-90">Zoom Meeting</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button
+                        class="swiper-Button-prev-event w-8 h-8 bg-eduwork-main rounded-full text-white flex items-center justify-center absolute top-[40%] left-3 z-20"><i
+                            class="bi bi-chevron-left"></i></button>
+                    <button
+                        class="swiper-Button-next-event w-8 h-8 bg-eduwork-main rounded-full text-white flex items-center justify-center absolute top-[40%] right-3 z-20"><i
+                            class="bi bi-chevron-right"></i></button>
+                </div>
+            </div>
+            <!-- End of Upcomming Event (Mobile) -->
+
             <!-- Post -->
             <div class="flex flex-col bg-white rounded-2xl shadow-lg p-5 gap-3">
                 <div class="flex flex-row items-center gap-2 justify-between">
@@ -806,6 +858,42 @@
         navigation: {
             nextEl: ".swiper-Button-next-calendar",
             prevEl: ".swiper-Button-prev-calendar",
+        },
+        // pagination: {
+        //     el: '.swiper-pagination',
+        //     type: 'bullets',
+        //     clickable: true
+        // },
+        loop: true
+    });
+
+    var swiper_event = new Swiper(".mySwiper-event", {
+        effect: "slide",
+        direction: "horizontal",
+        centerdSlides: true,
+        slideToClickedSlide: true,
+        // autoplay: {
+        //     delay: 5000,
+        // },
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+                spaceBetween: 20
+            },
+            800: {
+                slidesPerView: 2,
+                spaceBetween: 20
+            },
+            1024: {
+                slidesPerView: 2,
+                spaceBetween: 20
+            },
+        },
+        grabCursor: true,
+        // slidesPerGroup: 1,
+        navigation: {
+            nextEl: ".swiper-Button-next-event",
+            prevEl: ".swiper-Button-prev-event",
         },
         // pagination: {
         //     el: '.swiper-pagination',
