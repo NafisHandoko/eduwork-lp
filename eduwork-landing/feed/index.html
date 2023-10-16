@@ -163,7 +163,8 @@
         </div>
     </nav>
 
-    <div class="container mx-auto px-3 xl:px-32 2xl:px-64 flex flex-col md:flex-row gap-3 mt-[70px] md:mt-[100px] mb-20">
+    <div
+        class="container mx-auto px-3 xl:px-32 2xl:px-64 flex flex-col md:flex-row gap-3 mt-[70px] md:mt-[100px] mb-20">
         <!-- Left Sidebar -->
         <div class="w-full md:w-1/4 hidden md:flex flex-col gap-3">
             <!-- Navigation (Desktop) -->
@@ -274,6 +275,58 @@
             </div>
             <!-- End of Post Input -->
 
+            <!-- Recommendation (Mobile) -->
+            <div class="md:hidden bg-white rounded-2xl shadow-lg flex flex-col py-5">
+                <h3 class="px-5 text-lg text-eduwork-neutral-100 font-medium">Recommendation</h3>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide px-14 flex flex-row items-start gap-3">
+                            <img src="./images/feed/company.png" alt="">
+                            <div class="flex flex-col items-start gap-1">
+                                <span class="text-eduwork-neutral-100 font-medium">Gekko & Co</span>
+                                <span class="text-xs text-eduwork-neutral-90">Company | Financial Service</span>
+                                <button
+                                    class="bg-eduwork-main text-white flex flex-row gap-1 items-center rounded-3xl px-4 py-1">
+                                    <span>Follow</span>
+                                    <i class="bi bi-plus-lg"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide px-14 flex flex-row items-start gap-3">
+                            <img src="./images/feed/company.png" alt="">
+                            <div class="flex flex-col items-start gap-1">
+                                <span class="text-eduwork-neutral-100 font-medium">Gekko & Co</span>
+                                <span class="text-xs text-eduwork-neutral-90">Company | Financial Service</span>
+                                <button
+                                    class="bg-eduwork-main text-white flex flex-row gap-1 items-center rounded-3xl px-4 py-1">
+                                    <span>Follow</span>
+                                    <i class="bi bi-plus-lg"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide px-14 flex flex-row items-start gap-3">
+                            <img src="./images/feed/company.png" alt="">
+                            <div class="flex flex-col items-start gap-1">
+                                <span class="text-eduwork-neutral-100 font-medium">Gekko & Co</span>
+                                <span class="text-xs text-eduwork-neutral-90">Company | Financial Service</span>
+                                <button
+                                    class="bg-eduwork-main text-white flex flex-row gap-1 items-center rounded-3xl px-4 py-1">
+                                    <span>Follow</span>
+                                    <i class="bi bi-plus-lg"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <button
+                        class="swiper-Button-prev w-8 h-8 bg-eduwork-main rounded-full text-white flex items-center justify-center absolute top-[40%] left-3 z-20"><i
+                            class="bi bi-chevron-left"></i></button>
+                    <button
+                        class="swiper-Button-next w-8 h-8 bg-eduwork-main rounded-full text-white flex items-center justify-center absolute top-[40%] right-3 z-20"><i
+                            class="bi bi-chevron-right"></i></button>
+                </div>
+            </div>
+            <!-- End of Recommendation (Mobile) -->
+
             <!-- Post -->
             <div class="flex flex-col bg-white rounded-2xl shadow-lg p-5 gap-3">
                 <div class="flex flex-row items-center gap-2 justify-between">
@@ -361,6 +414,7 @@
                     </div>
                 </div>
             </div>
+            <!-- End of Post -->
         </div>
         <!-- End of Main Content -->
 
@@ -515,7 +569,8 @@
     </div>
 
     <!-- Navigation (Mobile) -->
-    <div class="bg-white fixed w-full bottom-0 z-30 shadow-2xl flex flex-row justify-between px-8 py-4 items-center md:hidden">
+    <div
+        class="bg-white fixed w-full bottom-0 z-30 shadow-2xl flex flex-row justify-between px-8 py-4 items-center md:hidden">
         <i class="bi bi-grid"></i>
         <i class="bi bi-search"></i>
         <i class="bi bi-calendar"></i>
@@ -614,9 +669,9 @@
         direction: "horizontal",
         centerdSlides: true,
         slideToClickedSlide: true,
-        autoplay: {
-            delay: 5000,
-        },
+        // autoplay: {
+        //     delay: 5000,
+        // },
         breakpoints: {
             0: {
                 slidesPerView: 1,
@@ -637,27 +692,28 @@
             nextEl: ".swiper-Button-next",
             prevEl: ".swiper-Button-prev",
         },
-        pagination: {
-            el: '.swiper-pagination',
-            type: 'bullets',
-            clickable: true
-        },
+        // pagination: {
+        //     el: '.swiper-pagination',
+        //     type: 'bullets',
+        //     clickable: true
+        // },
+        loop: true
     });
 
-    swiper.on('slideChange', () => {
-        if (swiper.isBeginning) {
-            document.getElementById('swiper-Button-prev').classList.add('hidden')
-        }
-        if (!swiper.isBeginning) {
-            document.getElementById('swiper-Button-prev').classList.remove('hidden')
-        }
-        if (swiper.isEnd) {
-            document.getElementById('swiper-Button-next').classList.add('hidden')
-        }
-        if (!swiper.isEnd) {
-            document.getElementById('swiper-Button-next').classList.remove('hidden')
-        }
-    })
+    // swiper.on('slideChange', () => {
+    //     if (swiper.isBeginning) {
+    //         document.getElementById('swiper-Button-prev').classList.add('hidden')
+    //     }
+    //     if (!swiper.isBeginning) {
+    //         document.getElementById('swiper-Button-prev').classList.remove('hidden')
+    //     }
+    //     if (swiper.isEnd) {
+    //         document.getElementById('swiper-Button-next').classList.add('hidden')
+    //     }
+    //     if (!swiper.isEnd) {
+    //         document.getElementById('swiper-Button-next').classList.remove('hidden')
+    //     }
+    // })
 </script>
 
 </html>
