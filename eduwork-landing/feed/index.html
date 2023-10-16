@@ -162,8 +162,11 @@
             </div>
         </div>
     </nav>
+
     <div class="container mx-auto px-3 xl:px-32 2xl:px-64 flex flex-col md:flex-row gap-3 mt-[70px] md:mt-[100px] mb-20">
+        <!-- Left Sidebar -->
         <div class="w-full md:w-1/4 hidden md:flex flex-col gap-3">
+            <!-- Navigation (Desktop) -->
             <div class="bg-white rounded-2xl shadow-lg flex flex-col">
                 <div class="flex flex-row items-center gap-2 text-eduwork-main px-6 py-3 rounded-t-lg bg-[#EBF3FF]">
                     <i class="bi bi-grid"></i>
@@ -186,6 +189,9 @@
                     <span class="text-lg font-medium">Profile</span>
                 </div>
             </div>
+            <!-- End of Navigation (Desktop) -->
+
+            <!-- Recommendation (Desktop) -->
             <div class="bg-white rounded-2xl shadow-lg flex flex-col p-4 gap-5">
                 <h3 class="text-lg text-eduwork-neutral-100 font-medium">Recommendation</h3>
                 <div class="flex flex-col gap-4">
@@ -228,8 +234,13 @@
                 </div>
                 <span class="text-eduwork-main font-medium">Show more</span>
             </div>
+            <!-- End of Recommendation (Desktop) -->
         </div>
+        <!-- End of Left Sidebar -->
+
+        <!-- Main Content -->
         <div class="w-full md:w-1/2 flex flex-col gap-3">
+            <!-- Post Input -->
             <div class="bg-white rounded-2xl shadow-lg flex flex-col gap-4 p-5">
                 <div class="flex flex-row gap-4 items-center">
                     <div class="bg-center bg-cover rounded-full w-full max-w-[60px] h-[60px]"
@@ -261,6 +272,9 @@
                     </div>
                 </div>
             </div>
+            <!-- End of Post Input -->
+
+            <!-- Post -->
             <div class="flex flex-col bg-white rounded-2xl shadow-lg p-5 gap-3">
                 <div class="flex flex-row items-center gap-2 justify-between">
                     <div class="flex flex-row items-center gap-2">
@@ -348,7 +362,11 @@
                 </div>
             </div>
         </div>
+        <!-- End of Main Content -->
+
+        <!-- Right Sidebar -->
         <div class="w-full md:w-1/4 hidden md:flex flex-col gap-3">
+            <!-- Event Calendar -->
             <div class="bg-white rounded-2xl shadow-lg flex flex-col gap-4 p-5">
                 <div class="flex flex-row justify-between gap-2 items-center">
                     <h3 class="text-lg text-eduwork-text-heading">July 2023</h3>
@@ -418,6 +436,9 @@
                     See All
                 </button>
             </div>
+            <!-- End of Event Calendar -->
+
+            <!-- Upcoming Event -->
             <div class="bg-white rounded-2xl shadow-lg flex flex-col gap-4 p-5">
                 <h3 class="text-eduwork-text-heading text-lg font-medium">Upcoming Event</h3>
                 <hr>
@@ -461,6 +482,9 @@
                     View All Schedule
                 </button>
             </div>
+            <!-- End of Upcoming Event -->
+
+            <!-- E-Class -->
             <div class="bg-white rounded-2xl shadow-lg flex flex-col gap-4 p-5">
                 <h3 class="text-eduwork-text-heading text-lg font-medium">E-Class</h3>
                 <hr>
@@ -485,8 +509,12 @@
                     See All
                 </button>
             </div>
+            <!-- End of E-Class -->
         </div>
+        <!-- End of Right Sidebar -->
     </div>
+
+    <!-- Navigation (Mobile) -->
     <div class="bg-white fixed w-full bottom-0 z-30 shadow-2xl flex flex-row justify-between px-8 py-4 items-center md:hidden">
         <i class="bi bi-grid"></i>
         <i class="bi bi-search"></i>
@@ -494,6 +522,7 @@
         <i class="bi bi-bookmark"></i>
         <i class="bi bi-person"></i>
     </div>
+    <!-- End of Navigation (Mobile) -->
 </body>
 
 <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
