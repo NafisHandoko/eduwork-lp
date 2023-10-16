@@ -458,6 +458,39 @@
             </div>
             <!-- End of Upcomming Event (Mobile) -->
 
+            <!-- E-Class (Mobile) -->
+            <div class="md:hidden bg-white rounded-2xl shadow-lg flex flex-col py-5">
+                <div class="flex flex-col px-5 gap-4">
+                    <h3 class="text-eduwork-text-heading text-lg font-medium">E-Class</h3>
+                    <hr>
+                </div>
+                <div class="swiper mySwiper-eclass">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide px-14 flex flex-row gap-2 items-center">
+                            <img src="./images/feed/event-1.png" alt="">
+                            <div class="flex flex-col gap-1">
+                                <h4 class="text-eduwork-neutral-100 font-medium">Belajar Programmer Hanya 2 Jam</h4>
+                                <span class="text-xs text-eduwork-neutral-90">Pelita Nur Najmina</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide px-14 flex flex-row gap-2 items-center">
+                            <img src="./images/feed/event-2.png" alt="">
+                            <div class="flex flex-col gap-1">
+                                <h4 class="text-eduwork-neutral-100 font-medium">Private Mentoring UI/UX</h4>
+                                <span class="text-xs text-eduwork-neutral-90">Pelita Nur Najmina</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button
+                        class="swiper-Button-prev-eclass w-8 h-8 bg-eduwork-main rounded-full text-white flex items-center justify-center absolute top-[40%] left-3 z-20"><i
+                            class="bi bi-chevron-left"></i></button>
+                    <button
+                        class="swiper-Button-next-eclass w-8 h-8 bg-eduwork-main rounded-full text-white flex items-center justify-center absolute top-[40%] right-3 z-20"><i
+                            class="bi bi-chevron-right"></i></button>
+                </div>
+            </div>
+            <!-- End of E-Class (Mobile) -->
+
             <!-- Post -->
             <div class="flex flex-col bg-white rounded-2xl shadow-lg p-5 gap-3">
                 <div class="flex flex-row items-center gap-2 justify-between">
@@ -894,6 +927,42 @@
         navigation: {
             nextEl: ".swiper-Button-next-event",
             prevEl: ".swiper-Button-prev-event",
+        },
+        // pagination: {
+        //     el: '.swiper-pagination',
+        //     type: 'bullets',
+        //     clickable: true
+        // },
+        loop: true
+    });
+
+    var swiper_eclass = new Swiper(".mySwiper-eclass", {
+        effect: "slide",
+        direction: "horizontal",
+        centerdSlides: true,
+        slideToClickedSlide: true,
+        // autoplay: {
+        //     delay: 5000,
+        // },
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+                spaceBetween: 20
+            },
+            800: {
+                slidesPerView: 2,
+                spaceBetween: 20
+            },
+            1024: {
+                slidesPerView: 2,
+                spaceBetween: 20
+            },
+        },
+        grabCursor: true,
+        // slidesPerGroup: 1,
+        navigation: {
+            nextEl: ".swiper-Button-next-eclass",
+            prevEl: ".swiper-Button-prev-eclass",
         },
         // pagination: {
         //     el: '.swiper-pagination',
