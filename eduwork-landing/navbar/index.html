@@ -24,6 +24,35 @@
             flex-direction: row;
             margin-top: 34px;
         }
+
+        #bg-hovered {
+            width: 30%;
+            margin-top: 20px;
+            border-top-right-radius: 16px;
+            border-bottom-right-radius: 16px;
+            background-repeat: no-repeat;
+        }
+
+        .feed {
+            background-image: url(./images/navbar/feed-bg.png);
+            background-position: 15% 30%;
+            background-size: 250%;
+        }
+        .listmentor {
+            background-image: url(./images/navbar/listmentor-bg.png);
+            background-position: 15% 30%;
+            background-size: 150%;
+        }
+        .listcontributor {
+            background-image: url(./images/navbar/listcontributor-bg.png);
+            background-position: 15% 30%;
+            background-size: 150%;
+        }
+        .listhiring {
+            background-image: url(./images/navbar/listhiring-bg.png);
+            background-position: 15% 30%;
+            background-size: 150%;
+        }
     </style>
     <style type="text/tailwindcss">
         @layer utilities {
@@ -92,48 +121,56 @@
                             class="z-10 hidden bg-white rounded-2xl shadow-lg w-full flex flex-row gap-6 md:w-[70%]">
                             <div class="w-1/3 flex flex-col py-5 pl-5">
                                 <div class="py-5 border-b">
-                                    <a href="#"
+                                    <a href="#" id="feedbtn"
                                         class="group hover:bg-eduwork-main text-[#8E8E8E] hover:text-white hover:shadow-lg flex flex-row gap-2 px-3 py-2 rounded-lg items-center">
                                         <div
                                             class="w-10 h-10 rounded-full border border-[#EBEBEBCC] group-hover:border-white bg-[#EBEBEBCC] group-hover:bg-transparent flex items-center justify-center">
-                                            <img src="./images/navbar/feed-icon.svg" class="block group-hover:hidden" alt="">
-                                            <img src="./images/navbar/feed-hover-icon.svg" class="hidden group-hover:block" alt="">
+                                            <img src="./images/navbar/feed-icon.svg" class="block group-hover:hidden"
+                                                alt="">
+                                            <img src="./images/navbar/feed-hover-icon.svg"
+                                                class="hidden group-hover:block" alt="">
                                         </div>
                                         <span class="font-semibold text-lg">Feed</span>
                                         <i class="bi bi-chevron-right ml-auto text-xl group-hover:block hidden"></i>
                                     </a>
                                 </div>
                                 <div class="py-5 border-b">
-                                    <a href="#"
+                                    <a href="#" id="listmentorbtn"
                                         class="group hover:bg-eduwork-main text-[#8E8E8E] hover:text-white hover:shadow-lg flex flex-row gap-2 px-3 py-2 rounded-lg items-center">
                                         <div
                                             class="w-10 h-10 rounded-full border border-[#EBEBEBCC] group-hover:border-white bg-[#EBEBEBCC] group-hover:bg-transparent flex items-center justify-center">
-                                            <img src="./images/navbar/list-mentor-icon.svg" class="block group-hover:hidden" alt="">
-                                            <img src="./images/navbar/list-mentor-hover-icon.svg" class="hidden group-hover:block" alt="">
+                                            <img src="./images/navbar/list-mentor-icon.svg"
+                                                class="block group-hover:hidden" alt="">
+                                            <img src="./images/navbar/list-mentor-hover-icon.svg"
+                                                class="hidden group-hover:block" alt="">
                                         </div>
                                         <span class="font-semibold text-lg">List Mentor</span>
                                         <i class="bi bi-chevron-right ml-auto text-xl group-hover:block hidden"></i>
                                     </a>
                                 </div>
                                 <div class="py-5 border-b">
-                                    <a href="#"
+                                    <a href="#" id="listcontributorbtn"
                                         class="group hover:bg-eduwork-main text-[#8E8E8E] hover:text-white hover:shadow-lg flex flex-row gap-2 px-3 py-2 rounded-lg items-center">
                                         <div
                                             class="w-10 h-10 rounded-full border border-[#EBEBEBCC] group-hover:border-white bg-[#EBEBEBCC] group-hover:bg-transparent flex items-center justify-center">
-                                            <img src="./images/navbar/list-contributor-icon.svg" class="block group-hover:hidden" alt="">
-                                            <img src="./images/navbar/list-contributor-hover-icon.svg" class="hidden group-hover:block" alt="">
+                                            <img src="./images/navbar/list-contributor-icon.svg"
+                                                class="block group-hover:hidden" alt="">
+                                            <img src="./images/navbar/list-contributor-hover-icon.svg"
+                                                class="hidden group-hover:block" alt="">
                                         </div>
                                         <span class="font-semibold text-lg">List Contributor</span>
                                         <i class="bi bi-chevron-right ml-auto text-xl group-hover:block hidden"></i>
                                     </a>
                                 </div>
                                 <div class="py-5">
-                                    <a href="#"
+                                    <a href="#" id="listhiringbtn"
                                         class="group hover:bg-eduwork-main text-[#8E8E8E] hover:text-white hover:shadow-lg flex flex-row gap-2 px-3 py-2 rounded-lg items-center">
                                         <div
                                             class="w-10 h-10 rounded-full border border-[#EBEBEBCC] group-hover:border-white bg-[#EBEBEBCC] group-hover:bg-transparent flex items-center justify-center">
-                                            <img src="./images/navbar/list-hiring-icon.svg" class="block group-hover:hidden" alt="">
-                                            <img src="./images/navbar/list-hiring-hover-icon.svg" class="hidden group-hover:block" alt="">
+                                            <img src="./images/navbar/list-hiring-icon.svg"
+                                                class="block group-hover:hidden" alt="">
+                                            <img src="./images/navbar/list-hiring-hover-icon.svg"
+                                                class="hidden group-hover:block" alt="">
                                         </div>
                                         <span class="font-semibold text-lg">List Hiring Partner</span>
                                         <i class="bi bi-chevron-right ml-auto text-xl group-hover:block hidden"></i>
@@ -158,9 +195,10 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="w-1/3 bg-[50%] mt-5 rounded-r-2xl"
+                            <!-- <div class="w-1/3 bg-[50%] mt-5 rounded-r-2xl" id="bg-hovered"
                                 style="background-image: url(./images/navbar/navbar-bg.png);background-position: 15% 30%;">
-                            </div>
+                            </div> -->
+                            <div id="bg-hovered"></div>
                             <!-- <div class="w-1/3 relative">
                                 <img src="./images/navbar/navbar-bg.png" class="min-w-[650px] overlfow-x-hidden -z-10" alt="">
                             </div> -->
@@ -307,5 +345,42 @@
         document.getElementById('open-all-skills-btn').classList.add('hidden')
     }
 </script>
+
+<script>
+    const feedbtn = document.getElementById("feedbtn");
+    const listmentorbtn = document.getElementById("listmentorbtn");
+    const listcontributorbtn = document.getElementById("listcontributorbtn");
+    const listhiringbtn = document.getElementById("listhiringbtn");
+    const bgHovered = document.getElementById("bg-hovered");
+
+    feedbtn.addEventListener("mouseover", function () {
+        bgHovered.classList.add("feed");
+    });
+    feedbtn.addEventListener("mouseout", function () {
+        bgHovered.classList.remove("feed");
+    });
+
+    listmentorbtn.addEventListener("mouseover", function () {
+        bgHovered.classList.add("listmentor");
+    });
+    listmentorbtn.addEventListener("mouseout", function () {
+        bgHovered.classList.remove("listmentor");
+    });
+
+    listcontributorbtn.addEventListener("mouseover", function () {
+        bgHovered.classList.add("listcontributor");
+    });
+    listcontributorbtn.addEventListener("mouseout", function () {
+        bgHovered.classList.remove("listcontributor");
+    });
+
+    listhiringbtn.addEventListener("mouseover", function () {
+        bgHovered.classList.add("listhiring");
+    });
+    listhiringbtn.addEventListener("mouseout", function () {
+        bgHovered.classList.remove("listhiring");
+    });
+</script>
+
 
 </html>
