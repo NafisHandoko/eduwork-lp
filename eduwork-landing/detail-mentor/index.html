@@ -24,6 +24,35 @@
             flex-direction: row;
             margin-top: 34px;
         }
+
+        #bg-hovered {
+            width: 30%;
+            margin-top: 20px;
+            border-top-right-radius: 16px;
+            border-bottom-right-radius: 16px;
+            background-repeat: no-repeat;
+        }
+
+        .feed {
+            background-image: url(./images/navbar/feed-bg.png);
+            background-position: 15% 30%;
+            background-size: 250%;
+        }
+        .listmentor {
+            background-image: url(./images/navbar/listmentor-bg.png);
+            background-position: 15% 30%;
+            background-size: 150%;
+        }
+        .listcontributor {
+            background-image: url(./images/navbar/listcontributor-bg.png);
+            background-position: 15% 30%;
+            background-size: 150%;
+        }
+        .listhiring {
+            background-image: url(./images/navbar/listhiring-bg.png);
+            background-position: 15% 30%;
+            background-size: 150%;
+        }
     </style>
 </head>
 
@@ -37,15 +66,15 @@
                 </a>
                 <div class="flex gap-3 md:order-2">
                     <button type="button"
-                        class="text-white hidden md:block bg-primary hover:bg-primary/80 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0">
-                        Login
+                        class="text-primary hidden md:block border border-primary hover:bg-primary/80 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-3 md:mr-0">
+                        Sign In
                     </button>
                     <button type="button"
-                        class="text-white hidden md:block bg-primary hover:bg-primary/80 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0">
+                        class="text-white hidden md:block bg-primary hover:bg-primary/80 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-3 md:mr-0">
                         Register
                     </button>
                     <button data-collapse-toggle="navbar-sticky" type="button"
-                        class="inline-flex items-center p-2 text-sm text-gray-800 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                        class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                         aria-controls="navbar-sticky" aria-expanded="false">
                         <span class="sr-only">Open main menu</span>
                         <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
@@ -59,9 +88,10 @@
                 <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
                     <ul
                         class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row gap-[10px] md:gap-[40px] md:mt-0 md:text-sm md:font-semibold md:border-0 md:bg-transparent">
+                        <a href="#">Home</a>
                         <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
                             class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto md:dark:hover:bg-transparent">
-                            Kelas
+                            Community
                             <svg class="w-5 h-5 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd"
@@ -70,22 +100,94 @@
                             </svg>
                         </button>
                         <div id="dropdownNavbar"
-                            class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded shadow w-full md:w-44">
-                            <ul class="py-1 text-sm text-gray-700 dark:text-gray-400"
-                                aria-labelledby="dropdownLargeButton">
-                                <li>
-                                    <a href="#"
-                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Regular</a>
-                                </li>
-                                <li>
-                                    <a href="#"
-                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Kelas</a>
-                                </li>
-                            </ul>
+                            class="z-10 hidden bg-white rounded-2xl shadow-lg w-[90%] flex flex-row gap-6 md:w-[70%]">
+                            <div class="w-full md:w-1/3 flex flex-col py-1 md:py-5 pl-5 pr-5 md:pr-0">
+                                <div class="py-1 md:py-5 border-b">
+                                    <a href="#" id="feedbtn"
+                                        class="group hover:bg-eduwork-main text-[#8E8E8E] hover:text-white hover:shadow-lg flex flex-row gap-2 px-3 py-2 rounded-lg items-center">
+                                        <div
+                                            class="w-10 h-10 rounded-full border border-[#EBEBEBCC] group-hover:border-white bg-[#EBEBEBCC] group-hover:bg-transparent flex items-center justify-center">
+                                            <img src="./images/navbar/feed-icon.svg" class="block group-hover:hidden"
+                                                alt="">
+                                            <img src="./images/navbar/feed-hover-icon.svg"
+                                                class="hidden group-hover:block" alt="">
+                                        </div>
+                                        <span class="font-semibold text-lg">Feed</span>
+                                        <i class="bi bi-chevron-right ml-auto text-xl group-hover:block hidden"></i>
+                                    </a>
+                                </div>
+                                <div class="py-1 md:py-5 border-b">
+                                    <a href="#" id="listmentorbtn"
+                                        class="group hover:bg-eduwork-main text-[#8E8E8E] hover:text-white hover:shadow-lg flex flex-row gap-2 px-3 py-2 rounded-lg items-center">
+                                        <div
+                                            class="w-10 h-10 rounded-full border border-[#EBEBEBCC] group-hover:border-white bg-[#EBEBEBCC] group-hover:bg-transparent flex items-center justify-center">
+                                            <img src="./images/navbar/list-mentor-icon.svg"
+                                                class="block group-hover:hidden" alt="">
+                                            <img src="./images/navbar/list-mentor-hover-icon.svg"
+                                                class="hidden group-hover:block" alt="">
+                                        </div>
+                                        <span class="font-semibold text-lg">List Mentor</span>
+                                        <i class="bi bi-chevron-right ml-auto text-xl group-hover:block hidden"></i>
+                                    </a>
+                                </div>
+                                <div class="py-1 md:py-5 border-b">
+                                    <a href="#" id="listcontributorbtn"
+                                        class="group hover:bg-eduwork-main text-[#8E8E8E] hover:text-white hover:shadow-lg flex flex-row gap-2 px-3 py-2 rounded-lg items-center">
+                                        <div
+                                            class="w-10 h-10 rounded-full border border-[#EBEBEBCC] group-hover:border-white bg-[#EBEBEBCC] group-hover:bg-transparent flex items-center justify-center">
+                                            <img src="./images/navbar/list-contributor-icon.svg"
+                                                class="block group-hover:hidden" alt="">
+                                            <img src="./images/navbar/list-contributor-hover-icon.svg"
+                                                class="hidden group-hover:block" alt="">
+                                        </div>
+                                        <span class="font-semibold text-lg">List Contributor</span>
+                                        <i class="bi bi-chevron-right ml-auto text-xl group-hover:block hidden"></i>
+                                    </a>
+                                </div>
+                                <div class="py-1 md:py-5">
+                                    <a href="#" id="listhiringbtn"
+                                        class="group hover:bg-eduwork-main text-[#8E8E8E] hover:text-white hover:shadow-lg flex flex-row gap-2 px-3 py-2 rounded-lg items-center">
+                                        <div
+                                            class="w-10 h-10 rounded-full border border-[#EBEBEBCC] group-hover:border-white bg-[#EBEBEBCC] group-hover:bg-transparent flex items-center justify-center">
+                                            <img src="./images/navbar/list-hiring-icon.svg"
+                                                class="block group-hover:hidden" alt="">
+                                            <img src="./images/navbar/list-hiring-hover-icon.svg"
+                                                class="hidden group-hover:block" alt="">
+                                        </div>
+                                        <span class="font-semibold text-lg">List Hiring Partner</span>
+                                        <i class="bi bi-chevron-right ml-auto text-xl group-hover:block hidden"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="w-1/3 hidden md:flex flex-col gap-5 py-10">
+                                <div class="flex flex-col gap-2">
+                                    <h2 class="text-eduwork-main font-medium text-xl">Lorem ipsum dolor sit amet</h2>
+                                    <p class="text-justify font-normal">Lorem ipsum dolor sit amet consectetur. Non non
+                                        magna lectus
+                                        mauris eu neque faucibus. Lorem lorem dui in pharetra a sed sem sagittis. gna
+                                        lectus mauris eu neque faucibus. Lorem lorem dui in pharetra a sed sem sagittis.
+                                    </p>
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <h2 class="text-eduwork-main font-medium text-xl">Lorem ipsum dolor sit amet</h2>
+                                    <p class="text-justify font-normal">Lorem ipsum dolor sit amet consectetur. Non non
+                                        magna lectus
+                                        mauris eu neque faucibus. Lorem lorem dui in pharetra a sed sem sagittis. gna
+                                        lectus mauris eu neque faucibus. Lorem lorem dui in pharetra a sed sem sagittis.
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- <div class="w-1/3 bg-[50%] mt-5 rounded-r-2xl" id="bg-hovered"
+                                style="background-image: url(./images/navbar/navbar-bg.png);background-position: 15% 30%;">
+                            </div> -->
+                            <div id="bg-hovered" class="hidden md:block"></div>
+                            <!-- <div class="w-1/3 relative">
+                                <img src="./images/navbar/navbar-bg.png" class="min-w-[650px] overlfow-x-hidden -z-10" alt="">
+                            </div> -->
                         </div>
                         <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownMentor"
                             class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto md:dark:hover:bg-transparent">
-                            Mentor
+                            Learning
                             <svg class="w-5 h-5 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd"
@@ -94,7 +196,7 @@
                             </svg>
                         </button>
                         <div id="dropdownMentor"
-                            class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded shadow w-full md:w-44">
+                            class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded shadow w-[90%] md:w-auto md:w-44">
                             <ul class="py-1 text-sm text-gray-700 dark:text-gray-400"
                                 aria-labelledby="dropdownLargeButton">
                                 <li>
@@ -109,7 +211,7 @@
                         </div>
                         <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownCompany"
                             class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto md:dark:hover:bg-transparent">
-                            Company
+                            Opportunity
                             <svg class="w-5 h-5 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd"
@@ -118,7 +220,7 @@
                             </svg>
                         </button>
                         <div id="dropdownCompany"
-                            class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded shadow w-full md:w-44 !mb-5">
+                            class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded shadow w-[90%] md:w-auto md:w-44 !mb-5">
                             <ul class="py-1 text-sm text-gray-700 dark:text-gray-400"
                                 aria-labelledby="dropdownLargeButton">
                                 <li>
@@ -2035,4 +2137,39 @@
     })
 </script>
 
+<script>
+    const feedbtn = document.getElementById("feedbtn");
+    const listmentorbtn = document.getElementById("listmentorbtn");
+    const listcontributorbtn = document.getElementById("listcontributorbtn");
+    const listhiringbtn = document.getElementById("listhiringbtn");
+    const bgHovered = document.getElementById("bg-hovered");
+
+    feedbtn.addEventListener("mouseover", function () {
+        bgHovered.classList.add("feed");
+    });
+    feedbtn.addEventListener("mouseout", function () {
+        bgHovered.classList.remove("feed");
+    });
+
+    listmentorbtn.addEventListener("mouseover", function () {
+        bgHovered.classList.add("listmentor");
+    });
+    listmentorbtn.addEventListener("mouseout", function () {
+        bgHovered.classList.remove("listmentor");
+    });
+
+    listcontributorbtn.addEventListener("mouseover", function () {
+        bgHovered.classList.add("listcontributor");
+    });
+    listcontributorbtn.addEventListener("mouseout", function () {
+        bgHovered.classList.remove("listcontributor");
+    });
+
+    listhiringbtn.addEventListener("mouseover", function () {
+        bgHovered.classList.add("listhiring");
+    });
+    listhiringbtn.addEventListener("mouseout", function () {
+        bgHovered.classList.remove("listhiring");
+    });
+</script>
 </html>
