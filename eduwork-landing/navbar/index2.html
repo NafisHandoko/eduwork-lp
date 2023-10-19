@@ -148,7 +148,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="w-2/3 flex flex-row pr-5 hidden">
+                            <div id="feed-layout" class="w-2/3 flex flex-row pr-5 hidden">
                                 <div class="w-1/2 flex flex-col justify-between pt-5">
                                     <div class="flex flex-col gap-1">
                                         <h2 class="text-eduwork-main text-lg font-medium">Tentang Eduwork</h2>
@@ -169,7 +169,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="w-2/3 flex flex-row pr-5 hidden">
+                            <div id="mentor-layout" class="w-2/3 flex flex-row pr-5 hidden">
                                 <div class="w-1/2 flex flex-col justify-between py-10">
                                     <div class="flex flex-col gap-1">
                                         <h2 class="text-eduwork-main font-medium text-lg">Dibimbing Dengan Mentor
@@ -205,7 +205,7 @@
                                         alt="">
                                 </div>
                             </div>
-                            <div class="w-2/3 flex flex-row pr-5 gap-5 hidden">
+                            <div id="contributor-layout" class="w-2/3 flex flex-row pr-5 gap-5 hidden">
                                 <div class="w-1/2 flex flex-col justify-between py-5">
                                     <div class="flex flex-col gap-1 pr-5">
                                         <h2 class="text-eduwork-main text-lg font-medium">Kesempatan Menjadi Kontributor
@@ -231,7 +231,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="w-2/3 flex flex-row pr-5 gap-5 hidden">
+                            <div id="hiring-layout" class="w-2/3 flex flex-row pr-5 gap-5 hidden">
                                 <div class="w-1/2 flex flex-col justify-between py-10">
                                     <div class="flex flex-col gap-1">
                                         <h2 class="text-eduwork-main font-medium text-lg">Partner Hiring Partner
@@ -405,34 +405,38 @@
     const listmentorbtn = document.getElementById("listmentorbtn");
     const listcontributorbtn = document.getElementById("listcontributorbtn");
     const listhiringbtn = document.getElementById("listhiringbtn");
-    const bgHovered = document.getElementById("bg-hovered");
+    // const bgHovered = document.getElementById("bg-hovered");
+    const feedLayout = document.getElementById('feed-layout')
+    const mentorLayout = document.getElementById('mentor-layout')
+    const contributorLayout = document.getElementById('contributor-layout')
+    const hiringLayout = document.getElementById('hiring-layout')
 
     feedbtn.addEventListener("mouseover", function () {
-        bgHovered.classList.add("feed");
+        feedLayout.classList.remove("hidden");
     });
     feedbtn.addEventListener("mouseout", function () {
-        bgHovered.classList.remove("feed");
+        feedLayout.classList.add("hidden");
     });
 
     listmentorbtn.addEventListener("mouseover", function () {
-        bgHovered.classList.add("listmentor");
+        mentorLayout.classList.remove("hidden");
     });
     listmentorbtn.addEventListener("mouseout", function () {
-        bgHovered.classList.remove("listmentor");
+        mentorLayout.classList.add("hidden");
     });
 
     listcontributorbtn.addEventListener("mouseover", function () {
-        bgHovered.classList.add("listcontributor");
+        contributorLayout.classList.remove("hidden");
     });
     listcontributorbtn.addEventListener("mouseout", function () {
-        bgHovered.classList.remove("listcontributor");
+        contributorLayout.classList.add("hidden");
     });
 
     listhiringbtn.addEventListener("mouseover", function () {
-        bgHovered.classList.add("listhiring");
+        hiringLayout.classList.remove("hidden");
     });
     listhiringbtn.addEventListener("mouseout", function () {
-        bgHovered.classList.remove("listhiring");
+        hiringLayout.classList.add("hidden");
     });
 </script>
 
