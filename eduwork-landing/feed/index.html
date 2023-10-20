@@ -78,8 +78,8 @@
                     <ul
                         class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row gap-[10px] md:gap-[40px] md:mt-0 md:text-sm md:font-semibold md:border-0 md:bg-transparent">
                         <a href="#" class="px-3 py-2">Home</a>
-                        <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
-                            class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto md:dark:hover:bg-transparent">
+                        <button id="menuCommunity" data-dropdown-toggle="dropdownCommunity"
+                            class="group/menu flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto md:dark:hover:bg-transparent">
                             Community
                             <svg class="w-5 h-5 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -87,177 +87,185 @@
                                     d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                                     clip-rule="evenodd"></path>
                             </svg>
-                        </button>
-                        <div id="dropdownNavbar"
-                            class="z-10 hidden overflow-hidden bg-white rounded-2xl shadow-lg w-[90%] flex flex-row gap-6 md:w-full md:!translate-x-0 md:!translate-y-0 md:!top-[90px]">
-                            <div class="w-full md:w-1/3 flex flex-col py-1 md:py-5 pl-5 pr-5 md:pr-0">
-                                <div class="py-1 md:py-5 border-b">
-                                    <a href="#" id="feedbtn"
-                                        class="group hover:bg-eduwork-main text-[#8E8E8E] hover:text-white hover:shadow-lg flex flex-row gap-2 px-3 py-2 rounded-lg items-center">
-                                        <div
-                                            class="w-10 h-10 rounded-full border border-[#EBEBEBCC] group-hover:border-white bg-[#EBEBEBCC] group-hover:bg-transparent flex items-center justify-center">
-                                            <img src="./images/navbar/feed-icon.svg" class="block group-hover:hidden"
-                                                alt="">
-                                            <img src="./images/navbar/feed-hover-icon.svg"
-                                                class="hidden group-hover:block" alt="">
-                                        </div>
-                                        <span class="font-semibold text-lg">Feed</span>
-                                        <i class="bi bi-chevron-right ml-auto text-xl group-hover:block hidden"></i>
-                                    </a>
-                                </div>
-                                <div class="py-1 md:py-5 border-b">
-                                    <a href="#" id="listmentorbtn"
-                                        class="group hover:bg-eduwork-main text-[#8E8E8E] hover:text-white hover:shadow-lg flex flex-row gap-2 px-3 py-2 rounded-lg items-center">
-                                        <div
-                                            class="w-10 h-10 rounded-full border border-[#EBEBEBCC] group-hover:border-white bg-[#EBEBEBCC] group-hover:bg-transparent flex items-center justify-center">
-                                            <img src="./images/navbar/list-mentor-icon.svg"
-                                                class="block group-hover:hidden" alt="">
-                                            <img src="./images/navbar/list-mentor-hover-icon.svg"
-                                                class="hidden group-hover:block" alt="">
-                                        </div>
-                                        <span class="font-semibold text-lg">List Mentor</span>
-                                        <i class="bi bi-chevron-right ml-auto text-xl group-hover:block hidden"></i>
-                                    </a>
-                                </div>
-                                <div class="py-1 md:py-5 border-b">
-                                    <a href="#" id="listcontributorbtn"
-                                        class="group hover:bg-eduwork-main text-[#8E8E8E] hover:text-white hover:shadow-lg flex flex-row gap-2 px-3 py-2 rounded-lg items-center">
-                                        <div
-                                            class="w-10 h-10 rounded-full border border-[#EBEBEBCC] group-hover:border-white bg-[#EBEBEBCC] group-hover:bg-transparent flex items-center justify-center">
-                                            <img src="./images/navbar/list-contributor-icon.svg"
-                                                class="block group-hover:hidden" alt="">
-                                            <img src="./images/navbar/list-contributor-hover-icon.svg"
-                                                class="hidden group-hover:block" alt="">
-                                        </div>
-                                        <span class="font-semibold text-lg">List Contributor</span>
-                                        <i class="bi bi-chevron-right ml-auto text-xl group-hover:block hidden"></i>
-                                    </a>
-                                </div>
-                                <div class="py-1 md:py-5">
-                                    <a href="#" id="listhiringbtn"
-                                        class="group hover:bg-eduwork-main text-[#8E8E8E] hover:text-white hover:shadow-lg flex flex-row gap-2 px-3 py-2 rounded-lg items-center">
-                                        <div
-                                            class="w-10 h-10 rounded-full border border-[#EBEBEBCC] group-hover:border-white bg-[#EBEBEBCC] group-hover:bg-transparent flex items-center justify-center">
-                                            <img src="./images/navbar/list-hiring-icon.svg"
-                                                class="block group-hover:hidden" alt="">
-                                            <img src="./images/navbar/list-hiring-hover-icon.svg"
-                                                class="hidden group-hover:block" alt="">
-                                        </div>
-                                        <span class="font-semibold text-lg">List Hiring Partner</span>
-                                        <i class="bi bi-chevron-right ml-auto text-xl group-hover:block hidden"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div id="feed-layout" class="w-2/3 hidden md:flex flex-row pr-5 md:hidden">
-                                <div class="w-1/2 flex flex-col justify-between pt-5">
-                                    <div class="flex flex-col gap-1">
-                                        <h2 class="text-eduwork-main text-lg font-medium">Tentang Eduwork</h2>
-                                        <p class="font-normal">Eduwork didirikan pada tahun 2021, merupakan platform
-                                            yang beroperasi di bidang pembelajaran, pelatihan dan distribusi pekerjaan,
-                                        </p>
+                            <div id="dropdownCommunity"
+                                class="z-10 hidden overflow-hidden bg-white rounded-2xl shadow-lg w-[90%] group-hover/menu:flex flex-row gap-6 md:w-full md:!translate-x-0 md:!translate-y-0 md:!top-[50px] text-start">
+                                <div class="w-full md:w-1/3 flex flex-col py-1 md:py-5 pl-5 pr-5 md:pr-0">
+                                    <div class="py-1 md:py-5 border-b">
+                                        <a href="#" id="feedbtn"
+                                            class="group/submenu hover:bg-eduwork-main text-[#8E8E8E] hover:text-white hover:shadow-lg flex flex-row gap-2 px-3 py-2 rounded-lg items-center">
+                                            <div
+                                                class="w-10 h-10 rounded-full border border-[#EBEBEBCC] group-hover/submenu:border-white bg-[#EBEBEBCC] group-hover/submenu:bg-transparent flex items-center justify-center">
+                                                <img src="./images/navbar/feed-icon.svg"
+                                                    class="block group-hover/submenu:hidden" alt="">
+                                                <img src="./images/navbar/feed-hover-icon.svg"
+                                                    class="hidden group-hover/submenu:block" alt="">
+                                            </div>
+                                            <span class="font-semibold text-lg">Feed</span>
+                                            <i class="bi bi-chevron-right ml-auto text-xl group-hover/submenu:block hidden"></i>
+                                        </a>
                                     </div>
-                                    <img src="./images/navbar/feed-img.png" class="scale-150" alt="">
-                                </div>
-                                <div class="w-1/2 flex flex-col justify-between pb-5">
-                                    <img src="./images/navbar/feed-img2.png" class="scale-150" alt="">
-                                    <div class="flex flex-col gap-1">
-                                        <h2 class="text-eduwork-main text-lg font-medium text-end self-end">Kesempatan
-                                            Buat Kamu</h2>
-                                        <p class="font-normal text-justify">Disini kamu bisa mendapatkan pelatihan
-                                            menjadi HR dan Fullstack Developer dengan mudah, cepat, kapan saja dan
-                                            dimana saja dengan belajar di komunitas bersama Eduwork</p>
+                                    <div class="py-1 md:py-5 border-b">
+                                        <a href="#" id="listmentorbtn"
+                                            class="group/submenu hover:bg-eduwork-main text-[#8E8E8E] hover:text-white hover:shadow-lg flex flex-row gap-2 px-3 py-2 rounded-lg items-center">
+                                            <div
+                                                class="w-10 h-10 rounded-full border border-[#EBEBEBCC] group-hover/submenu:border-white bg-[#EBEBEBCC] group-hover/submenu:bg-transparent flex items-center justify-center">
+                                                <img src="./images/navbar/list-mentor-icon.svg"
+                                                    class="block group-hover/submenu:hidden" alt="">
+                                                <img src="./images/navbar/list-mentor-hover-icon.svg"
+                                                    class="hidden group-hover/submenu:block" alt="">
+                                            </div>
+                                            <span class="font-semibold text-lg">List Mentor</span>
+                                            <i class="bi bi-chevron-right ml-auto text-xl group-hover/submenu:block hidden"></i>
+                                        </a>
+                                    </div>
+                                    <div class="py-1 md:py-5 border-b">
+                                        <a href="#" id="listcontributorbtn"
+                                            class="group/submenu hover:bg-eduwork-main text-[#8E8E8E] hover:text-white hover:shadow-lg flex flex-row gap-2 px-3 py-2 rounded-lg items-center">
+                                            <div
+                                                class="w-10 h-10 rounded-full border border-[#EBEBEBCC] group-hover/submenu:border-white bg-[#EBEBEBCC] group-hover/submenu:bg-transparent flex items-center justify-center">
+                                                <img src="./images/navbar/list-contributor-icon.svg"
+                                                    class="block group-hover/submenu:hidden" alt="">
+                                                <img src="./images/navbar/list-contributor-hover-icon.svg"
+                                                    class="hidden group-hover/submenu:block" alt="">
+                                            </div>
+                                            <span class="font-semibold text-lg">List Contributor</span>
+                                            <i class="bi bi-chevron-right ml-auto text-xl group-hover/submenu:block hidden"></i>
+                                        </a>
+                                    </div>
+                                    <div class="py-1 md:py-5">
+                                        <a href="#" id="listhiringbtn"
+                                            class="group/submenu hover:bg-eduwork-main text-[#8E8E8E] hover:text-white hover:shadow-lg flex flex-row gap-2 px-3 py-2 rounded-lg items-center">
+                                            <div
+                                                class="w-10 h-10 rounded-full border border-[#EBEBEBCC] group-hover/submenu:border-white bg-[#EBEBEBCC] group-hover/submenu:bg-transparent flex items-center justify-center">
+                                                <img src="./images/navbar/list-hiring-icon.svg"
+                                                    class="block group-hover/submenu:hidden" alt="">
+                                                <img src="./images/navbar/list-hiring-hover-icon.svg"
+                                                    class="hidden group-hover/submenu:block" alt="">
+                                            </div>
+                                            <span class="font-semibold text-lg">List Hiring Partner</span>
+                                            <i class="bi bi-chevron-right ml-auto text-xl group-hover/submenu:block hidden"></i>
+                                        </a>
                                     </div>
                                 </div>
-                            </div>
-                            <div id="mentor-layout" class="w-2/3 hidden md:flex flex-row pr-5 md:hidden">
-                                <div class="w-1/2 flex flex-col justify-between py-10">
-                                    <div class="flex flex-col gap-1">
-                                        <h2 class="text-eduwork-main font-medium text-lg">Dibimbing Dengan Mentor
-                                            Berpengalaman
-                                        </h2>
-                                        <p class="text-justify font-normal">Bergabung di komunitas Eduwork kamu mendapat
-                                            bimbingan langsung dari mentor-mentor professional yang sekaligus
-                                            memperkenalkan kamu ke dunia kerja
-                                        </p>
+                                <div id="feed-layout" class="w-2/3 hidden md:flex flex-row pr-5">
+                                    <div class="w-1/2 flex flex-col justify-between pt-5">
+                                        <div class="flex flex-col gap-1">
+                                            <h2 class="text-eduwork-main text-lg font-medium">Tentang Eduwork</h2>
+                                            <p class="font-normal">Eduwork didirikan pada tahun 2021, merupakan platform
+                                                yang beroperasi di bidang pembelajaran, pelatihan dan distribusi
+                                                pekerjaan,
+                                            </p>
+                                        </div>
+                                        <img src="./images/navbar/feed-img.png" class="scale-150" alt="">
                                     </div>
-                                    <div class="flex flex-col gap-1">
-                                        <h2 class="text-eduwork-main font-medium text-lg">Benefit yang kamu Dapat di
-                                            Komunitas Eduwork
-                                        </h2>
-                                        <div class="flex flex-row gap-7 text-sm font-normal ml-5">
-                                            <ul class="list-disc">
-                                                <li>Expert mentor</li>
-                                                <li>Portofolio real project</li>
-                                                <li>Live mentoring</li>
-                                                <li>Live class zoom</li>
-                                            </ul>
-                                            <ul class="list-disc">
-                                                <li>Free Konsul</li>
-                                                <li>Video materi</li>
-                                                <li>Pendampingan kerja</li>
+                                    <div class="w-1/2 flex flex-col justify-between pb-5">
+                                        <img src="./images/navbar/feed-img2.png" class="scale-150" alt="">
+                                        <div class="flex flex-col gap-1">
+                                            <h2 class="text-eduwork-main text-lg font-medium text-end self-end">
+                                                Kesempatan
+                                                Buat Kamu</h2>
+                                            <p class="font-normal text-justify">Disini kamu bisa mendapatkan pelatihan
+                                                menjadi HR dan Fullstack Developer dengan mudah, cepat, kapan saja dan
+                                                dimana saja dengan belajar di komunitas bersama Eduwork</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="mentor-layout" class="w-2/3 hidden md:flex flex-row pr-5 md:hidden">
+                                    <div class="w-1/2 flex flex-col justify-between py-10">
+                                        <div class="flex flex-col gap-1">
+                                            <h2 class="text-eduwork-main font-medium text-lg">Dibimbing Dengan Mentor
+                                                Berpengalaman
+                                            </h2>
+                                            <p class="text-justify font-normal">Bergabung di komunitas Eduwork kamu
+                                                mendapat
+                                                bimbingan langsung dari mentor-mentor professional yang sekaligus
+                                                memperkenalkan kamu ke dunia kerja
+                                            </p>
+                                        </div>
+                                        <div class="flex flex-col gap-1">
+                                            <h2 class="text-eduwork-main font-medium text-lg">Benefit yang kamu Dapat di
+                                                Komunitas Eduwork
+                                            </h2>
+                                            <div class="flex flex-row gap-7 text-sm font-normal ml-5">
+                                                <ul class="list-disc">
+                                                    <li>Expert mentor</li>
+                                                    <li>Portofolio real project</li>
+                                                    <li>Live mentoring</li>
+                                                    <li>Live class zoom</li>
+                                                </ul>
+                                                <ul class="list-disc">
+                                                    <li>Free Konsul</li>
+                                                    <li>Video materi</li>
+                                                    <li>Pendampingan kerja</li>
+                                                    <li>Sertifikat</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w-1/2">
+                                        <img src="./images/navbar/listmentor-bg.png" class="scale-150 translate-x-14"
+                                            alt="">
+                                    </div>
+                                </div>
+                                <div id="contributor-layout" class="w-2/3 hidden md:flex flex-row pr-5 gap-5 md:hidden">
+                                    <div class="w-1/2 flex flex-col justify-between py-5">
+                                        <div class="flex flex-col gap-1 pr-5">
+                                            <h2 class="text-eduwork-main text-lg font-medium">Kesempatan Menjadi
+                                                Kontributor
+                                            </h2>
+                                            <p class="font-normal">Di Eduwork kamu gak cuma bisa belajar tapi juga bisa
+                                                loh
+                                                menjadi kontributor untuk sebagai langkah awalmu terjun di dunia kerja
+                                            </p>
+                                        </div>
+                                        <img src="./images/navbar/listcontributor-img.png" class="scale-110" alt="">
+                                    </div>
+                                    <div class="w-1/2 flex flex-col justify-between py-5">
+                                        <img src="./images/navbar/listcontributor-img2.png" class="scale-110" alt="">
+                                        <div class="flex flex-col gap-1 pl-10">
+                                            <h2 class="text-eduwork-main text-lg font-medium">Manfaat
+                                                Menjadi Kontributor di Eduwork</h2>
+                                            <ul class="font-normal list-disc list-inside">
+                                                <li>Penambahan portofolio</li>
+                                                <li>Real project</li>
+                                                <li>Relasi</li>
+                                                <li>Rekomendasi Linkedln</li>
                                                 <li>Sertifikat</li>
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="w-1/2">
-                                    <img src="./images/navbar/listmentor-bg.png" class="scale-150 translate-x-14"
-                                        alt="">
-                                </div>
-                            </div>
-                            <div id="contributor-layout" class="w-2/3 hidden md:flex flex-row pr-5 gap-5 md:hidden">
-                                <div class="w-1/2 flex flex-col justify-between py-5">
-                                    <div class="flex flex-col gap-1 pr-5">
-                                        <h2 class="text-eduwork-main text-lg font-medium">Kesempatan Menjadi Kontributor
-                                        </h2>
-                                        <p class="font-normal">Di Eduwork kamu gak cuma bisa belajar tapi juga bisa loh
-                                            menjadi kontributor untuk sebagai langkah awalmu terjun di dunia kerja
-                                        </p>
+                                <div id="hiring-layout" class="w-2/3 hidden md:flex flex-row pr-5 gap-5 md:hidden">
+                                    <div class="w-1/2 flex flex-col justify-between py-10">
+                                        <div class="flex flex-col gap-1">
+                                            <h2 class="text-eduwork-main font-medium text-lg">Partner Hiring Partner
+                                            </h2>
+                                            <p class="text-justify font-normal">Eduwork hiring partner dengan tujuan
+                                                kerjasama sebagai mentor, kontributor maupun kebutuhan lainnya yang
+                                                berhubungan dengan pelatihan dan penyaluran kerja. Eduwork platform
+                                                terpercaya di Indonesia menghasilkan ratusan alumni yang berkualitas dan
+                                                testimoni yang baik. Eduwork menerima dan melayani dengan senang hati
+                                                apapun
+                                                kebutuhan Anda
+                                            </p>
+                                        </div>
+                                        <div class="flex flex-col gap-1">
+                                            <h2 class="text-eduwork-main font-medium text-lg">Posisi yang Dibutuhkan
+                                            </h2>
+                                            <p class="text-justify font-normal">Eduwork membutuhkan partner dibidang
+                                                Human
+                                                Resources dan Fullstack Developper
+                                            </p>
+                                        </div>
                                     </div>
-                                    <img src="./images/navbar/listcontributor-img.png" class="scale-110" alt="">
-                                </div>
-                                <div class="w-1/2 flex flex-col justify-between py-5">
-                                    <img src="./images/navbar/listcontributor-img2.png" class="scale-110" alt="">
-                                    <div class="flex flex-col gap-1 pl-10">
-                                        <h2 class="text-eduwork-main text-lg font-medium">Manfaat
-                                            Menjadi Kontributor di Eduwork</h2>
-                                        <ul class="font-normal list-disc list-inside">
-                                            <li>Penambahan portofolio</li>
-                                            <li>Real project</li>
-                                            <li>Relasi</li>
-                                            <li>Rekomendasi Linkedln</li>
-                                            <li>Sertifikat</li>
-                                        </ul>
+                                    <div class="w-1/2 py-5 flex items-center justify-center">
+                                        <img src="./images/navbar/listhiring-img.png" class="my-auto" alt="">
                                     </div>
                                 </div>
                             </div>
-                            <div id="hiring-layout" class="w-2/3 hidden md:flex flex-row pr-5 gap-5 md:hidden">
-                                <div class="w-1/2 flex flex-col justify-between py-10">
-                                    <div class="flex flex-col gap-1">
-                                        <h2 class="text-eduwork-main font-medium text-lg">Partner Hiring Partner
-                                        </h2>
-                                        <p class="text-justify font-normal">Eduwork hiring partner dengan tujuan
-                                            kerjasama sebagai mentor, kontributor maupun kebutuhan lainnya yang
-                                            berhubungan dengan pelatihan dan penyaluran kerja. Eduwork platform
-                                            terpercaya di Indonesia menghasilkan ratusan alumni yang berkualitas dan
-                                            testimoni yang baik. Eduwork menerima dan melayani dengan senang hati apapun
-                                            kebutuhan Anda
-                                        </p>
-                                    </div>
-                                    <div class="flex flex-col gap-1">
-                                        <h2 class="text-eduwork-main font-medium text-lg">Posisi yang Dibutuhkan
-                                        </h2>
-                                        <p class="text-justify font-normal">Eduwork membutuhkan partner dibidang Human
-                                            Resources dan Fullstack Developper
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="w-1/2 py-5 flex items-center justify-center">
-                                    <img src="./images/navbar/listhiring-img.png" class="my-auto" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownMentor"
+                        </button>
+
+                        <button id="menuLearning" data-dropdown-toggle="dropdownLearning"
                             class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto md:dark:hover:bg-transparent">
                             Learning
                             <svg class="w-5 h-5 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
@@ -267,7 +275,7 @@
                                     clip-rule="evenodd"></path>
                             </svg>
                         </button>
-                        <div id="dropdownMentor"
+                        <div id="dropdownLearning"
                             class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded shadow w-[90%] md:w-auto md:w-44">
                             <ul class="py-1 text-sm text-gray-700 dark:text-gray-400"
                                 aria-labelledby="dropdownLargeButton">
@@ -281,7 +289,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownCompany"
+                        <button id="menuOpportunity" data-dropdown-toggle="dropdownOpportunity"
                             class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto md:dark:hover:bg-transparent">
                             Opportunity
                             <svg class="w-5 h-5 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
@@ -291,7 +299,7 @@
                                     clip-rule="evenodd"></path>
                             </svg>
                         </button>
-                        <div id="dropdownCompany"
+                        <div id="dropdownOpportunity"
                             class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded shadow w-[90%] md:w-auto md:w-44 !mb-5">
                             <ul class="py-1 text-sm text-gray-700 dark:text-gray-400"
                                 aria-labelledby="dropdownLargeButton">
@@ -941,30 +949,30 @@
 
     feedbtn.addEventListener("mouseover", function () {
         feedLayout.classList.remove("md:hidden");
-    });
-    feedbtn.addEventListener("mouseout", function () {
-        feedLayout.classList.add("md:hidden");
+        mentorLayout.classList.add("md:hidden");
+        contributorLayout.classList.add("md:hidden");
+        hiringLayout.classList.add("md:hidden");
     });
 
     listmentorbtn.addEventListener("mouseover", function () {
+        feedLayout.classList.add("md:hidden");
         mentorLayout.classList.remove("md:hidden");
-    });
-    listmentorbtn.addEventListener("mouseout", function () {
-        mentorLayout.classList.add("md:hidden");
+        contributorLayout.classList.add("md:hidden");
+        hiringLayout.classList.add("md:hidden");
     });
 
     listcontributorbtn.addEventListener("mouseover", function () {
+        feedLayout.classList.add("md:hidden");
+        mentorLayout.classList.add("md:hidden");
         contributorLayout.classList.remove("md:hidden");
-    });
-    listcontributorbtn.addEventListener("mouseout", function () {
-        contributorLayout.classList.add("md:hidden");
+        hiringLayout.classList.add("md:hidden");
     });
 
     listhiringbtn.addEventListener("mouseover", function () {
+        feedLayout.classList.add("md:hidden");
+        mentorLayout.classList.add("md:hidden");
+        contributorLayout.classList.add("md:hidden");
         hiringLayout.classList.remove("md:hidden");
-    });
-    listhiringbtn.addEventListener("mouseout", function () {
-        hiringLayout.classList.add("md:hidden");
     });
 </script>
 
