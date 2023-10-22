@@ -55,7 +55,7 @@
                 </a>
                 <div class="flex gap-3 md:order-2">
                     <button type="button"
-                        class="text-primary hidden md:block border border-primary hover:bg-primary/80 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-3 md:mr-0">
+                        class="text-primary hidden md:block border border-primary hover:bg-primary/80 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-3 md:mr-0">
                         Sign In
                     </button>
                     <button type="button"
@@ -80,7 +80,7 @@
                         <a href="#" class="px-3 py-2">Home</a>
                         <button id="menuCommunity" data-dropdown-toggle="dropdownCommunity"
                             class="group/menu flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto md:dark:hover:bg-transparent">
-                            Community
+                            <span class="group-hover/menu:text-eduwork-main">Community</span>
                             <svg class="w-5 h-5 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd"
@@ -95,13 +95,14 @@
                                             class="group/submenu hover:bg-eduwork-main text-[#8E8E8E] hover:text-white hover:shadow-lg flex flex-row gap-2 px-3 py-2 rounded-lg items-center">
                                             <div
                                                 class="w-10 h-10 rounded-full border border-[#EBEBEBCC] group-hover/submenu:border-white bg-[#EBEBEBCC] group-hover/submenu:bg-transparent flex items-center justify-center">
-                                                <img src="./images/navbar/feed-icon.svg"
+                                                <img src="./images/navbar/community/feed-icon.svg"
                                                     class="block group-hover/submenu:hidden" alt="">
-                                                <img src="./images/navbar/feed-hover-icon.svg"
+                                                <img src="./images/navbar/community/feed-hover-icon.svg"
                                                     class="hidden group-hover/submenu:block" alt="">
                                             </div>
                                             <span class="font-semibold text-lg">Feed</span>
-                                            <i class="bi bi-chevron-right ml-auto text-xl group-hover/submenu:block hidden"></i>
+                                            <i
+                                                class="bi bi-chevron-right ml-auto text-xl group-hover/submenu:block hidden"></i>
                                         </a>
                                     </div>
                                     <div class="py-1 md:py-5 border-b">
@@ -109,13 +110,14 @@
                                             class="group/submenu hover:bg-eduwork-main text-[#8E8E8E] hover:text-white hover:shadow-lg flex flex-row gap-2 px-3 py-2 rounded-lg items-center">
                                             <div
                                                 class="w-10 h-10 rounded-full border border-[#EBEBEBCC] group-hover/submenu:border-white bg-[#EBEBEBCC] group-hover/submenu:bg-transparent flex items-center justify-center">
-                                                <img src="./images/navbar/list-mentor-icon.svg"
+                                                <img src="./images/navbar/community/list-mentor-icon.svg"
                                                     class="block group-hover/submenu:hidden" alt="">
-                                                <img src="./images/navbar/list-mentor-hover-icon.svg"
+                                                <img src="./images/navbar/community/list-mentor-hover-icon.svg"
                                                     class="hidden group-hover/submenu:block" alt="">
                                             </div>
                                             <span class="font-semibold text-lg">List Mentor</span>
-                                            <i class="bi bi-chevron-right ml-auto text-xl group-hover/submenu:block hidden"></i>
+                                            <i
+                                                class="bi bi-chevron-right ml-auto text-xl group-hover/submenu:block hidden"></i>
                                         </a>
                                     </div>
                                     <div class="py-1 md:py-5 border-b">
@@ -123,13 +125,14 @@
                                             class="group/submenu hover:bg-eduwork-main text-[#8E8E8E] hover:text-white hover:shadow-lg flex flex-row gap-2 px-3 py-2 rounded-lg items-center">
                                             <div
                                                 class="w-10 h-10 rounded-full border border-[#EBEBEBCC] group-hover/submenu:border-white bg-[#EBEBEBCC] group-hover/submenu:bg-transparent flex items-center justify-center">
-                                                <img src="./images/navbar/list-contributor-icon.svg"
+                                                <img src="./images/navbar/community/list-contributor-icon.svg"
                                                     class="block group-hover/submenu:hidden" alt="">
-                                                <img src="./images/navbar/list-contributor-hover-icon.svg"
+                                                <img src="./images/navbar/community/list-contributor-hover-icon.svg"
                                                     class="hidden group-hover/submenu:block" alt="">
                                             </div>
                                             <span class="font-semibold text-lg">List Contributor</span>
-                                            <i class="bi bi-chevron-right ml-auto text-xl group-hover/submenu:block hidden"></i>
+                                            <i
+                                                class="bi bi-chevron-right ml-auto text-xl group-hover/submenu:block hidden"></i>
                                         </a>
                                     </div>
                                     <div class="py-1 md:py-5">
@@ -137,13 +140,14 @@
                                             class="group/submenu hover:bg-eduwork-main text-[#8E8E8E] hover:text-white hover:shadow-lg flex flex-row gap-2 px-3 py-2 rounded-lg items-center">
                                             <div
                                                 class="w-10 h-10 rounded-full border border-[#EBEBEBCC] group-hover/submenu:border-white bg-[#EBEBEBCC] group-hover/submenu:bg-transparent flex items-center justify-center">
-                                                <img src="./images/navbar/list-hiring-icon.svg"
+                                                <img src="./images/navbar/community/list-hiring-icon.svg"
                                                     class="block group-hover/submenu:hidden" alt="">
-                                                <img src="./images/navbar/list-hiring-hover-icon.svg"
+                                                <img src="./images/navbar/community/list-hiring-hover-icon.svg"
                                                     class="hidden group-hover/submenu:block" alt="">
                                             </div>
                                             <span class="font-semibold text-lg">List Hiring Partner</span>
-                                            <i class="bi bi-chevron-right ml-auto text-xl group-hover/submenu:block hidden"></i>
+                                            <i
+                                                class="bi bi-chevron-right ml-auto text-xl group-hover/submenu:block hidden"></i>
                                         </a>
                                     </div>
                                 </div>
@@ -156,10 +160,10 @@
                                                 pekerjaan,
                                             </p>
                                         </div>
-                                        <img src="./images/navbar/feed-img.png" class="scale-150" alt="">
+                                        <img src="./images/navbar/community/feed-img.png" class="scale-150" alt="">
                                     </div>
-                                    <div class="w-1/2 flex flex-col justify-between pb-5">
-                                        <img src="./images/navbar/feed-img2.png" class="scale-150" alt="">
+                                    <div class="w-1/2 flex flex-col justify-between pb-6">
+                                        <img src="./images/navbar/community/feed-img2.png" class="scale-150" alt="">
                                         <div class="flex flex-col gap-1">
                                             <h2 class="text-eduwork-main text-lg font-medium text-end self-end">
                                                 Kesempatan
@@ -203,8 +207,8 @@
                                         </div>
                                     </div>
                                     <div class="w-1/2">
-                                        <img src="./images/navbar/listmentor-bg.png" class="scale-150 translate-x-14"
-                                            alt="">
+                                        <img src="./images/navbar/community/listmentor-bg.png"
+                                            class="scale-150 translate-x-14" alt="">
                                     </div>
                                 </div>
                                 <div id="contributor-layout" class="w-2/3 hidden md:flex flex-row pr-5 gap-5 md:hidden">
@@ -218,10 +222,12 @@
                                                 menjadi kontributor untuk sebagai langkah awalmu terjun di dunia kerja
                                             </p>
                                         </div>
-                                        <img src="./images/navbar/listcontributor-img.png" class="scale-110" alt="">
+                                        <img src="./images/navbar/community/listcontributor-img.png" class="scale-110"
+                                            alt="">
                                     </div>
                                     <div class="w-1/2 flex flex-col justify-between py-5">
-                                        <img src="./images/navbar/listcontributor-img2.png" class="scale-110" alt="">
+                                        <img src="./images/navbar/community/listcontributor-img2.png" class="scale-110"
+                                            alt="">
                                         <div class="flex flex-col gap-1 pl-10">
                                             <h2 class="text-eduwork-main text-lg font-medium">Manfaat
                                                 Menjadi Kontributor di Eduwork</h2>
@@ -259,36 +265,188 @@
                                         </div>
                                     </div>
                                     <div class="w-1/2 py-5 flex items-center justify-center">
-                                        <img src="./images/navbar/listhiring-img.png" class="my-auto" alt="">
+                                        <img src="./images/navbar/community/listhiring-img.png" class="my-auto" alt="">
                                     </div>
                                 </div>
                             </div>
                         </button>
 
                         <button id="menuLearning" data-dropdown-toggle="dropdownLearning"
-                            class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto md:dark:hover:bg-transparent">
-                            Learning
+                            class="group/menu flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto md:dark:hover:bg-transparent">
+                            <span class="group-hover/menu:text-eduwork-main">Learning</span>
                             <svg class="w-5 h-5 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd"
                                     d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                                     clip-rule="evenodd"></path>
                             </svg>
+                            <div id="dropdownLearning"
+                                class="z-10 hidden overflow-hidden bg-white rounded-2xl shadow-lg w-[90%] group-hover/menu:flex flex-row gap-6 md:w-full md:!translate-x-0 md:!translate-y-0 md:!top-[50px] text-start">
+                                <div class="w-full md:w-1/3 bg-white flex flex-col py-1 md:py-5 pl-5 pr-5">
+                                    <div class="py-1 md:py-5 border-b">
+                                        <a href="#" id="classbtn"
+                                            class="group/submenu hover:bg-eduwork-main text-[#8E8E8E] hover:text-white hover:shadow-lg flex flex-row gap-2 px-3 py-2 rounded-lg items-center">
+                                            <div
+                                                class="w-10 h-10 rounded-full border border-[#EBEBEBCC] group-hover/submenu:border-white bg-[#EBEBEBCC] group-hover/submenu:bg-transparent flex items-center justify-center">
+                                                <img src="./images/navbar/learning/class-icon.svg"
+                                                    class="block group-hover/submenu:hidden" alt="">
+                                                <img src="./images/navbar/learning/class-hover-icon.svg"
+                                                    class="hidden group-hover/submenu:block" alt="">
+                                            </div>
+                                            <span class="font-semibold text-lg">Class</span>
+                                            <i
+                                                class="bi bi-chevron-right ml-auto text-xl group-hover/submenu:block hidden"></i>
+                                        </a>
+                                    </div>
+                                    <div class="py-1 md:py-5 border-b">
+                                        <a href="#" id="mentoringbtn"
+                                            class="group/submenu hover:bg-eduwork-main text-[#8E8E8E] hover:text-white hover:shadow-lg flex flex-row gap-2 px-3 py-2 rounded-lg items-center">
+                                            <div
+                                                class="w-10 h-10 rounded-full border border-[#EBEBEBCC] group-hover/submenu:border-white bg-[#EBEBEBCC] group-hover/submenu:bg-transparent flex items-center justify-center">
+                                                <img src="./images/navbar/learning/mentoring-icon.svg"
+                                                    class="block group-hover/submenu:hidden" alt="">
+                                                <img src="./images/navbar/learning/mentoring-hover-icon.svg"
+                                                    class="hidden group-hover/submenu:block" alt="">
+                                            </div>
+                                            <span class="font-semibold text-lg">Private Mentoring</span>
+                                            <i
+                                                class="bi bi-chevron-right ml-auto text-xl group-hover/submenu:block hidden"></i>
+                                        </a>
+                                    </div>
+                                    <div class="py-1 md:py-5 border-b">
+                                        <a href="#" id="bootcampbtn"
+                                            class="group/submenu hover:bg-eduwork-main text-[#8E8E8E] hover:text-white hover:shadow-lg flex flex-row gap-2 px-3 py-2 rounded-lg items-center">
+                                            <div
+                                                class="w-10 h-10 rounded-full border border-[#EBEBEBCC] group-hover/submenu:border-white bg-[#EBEBEBCC] group-hover/submenu:bg-transparent flex items-center justify-center">
+                                                <img src="./images/navbar/learning/bootcamp-icon.svg"
+                                                    class="block group-hover/submenu:hidden" alt="">
+                                                <img src="./images/navbar/learning/bootcamp-hover-icon.svg"
+                                                    class="hidden group-hover/submenu:block" alt="">
+                                            </div>
+                                            <span class="font-semibold text-lg">Bootcamp</span>
+                                            <i
+                                                class="bi bi-chevron-right ml-auto text-xl group-hover/submenu:block hidden"></i>
+                                        </a>
+                                    </div>
+                                    <div class="py-1 md:py-5">
+                                        <a href="#" id="webinarbtn"
+                                            class="group/submenu hover:bg-eduwork-main text-[#8E8E8E] hover:text-white hover:shadow-lg flex flex-row gap-2 px-3 py-2 rounded-lg items-center">
+                                            <div
+                                                class="w-10 h-10 rounded-full border border-[#EBEBEBCC] group-hover/submenu:border-white bg-[#EBEBEBCC] group-hover/submenu:bg-transparent flex items-center justify-center">
+                                                <img src="./images/navbar/learning/webinar-icon.svg"
+                                                    class="block group-hover/submenu:hidden" alt="">
+                                                <img src="./images/navbar/learning/webinar-hover-icon.svg"
+                                                    class="hidden group-hover/submenu:block" alt="">
+                                            </div>
+                                            <span class="font-semibold text-lg">Webinar</span>
+                                            <i
+                                                class="bi bi-chevron-right ml-auto text-xl group-hover/submenu:block hidden"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div id="class-layout" class="w-2/3 hidden md:flex flex-row pr-5 gap-5">
+                                    <div class="w-1/2 flex items-center justify-center">
+                                        <img src="./images/navbar/learning/class.png" alt="">
+                                    </div>
+                                    <div class="w-1/2 flex flex-col justify-between py-10 text-end">
+                                        <div class="flex flex-col gap-1">
+                                            <h2 class="text-eduwork-main font-medium text-lg">Lorem ipsum dolor sit amet
+                                            </h2>
+                                            <p class="font-normal">Lorem ipsum dolor sit amet consectetur. Non non magna
+                                                lectus mauris eu neque faucibus. Lorem lorem dui in pharetra a sed sem
+                                                sagittis. gna lectus mauris eu neque faucibus. Lorem lorem dui in
+                                                pharetra a sed sem sagittis.
+                                            </p>
+                                        </div>
+                                        <div class="flex flex-col gap-1">
+                                            <h2 class="text-eduwork-main font-medium text-lg">Lorem ipsum dolor sit amet
+                                            </h2>
+                                            <p class="font-normal">Lorem ipsum dolor sit amet consectetur. Non non magna
+                                                lectus mauris eu neque faucibus. Lorem lorem dui in pharetra a sed sem
+                                                sagittis. gna lectus mauris eu neque faucibus. Lorem lorem dui in
+                                                pharetra a sed sem sagittis.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="mentoring-layout" class="w-2/3 hidden md:flex flex-row pr-5 gap-7 md:hidden">
+                                    <div class="w-1/2 flex flex-col justify-center gap-5">
+                                        <div class="flex flex-col gap-1">
+                                            <h2 class="text-eduwork-main text-lg font-medium">Lorem ipsum dolor sit amet
+                                            </h2>
+                                            <p class="font-normal">Lorem ipsum dolor sit amet consectetur. Non non magna
+                                                lectus mauris eu neque faucibus. Lorem lorem dui in pharetra a sed sem
+                                                sagittis. gna lectus mauris eu neque faucibus.
+                                            </p>
+                                        </div>
+                                        <img src="./images/navbar/learning/mentoring1.png" class="" alt="">
+                                    </div>
+                                    <div class="w-1/2 flex flex-col justify-center gap-5">
+                                        <img src="./images/navbar/learning/mentoring2.png" class="" alt="">
+                                        <div class="flex flex-col gap-1">
+                                            <h2 class="text-eduwork-main text-lg font-medium text-end self-end">
+                                                Lorem ipsum dolor sit amet </h2>
+                                            <p class="font-normal text-justify">Lorem ipsum dolor sit amet consectetur.
+                                                Non non magna lectus mauris eu neque faucibus. Lorem lorem dui in
+                                                pharetra a sed sem sagittis. gna lectus mauris eu neque faucibus. Lorem
+                                                lorem dui in pharetra a sed sem sagittis.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="bootcamp-layout" class="w-2/3 hidden md:flex flex-row pr-5 gap-5 md:hidden">
+                                    <div class="w-1/2 flex items-center justify-center">
+                                        <img src="./images/navbar/learning/bootcamp.png"
+                                            class="scale-150 -translate-x-10 -z-10" alt="">
+                                    </div>
+                                    <div class="w-1/2 flex flex-col justify-between py-10 text-end">
+                                        <div class="flex flex-col gap-1">
+                                            <h2 class="text-eduwork-main font-medium text-lg">Lorem ipsum dolor sit amet
+                                            </h2>
+                                            <p class="font-normal">Lorem ipsum dolor sit amet consectetur. Non non magna
+                                                lectus mauris eu neque faucibus. Lorem lorem dui in pharetra a sed sem
+                                                sagittis. gna lectus mauris eu neque faucibus. Lorem lorem dui in
+                                                pharetra a sed sem sagittis.
+                                            </p>
+                                        </div>
+                                        <div class="flex flex-col gap-1">
+                                            <h2 class="text-eduwork-main font-medium text-lg">Lorem ipsum dolor sit amet
+                                            </h2>
+                                            <p class="font-normal">Lorem ipsum dolor sit amet consectetur. Non non magna
+                                                lectus mauris eu neque faucibus. Lorem lorem dui in pharetra a sed sem
+                                                sagittis. gna lectus mauris eu neque faucibus. Lorem lorem dui in
+                                                pharetra a sed sem sagittis.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="webinar-layout" class="w-2/3 hidden md:flex flex-row pr-5 gap-5 md:hidden">
+                                    <div class="w-1/2 flex flex-col justify-center gap-7 py-10">
+                                        <div class="flex flex-col gap-1">
+                                            <h2 class="text-eduwork-main font-medium text-lg">Lorem ipsum dolor sit amet
+                                            </h2>
+                                            <p class="text-justify font-normal">Lorem ipsum dolor sit amet consectetur.
+                                                Non non magna lectus mauris eu neque faucibus. Lorem lorem dui in
+                                                pharetra a sed sem sagittis. gna lectus mauris eu neque faucibus. Lorem
+                                                lorem dui in pharetra a sed sem sagittis.
+                                            </p>
+                                        </div>
+                                        <div class="flex flex-col gap-1">
+                                            <h2 class="text-eduwork-main font-medium text-lg">Lorem ipsum dolor sit amet
+                                            </h2>
+                                            <p class="text-justify font-normal">Lorem ipsum dolor sit amet consectetur.
+                                                Non non magna lectus mauris eu neque faucibus. Lorem lorem dui in
+                                                pharetra a sed sem sagittis. gna lectus mauris eu neque faucibus. Lorem
+                                                lorem dui in pharetra a sed sem sagittis.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="w-1/2 py-5 flex items-center justify-center">
+                                        <img src="./images/navbar/learning/webinar.png" class="my-auto scale-105" alt="">
+                                    </div>
+                                </div>
+                            </div>
                         </button>
-                        <div id="dropdownLearning"
-                            class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded shadow w-[90%] md:w-auto md:w-44">
-                            <ul class="py-1 text-sm text-gray-700 dark:text-gray-400"
-                                aria-labelledby="dropdownLargeButton">
-                                <li>
-                                    <a href="#"
-                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Mentor</a>
-                                </li>
-                                <li>
-                                    <a href="#"
-                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Mentor</a>
-                                </li>
-                            </ul>
-                        </div>
+
                         <button id="menuOpportunity" data-dropdown-toggle="dropdownOpportunity"
                             class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto md:dark:hover:bg-transparent">
                             Opportunity
@@ -314,7 +472,7 @@
                             </ul>
                         </div>
                         <button type="button"
-                            class="text-primary block md:hidden border border-primary hover:bg-primary/80 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-3 md:mr-0">
+                            class="text-primary block md:hidden border border-primary hover:bg-primary/80 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-3 md:mr-0">
                             Sign In
                         </button>
                         <button type="button"
@@ -409,6 +567,7 @@
 </script>
 
 <script>
+    // Community navbar dropdown
     const feedbtn = document.getElementById("feedbtn");
     const listmentorbtn = document.getElementById("listmentorbtn");
     const listcontributorbtn = document.getElementById("listcontributorbtn");
@@ -418,6 +577,12 @@
     const mentorLayout = document.getElementById('mentor-layout')
     const contributorLayout = document.getElementById('contributor-layout')
     const hiringLayout = document.getElementById('hiring-layout')
+
+    const dropdownCommunity = document.getElementById('dropdownCommunity')
+
+    dropdownCommunity.addEventListener('mouseout', function () {
+        dropdownCommunity.classList.replace('block', 'hidden')
+    })
 
     feedbtn.addEventListener("mouseover", function () {
         feedLayout.classList.remove("md:hidden");
@@ -445,6 +610,52 @@
         mentorLayout.classList.add("md:hidden");
         contributorLayout.classList.add("md:hidden");
         hiringLayout.classList.remove("md:hidden");
+    });
+
+
+    // Laerning navbar dropdown
+    const classbtn = document.getElementById("classbtn");
+    const mentoringbtn = document.getElementById("mentoringbtn");
+    const bootcampbtn = document.getElementById("bootcampbtn");
+    const webinarbtn = document.getElementById("webinarbtn");
+
+    const classLayout = document.getElementById('class-layout')
+    const mentoringLayout = document.getElementById('mentoring-layout')
+    const bootcampLayout = document.getElementById('bootcamp-layout')
+    const webinarLayout = document.getElementById('webinar-layout')
+
+    const dropdownLearning = document.getElementById('dropdownLearning')
+
+    dropdownLearning.addEventListener('mouseout', function () {
+        dropdownLearning.classList.replace('block', 'hidden')
+    })
+
+    classbtn.addEventListener("mouseover", function () {
+        classLayout.classList.remove("md:hidden");
+        mentoringLayout.classList.add("md:hidden");
+        bootcampLayout.classList.add("md:hidden");
+        webinarLayout.classList.add("md:hidden");
+    });
+
+    mentoringbtn.addEventListener("mouseover", function () {
+        classLayout.classList.add("md:hidden");
+        mentoringLayout.classList.remove("md:hidden");
+        bootcampLayout.classList.add("md:hidden");
+        webinarLayout.classList.add("md:hidden");
+    });
+
+    bootcampbtn.addEventListener("mouseover", function () {
+        classLayout.classList.add("md:hidden");
+        mentoringLayout.classList.add("md:hidden");
+        bootcampLayout.classList.remove("md:hidden");
+        webinarLayout.classList.add("md:hidden");
+    });
+
+    webinarbtn.addEventListener("mouseover", function () {
+        classLayout.classList.add("md:hidden");
+        mentoringLayout.classList.add("md:hidden");
+        bootcampLayout.classList.add("md:hidden");
+        webinarLayout.classList.remove("md:hidden");
     });
 </script>
 
