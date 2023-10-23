@@ -47,7 +47,120 @@
 </head>
 
 <body class="bg-white text-[#404040] font-poppins">
-    
+    <section class="bg-white container mx-auto py-2 md:py-4 flex flex-row justify-between items-center">
+        <img class="h-6 sm:h-7" src="./images/logo/favicon.png" alt="Eduwork Logo" />
+        <a href="#"
+            class="text-eduwork-main border border-primary rounded-full flex flex-row items-center gap-2 px-5 py-2">
+            <i class="bi bi-chat-text-fill"></i>
+            <span class="text-lg font-medium">Help Center</span>
+        </a>
+    </section>
+
+    <section class="container mx-auto grid grid-cols-6 gap-1">
+        <div class="flex flex-col border-t-8 border-primary gap-3">
+            <span class="text-eduwork-text-heading text-xl font-medium">STEP 1</span>
+            <span class="text-eduwork-text-paragraph text-lg">Account</span>
+        </div>
+        <div class="flex flex-col border-t-8 border-eduwork-neutral-40 gap-3">
+            <span class="text-eduwork-text-heading text-xl font-medium">STEP 2</span>
+            <span class="text-eduwork-text-paragraph text-lg">Personal Information</span>
+        </div>
+        <div class="flex flex-col border-t-8 border-eduwork-neutral-40 gap-3">
+            <span class="text-eduwork-text-heading text-xl font-medium">STEP 3</span>
+            <span class="text-eduwork-text-paragraph text-lg">Experience</span>
+        </div>
+        <div class="flex flex-col border-t-8 border-eduwork-neutral-40 gap-3">
+            <span class="text-eduwork-text-heading text-xl font-medium">STEP 4</span>
+            <span class="text-eduwork-text-paragraph text-lg">Complete</span>
+        </div>
+        <div class="flex flex-col border-t-8 border-eduwork-neutral-40 gap-3">
+            <span class="text-eduwork-text-heading text-xl font-medium">STEP 5</span>
+            <span class="text-eduwork-text-paragraph text-lg">Job Offer</span>
+        </div>
+        <div class="flex flex-col border-t-8 border-eduwork-neutral-40 gap-3">
+            <span class="text-eduwork-text-heading text-xl font-medium">STEP 6</span>
+            <span class="text-eduwork-text-paragraph text-lg">Role</span>
+        </div>
+    </section>
+
+    <section class="container mx-auto flex flex-row">
+        <div class="w-1/2 flex flex-col gap-4">
+            <h2 class="text-eduwork-text-heading font-bold text-4xl">Welcome</h2>
+            <div class="flex flex-col gap-5">
+                <div class="flex flex-col gap-1">
+                    <label for="username" class="text-eduwork-text-paragraph">Username</label>
+                    <form class="relative md:w-full">
+                        <div class="flex absolute inset-y-0 left-0 items-center pl-5 pointer-events-none"><i
+                                class="bi bi-person-fill text-[#C2C2C2]"></i></div>
+                        <input type="text" id="simple-search"
+                            class="bg-white border border-eduwork-neutral-40 text-sm rounded-lg focus:ring-relazee-blue focus:border-relazee-blue block w-full px-14 md:px-12 p-2.5 placeholder-[#C2C2C2]"
+                            placeholder="Username" />
+                        <!-- <button type='submit' class="flex absolute inset-y-0 right-0 items-center pr-5 cursor-pointer">
+                            <i class="bi bi-send-fill text-relazee-blue"></i>
+                        </button> -->
+                    </form>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <label for="email" class="text-eduwork-text-paragraph">Email</label>
+                    <form class="relative md:w-full">
+                        <div class="flex absolute inset-y-0 left-0 items-center pl-5 pointer-events-none"><i
+                                class="bi bi-envelope text-[#C2C2C2]"></i></div>
+                        <input type="email" id="simple-search"
+                            class="bg-white border border-eduwork-neutral-40 text-sm rounded-lg focus:ring-relazee-blue focus:border-relazee-blue block w-full px-14 md:px-12 p-2.5 placeholder-[#C2C2C2]"
+                            placeholder="Email" />
+                        <!-- <button type='submit' class="flex absolute inset-y-0 right-0 items-center pr-5 cursor-pointer">
+                            <i class="bi bi-send-fill text-relazee-blue"></i>
+                        </button> -->
+                    </form>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <label for="password" class="text-eduwork-text-paragraph">Password</label>
+                    <form class="relative md:w-full">
+                        <div class="flex absolute inset-y-0 left-0 items-center pl-5 pointer-events-none"><i
+                                class="bi bi-lock-fill text-[#C2C2C2]"></i></div>
+                        <input type="passowrd" id="simple-search"
+                            class="bg-white border border-eduwork-neutral-40 text-sm rounded-lg focus:ring-relazee-blue focus:border-relazee-blue block w-full px-14 md:px-12 p-2.5 placeholder-[#C2C2C2]"
+                            placeholder="masukkan password anda" />
+                        <button type='submit' class="flex absolute inset-y-0 right-0 items-center pr-5 cursor-pointer">
+                            <i class="bi bi-eye-fill text-[#C2C2C2]"></i>
+                        </button>
+                    </form>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <label for="confirm-password" class="text-eduwork-text-paragraph">Konfirmasi Password</label>
+                    <form class="relative md:w-full">
+                        <div class="flex absolute inset-y-0 left-0 items-center pl-5 pointer-events-none"><i
+                                class="bi bi-lock-fill text-[#C2C2C2]"></i></div>
+                        <input type="passowrd" id="simple-search"
+                            class="bg-white border border-eduwork-neutral-40 text-sm rounded-lg focus:ring-relazee-blue focus:border-relazee-blue block w-full px-14 md:px-12 p-2.5 placeholder-[#C2C2C2]"
+                            placeholder="Ketik ulang pasword anda" />
+                        <button type='submit' class="flex absolute inset-y-0 right-0 items-center pr-5 cursor-pointer">
+                            <i class="bi bi-eye-fill text-[#C2C2C2]"></i>
+                        </button>
+                    </form>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <label for="confirm-password" class="text-eduwork-text-paragraph">Dimana kamu mendapatkan informasi
+                        tentang kami?</label>
+                    <form class="relative md:w-full">
+                        <div class="flex absolute inset-y-0 left-0 items-center pl-5 pointer-events-none"><i
+                                class="bi bi-lock-fill text-[#C2C2C2]"></i></div>
+                        <select
+                            class="bg-white border border-eduwork-neutral-40 text-[#C2C2C2] text-sm rounded-lg block w-full px-14 md:px-12 p-2.5 placeholder-[#C2C2C2]">
+                            <option class="">Pilih atau masukkan opsi</option>
+                            <option class="text-black">Instagram</option>
+                            <option class="text-black">Linkedin</option>
+                            <option class="text-black">School/Campus</option>
+                        </select>
+                        <!-- <button type='submit' class="flex absolute inset-y-0 right-0 items-center pr-5 cursor-pointer">
+                            <i class="bi bi-eye-fill text-[#C2C2C2]"></i>
+                        </button> -->
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div></div>
+    </section>
 </body>
 
 <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
