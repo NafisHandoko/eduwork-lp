@@ -15,7 +15,7 @@
     <style>
         .swiper {
             width: 100%;
-            height: 100%;
+            /* height: 100%; */
         }
 
         .swiper-wrapper {
@@ -53,7 +53,7 @@
 </head>
 
 <body class="bg-white text-[#404040] font-poppins">
-    <section class="bg-white container mx-auto py-2 md:py-4 flex flex-row justify-between items-center px-10">
+    <section class="bg-white container mx-auto px-3 xl:px-[135px] 2xl:px-[265px] py-2 md:py-4 flex flex-row justify-between items-center px-10">
         <img class="h-6 sm:h-7" src="./images/logo/favicon.png" alt="Eduwork Logo" />
         <a href="#"
             class="text-eduwork-main border border-primary rounded-full flex flex-row items-center gap-4 px-8 py-2">
@@ -62,7 +62,7 @@
         </a>
     </section>
 
-    <section class="container mx-auto grid grid-cols-6 gap-1 mt-5 px-10">
+    <section class="container mx-auto px-3 xl:px-[135px] 2xl:px-[265px] grid grid-cols-6 gap-1 mt-5 px-10">
         <div class="flex flex-col border-t-8 border-primary gap-3">
             <span class="text-eduwork-text-heading text-xl font-medium">STEP 1</span>
             <span class="text-eduwork-text-paragraph text-lg">Account</span>
@@ -89,10 +89,10 @@
         </div>
     </section>
 
-    <section class="container mx-auto flex flex-row gap-14 mt-10 px-10 pb-10">
-        <div class="w-1/2 flex flex-col gap-8 mt-20">
+    <section class="container mx-auto px-3 xl:px-[135px] 2xl:px-[265px] flex flex-row gap-14 mt-10 px-10 pb-10 items-stretch">
+        <div class="w-1/2 flex flex-col gap-6">
             <h2 class="text-eduwork-text-heading font-bold text-4xl">Welcome!</h2>
-            <div class="flex flex-col gap-7">
+            <div class="flex flex-col gap-5">
                 <div class="flex flex-col gap-1">
                     <label for="username" class="text-eduwork-text-paragraph">Username</label>
                     <form class="relative md:w-full">
@@ -196,10 +196,10 @@
             </div>
         </div>
         <div class="w-1/2 flex flex-col gap-7">
-            <div class="bg-center bg-cover h-[900px]" style="background-image: url('./images/register/hero1.png');">
-                <div class="bg-eduwork-neutral-100/[.9] w-full h-full flex flex-col items-center justify-center">
-                    <img src="./images/logo/favicon.png" class="w-40 pt-28" alt="">
-                    <h2 class="text-white text-4xl font-bold text-center px-20 pt-20">Get Ready to <span
+            <div class="bg-center bg-cover" style="background-image: url('./images/register/hero1.png');">
+                <div class="bg-eduwork-neutral-100/[.9] w-full h-full flex flex-col items-center justify-center gap-10 py-14">
+                    <img src="./images/logo/favicon.png" class="w-40" alt="">
+                    <h2 class="text-white text-4xl font-bold text-center px-20">Get Ready to <span
                             class="text-[#FBBC04]">Kickstart</span> Your Journey with Us</h2>
                     <div class="swiper mySwiper flex flex-col">
                         <div class="swiper-wrapper">
@@ -213,7 +213,7 @@
                                 <img src="./images/register/slide-img.png" class="w-[60%]" alt="">
                             </div>
                         </div>
-                        <div class="flex flex-row items-center justify-center relative">
+                        <div class="flex flex-row items-center justify-center relative mt-3">
                             <div class="w-1/6">
                                 <button id="swiper-Button-prev" class="swiper-Button-prev text-eduwork-main bg-white rounded-full w-7 h-7 flex items-center justify-center"><i
                                         class="bi bi-chevron-left"></i></button>
@@ -225,7 +225,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="#" class="rounded-full border border-white px-5 py-2 flex flex-row items-center gap-2 text-white mt-44 mb-32">
+                    <a href="#" class="rounded-full border border-white px-5 py-2 flex flex-row items-center gap-2 text-white">
                         <i class="bi bi-chevron-left"></i>
                         <span>Back to Home</span>
                     </a>
