@@ -164,16 +164,20 @@
                 </div>
             </div>
         </div>
-        <div class="w-1/2 bg-center bg-cover h-[750px] rounded-2xl" style="background-image: url('./images/register/hero2.png');">
+        <div class="w-1/2 flex flex-col gap-7">
+            <div class="bg-center bg-cover h-[750px] rounded-2xl" style="background-image: url('./images/register/hero2.png');"></div>
+            <div class="flex flex-row justify-end gap-3">
+                <a href="index.html" class="rounded-full px-20 py-2 text-eduwork-neutral-50 border border-eduwork-neutral-50 flex flex-row items-center gap-2">
+                    <i class="bi bi-chevron-left"></i>
+                    <span>Previous Step</span>
+                </a>
+                <a href="#" class="rounded-full px-20 py-2 text-white bg-eduwork-main flex flex-row items-center gap-2">
+                    <span>Next Step</span>
+                    <i class="bi bi-chevron-right"></i>
+                </a>
+            </div>
         </div>
     </section>
-
-    <div class="flex flex-row justify-end container mx-auto px-10 py-7">
-        <button class="rounded-full px-20 py-2 text-white bg-eduwork-main flex flex-row items-center gap-2">
-            <span>Next Step</span>
-            <i class="bi bi-chevron-right"></i>
-        </button>
-    </div>
 </body>
 
 <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
