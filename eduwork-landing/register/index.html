@@ -146,7 +146,37 @@
                     </form>
                 </div>
                 <div class="flex flex-col gap-1">
-                    <label for="confirm-password" class="text-eduwork-text-paragraph">Dimana kamu mendapatkan informasi
+                    <label for="phone" class="text-eduwork-text-paragraph">Nomor Telephone</label>
+                    <div class="flex flex-row gap-3">
+                        <form class="relative md:w-1/4">
+                            <div class="flex absolute inset-y-0 left-0 items-center pl-5 pointer-events-none">
+                                <img src="./images/register/Indonesia (ID).svg" alt="">
+                            </div>
+                            <select
+                                class="bg-white border border-eduwork-neutral-40 text-[#C2C2C2] text-sm rounded-lg block w-full pl-14 md:pl-12 p-2.5 placeholder-[#C2C2C2]">
+                                <option class="">+62</option>
+                                <option class="text-black">+81</option>
+                                <option class="text-black">+65</option>
+                                <option class="text-black">+45</option>
+                            </select>
+                            <!-- <button type='submit' class="flex absolute inset-y-0 right-0 items-center pr-5 cursor-pointer">
+                                <i class="bi bi-eye-fill text-[#C2C2C2]"></i>
+                            </button> -->
+                        </form>
+                        <form class="relative md:w-full">
+                            <div class="flex absolute inset-y-0 left-0 items-center pl-5 pointer-events-none"><i
+                                    class="bi bi-telephone text-[#C2C2C2]"></i></div>
+                            <input type="text" id="simple-search"
+                                class="bg-white border border-eduwork-neutral-40 text-sm rounded-lg focus:ring-relazee-blue focus:border-relazee-blue block w-full pl-14 md:pl-12 p-2.5 placeholder-[#C2C2C2]"
+                                placeholder="masukkan nomor telephone anda" />
+                            <!-- <button type='submit' class="flex absolute inset-y-0 right-0 items-center pr-5 cursor-pointer">
+                                <i class="bi bi-send-fill text-relazee-blue"></i>
+                            </button> -->
+                        </form>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <label for="select" class="text-eduwork-text-paragraph">Dimana kamu mendapatkan informasi
                         tentang kami?</label>
                     <form class="relative md:w-full">
                         <div class="flex absolute inset-y-0 left-0 items-center pl-5 pointer-events-none"><i
@@ -201,6 +231,7 @@
             </div>
         </div>
     </section>
+
     <div class="flex flex-row justify-end container mx-auto px-10 py-7">
         <button class="rounded-full px-20 py-2 text-white bg-eduwork-main flex flex-row items-center gap-2">
             <span>Next Step</span>
