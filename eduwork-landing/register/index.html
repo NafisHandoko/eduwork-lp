@@ -24,6 +24,9 @@
             flex-direction: row;
             margin-top: 34px;
         }
+        .swiper-pagination-bullet{
+            background: #757575 !important;
+        }
     </style>
     <style type="text/tailwindcss">
         @layer utilities {
@@ -83,7 +86,7 @@
         </div>
     </section>
 
-    <section class="container mx-auto flex flex-row items-stretch gap-10 mt-10 px-10">
+    <section class="container mx-auto flex flex-row items-center gap-10 mt-10 px-10">
         <div class="w-1/2 flex flex-col gap-4">
             <h2 class="text-eduwork-text-heading font-bold text-4xl">Welcome</h2>
             <div class="flex flex-col gap-5">
@@ -159,8 +162,40 @@
                 </div>
             </div>
         </div>
-        <div class="w-1/2 bg-center bg-cover" style="background-image: url('./images/register/hero1.png');">
-            <div class="bg-black/[.9] w-full h-full"></div>
+        <div class="w-1/2 bg-center bg-cover h-[750px]" style="background-image: url('./images/register/hero1.png');">
+            <div class="bg-black/[.9] w-full h-full flex flex-col items-center justify-center">
+                <img src="./images/logo/favicon.png" class="w-40 pt-28" alt="">
+                <h2 class="text-white text-4xl font-bold text-center px-20 pt-20">Get Ready to <span
+                        class="text-[#FBBC04]">Kickstart</span> Your Journey with Us</h2>
+                <div class="swiper mySwiper flex flex-col">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide flex items-center justify-center">
+                            <img src="./images/register/slide-img.png" class="w-[60%]" alt="">
+                        </div>
+                        <div class="swiper-slide flex items-center justify-center">
+                            <img src="./images/register/slide-img.png" class="w-[60%]" alt="">
+                        </div>
+                        <div class="swiper-slide flex items-center justify-center">
+                            <img src="./images/register/slide-img.png" class="w-[60%]" alt="">
+                        </div>
+                    </div>
+                    <div class="flex flex-row items-center justify-center relative">
+                        <div class="w-1/6">
+                            <button id="swiper-Button-prev" class="swiper-Button-prev text-eduwork-main bg-white rounded-full w-7 h-7 flex items-center justify-center"><i
+                                    class="bi bi-chevron-left"></i></button>
+                        </div>
+                        <div class="swiper-pagination !static !w-auto"></div>
+                        <div class="w-1/6 flex flex-col items-end">
+                            <button id="swiper-Button-next" class="swiper-Button-next text-eduwork-main bg-white rounded-full w-7 h-7 flex items-center justify-center"><i
+                                    class="bi bi-chevron-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="rounded-full border border-white px-5 py-2 flex flex-row items-center gap-2 text-white mt-16 mb-16">
+                    <i class="bi bi-chevron-left"></i>
+                    <span>Back to Home</span>
+                </a>
+            </div>
         </div>
     </section>
     <div class="flex flex-row justify-end container mx-auto px-10 py-7">
@@ -250,8 +285,9 @@
         document.getElementById('open-all-skills-btn').classList.add('hidden')
     }
 </script>
+
 <!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
 <!-- Initialize Swiper -->
 <script>
@@ -260,21 +296,21 @@
         direction: "horizontal",
         centerdSlides: true,
         slideToClickedSlide: true,
-        // autoplay: {
-        //     delay: 5000,
-        // },
+        autoplay: {
+            delay: 5000,
+        },
         breakpoints: {
             0: {
                 slidesPerView: 1,
-                spaceBetween: 20
+                spaceBetween: 0
             },
             800: {
-                slidesPerView: 2,
-                spaceBetween: 20
+                slidesPerView: 1,
+                spaceBetween: 0
             },
             1024: {
-                slidesPerView: 2,
-                spaceBetween: 20
+                slidesPerView: 1,
+                spaceBetween: 0
             },
         },
         grabCursor: true,
@@ -283,136 +319,27 @@
             nextEl: ".swiper-Button-next",
             prevEl: ".swiper-Button-prev",
         },
-        // pagination: {
-        //     el: '.swiper-pagination',
-        //     type: 'bullets',
-        //     clickable: true
-        // },
-        loop: true
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true
+        },
     });
 
-    var swiper_calendar = new Swiper(".mySwiper-calendar", {
-        effect: "slide",
-        direction: "horizontal",
-        centerdSlides: true,
-        slideToClickedSlide: true,
-        // autoplay: {
-        //     delay: 5000,
-        // },
-        breakpoints: {
-            0: {
-                slidesPerView: 1,
-                spaceBetween: 20
-            },
-            800: {
-                slidesPerView: 2,
-                spaceBetween: 20
-            },
-            1024: {
-                slidesPerView: 2,
-                spaceBetween: 20
-            },
-        },
-        grabCursor: true,
-        // slidesPerGroup: 1,
-        navigation: {
-            nextEl: ".swiper-Button-next-calendar",
-            prevEl: ".swiper-Button-prev-calendar",
-        },
-        // pagination: {
-        //     el: '.swiper-pagination',
-        //     type: 'bullets',
-        //     clickable: true
-        // },
-        loop: true
-    });
-
-    var swiper_event = new Swiper(".mySwiper-event", {
-        effect: "slide",
-        direction: "horizontal",
-        centerdSlides: true,
-        slideToClickedSlide: true,
-        // autoplay: {
-        //     delay: 5000,
-        // },
-        breakpoints: {
-            0: {
-                slidesPerView: 1,
-                spaceBetween: 20
-            },
-            800: {
-                slidesPerView: 2,
-                spaceBetween: 20
-            },
-            1024: {
-                slidesPerView: 2,
-                spaceBetween: 20
-            },
-        },
-        grabCursor: true,
-        // slidesPerGroup: 1,
-        navigation: {
-            nextEl: ".swiper-Button-next-event",
-            prevEl: ".swiper-Button-prev-event",
-        },
-        // pagination: {
-        //     el: '.swiper-pagination',
-        //     type: 'bullets',
-        //     clickable: true
-        // },
-        loop: true
-    });
-
-    var swiper_eclass = new Swiper(".mySwiper-eclass", {
-        effect: "slide",
-        direction: "horizontal",
-        centerdSlides: true,
-        slideToClickedSlide: true,
-        // autoplay: {
-        //     delay: 5000,
-        // },
-        breakpoints: {
-            0: {
-                slidesPerView: 1,
-                spaceBetween: 20
-            },
-            800: {
-                slidesPerView: 2,
-                spaceBetween: 20
-            },
-            1024: {
-                slidesPerView: 2,
-                spaceBetween: 20
-            },
-        },
-        grabCursor: true,
-        // slidesPerGroup: 1,
-        navigation: {
-            nextEl: ".swiper-Button-next-eclass",
-            prevEl: ".swiper-Button-prev-eclass",
-        },
-        // pagination: {
-        //     el: '.swiper-pagination',
-        //     type: 'bullets',
-        //     clickable: true
-        // },
-        loop: true
-    });
-
-    // swiper.on('slideChange', () => {
-    //     if (swiper.isBeginning) {
-    //         document.getElementById('swiper-Button-prev').classList.add('hidden')
-    //     }
-    //     if (!swiper.isBeginning) {
-    //         document.getElementById('swiper-Button-prev').classList.remove('hidden')
-    //     }
-    //     if (swiper.isEnd) {
-    //         document.getElementById('swiper-Button-next').classList.add('hidden')
-    //     }
-    //     if (!swiper.isEnd) {
-    //         document.getElementById('swiper-Button-next').classList.remove('hidden')
-    //     }
-    // })
+    swiper.on('slideChange', () => {
+        if (swiper.isBeginning) {
+            document.getElementById('swiper-Button-prev').classList.add('hidden')
+        }
+        if (!swiper.isBeginning) {
+            document.getElementById('swiper-Button-prev').classList.remove('hidden')
+        }
+        if (swiper.isEnd) {
+            document.getElementById('swiper-Button-next').classList.add('hidden')
+        }
+        if (!swiper.isEnd) {
+            document.getElementById('swiper-Button-next').classList.remove('hidden')
+        }
+    })
 </script>
 
 
