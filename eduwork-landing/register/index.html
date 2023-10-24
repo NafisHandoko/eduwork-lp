@@ -260,66 +260,6 @@
             e.classList.remove("active");
         });
     }
-    // Event Scroll
-    var prevScrollpos = window.pageYOffset;
-    window.onscroll = function () {
-        var currentScrollPos = window.pageYOffset;
-        if (prevScrollpos > currentScrollPos) {
-            document.getElementById("navbar").style.top = "0";
-        } else {
-            document.getElementById("navbar").style.top = "-90px";
-        }
-        prevScrollpos = currentScrollPos;
-    };
-
-    window.addEventListener("scroll", function () {
-        if (window.scrollY >= 100) {
-            document.getElementById("navbar").style.backgroundColor = "#ffffff";
-            document.getElementById("navbar").style.boxShadow =
-                "0 0 10px rgba(0,0,0,0.1)";
-        } else {
-            // document.getElementById("navbar").style.backgroundColor = "transparent";
-            document.getElementById("navbar").style.backgroundColor = "white";
-            // document.getElementById("navbar").style.boxShadow = "none";
-        }
-    });
-
-    // Kontributor category code
-    const categoryButtons = document.querySelectorAll('.category-btn')
-    categoryButtons.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            e.preventDefault()
-            categoryButtons.forEach(btn => {
-                btn.classList.replace('bg-primary', 'bg-[#E7F1FF]')
-                btn.classList.replace('text-white', 'text-[#6C6E71]')
-            })
-            btn.classList.replace('bg-[#E7F1FF]', 'bg-primary')
-            btn.classList.replace('text-[#6C6E71]', 'text-white')
-        })
-    })
-
-    // Skill category code
-    const skillCategoryButtons = document.querySelectorAll('.skill-btn')
-    skillCategoryButtons.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            e.preventDefault()
-            skillCategoryButtons.forEach(btn => {
-                btn.classList.remove('bg-eduwork-main')
-                btn.classList.replace('text-white', 'text-eduwork-main')
-            })
-            btn.classList.add('bg-eduwork-main')
-            btn.classList.replace('text-eduwork-main', 'text-white')
-        })
-    })
-
-    function openAllSkills() {
-        let lastThreeElements = Array.from(document.getElementById("skills").children).slice(-3)
-        lastThreeElements.forEach(el => {
-            el.classList.remove('hidden')
-        })
-        document.getElementById('skills-overlay').classList.add('hidden')
-        document.getElementById('open-all-skills-btn').classList.add('hidden')
-    }
 </script>
 
 <!-- Swiper JS -->
