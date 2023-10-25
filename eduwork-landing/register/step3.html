@@ -91,71 +91,50 @@
 
     <section class="container mx-auto px-3 xl:px-[135px] 2xl:px-[265px] flex flex-row gap-10 mt-10 px-10 items-stretch">
         <div class="w-full md:w-1/2 flex flex-col gap-6">
-            <h2 class="text-eduwork-text-heading font-bold text-4xl">Welcome!</h2>
-            <p class="text-eduwork-text-paragraph text-lg w-3/4">Silahkan isi data berikut ini sebelum mengakses aplikasi</p>
+            <h2 class="text-eduwork-text-heading font-bold text-4xl">Beri Tahu Kami Tentang <span class="text-primary">Pengalaman Anda!</span></h2>
+            <p class="text-eduwork-text-paragraph text-lg w-4/5">Kami sangat senang bisa mengenal Anda lebih baik, beri tahu kami Pengalaman Anda!</p>
             <div class="flex flex-col gap-5">
                 <div class="flex flex-col gap-1">
-                    <label for="username" class="text-eduwork-text-paragraph">Nama</label>
+                    <label for="select" class="text-eduwork-text-paragraph">Apa kamu memiliki pengalaman kerja?</label>
                     <form class="relative md:w-full">
                         <div class="flex absolute inset-y-0 left-0 items-center pl-5 pointer-events-none"><i
-                                class="bi bi-person-fill text-[#C2C2C2]"></i></div>
-                        <input type="text" id="simple-search"
-                            class="bg-white border border-eduwork-neutral-40 text-sm rounded-lg focus:ring-relazee-blue focus:border-relazee-blue block w-full pl-14 md:pl-12 p-2.5 placeholder-[#C2C2C2]"
-                            placeholder="Nama Kamu" />
+                                class="bi bi-briefcase-fill text-[#C2C2C2]"></i></div>
+                        <select
+                            class="bg-white border border-eduwork-neutral-40 text-black text-sm rounded-lg block w-full px-14 md:px-12 p-2.5 placeholder-[#C2C2C2]">
+                            <option class="text-black">Belum</option>
+                            <option class="text-black">Sudah</option>
+                        </select>
                         <!-- <button type='submit' class="flex absolute inset-y-0 right-0 items-center pr-5 cursor-pointer">
-                            <i class="bi bi-send-fill text-relazee-blue"></i>
+                            <i class="bi bi-eye-fill text-[#C2C2C2]"></i>
                         </button> -->
                     </form>
                 </div>
                 <div class="flex flex-col gap-1">
-                    <label for="username" class="text-eduwork-text-paragraph">Kota Sekarang Tinggal</label>
+                    <label for="select" class="text-eduwork-text-paragraph">Apakah anda bersedia untuk kami berikan edukasi intensif sebelum disalurkan ke lapangan pekerjaan ?</label>
                     <form class="relative md:w-full">
                         <div class="flex absolute inset-y-0 left-0 items-center pl-5 pointer-events-none"><i
-                                class="bi bi-geo-alt-fill text-[#C2C2C2]"></i></div>
-                        <input type="text" id="simple-search"
-                            class="bg-white border border-eduwork-neutral-40 text-sm rounded-lg focus:ring-relazee-blue focus:border-relazee-blue block w-full pl-14 md:pl-12 p-2.5 placeholder-[#C2C2C2]"
-                            placeholder="Masukkan kota anda sekarang" />
-                        <!-- <button type='submit' class="flex absolute inset-y-0 right-0 items-center pr-5 cursor-pointer">
-                            <i class="bi bi-send-fill text-relazee-blue"></i>
-                        </button> -->
-                    </form>
-                </div>
-                <div class="flex flex-col gap-1">
-                    <label for="username" class="text-eduwork-text-paragraph">Tempat Lahir</label>
-                    <form class="relative md:w-full">
-                        <div class="flex absolute inset-y-0 left-0 items-center pl-5 pointer-events-none"><i
-                                class="bi bi-geo-alt-fill text-[#C2C2C2]"></i></div>
-                        <input type="text" id="simple-search"
-                            class="bg-white border border-eduwork-neutral-40 text-sm rounded-lg focus:ring-relazee-blue focus:border-relazee-blue block w-full pl-14 md:pl-12 p-2.5 placeholder-[#C2C2C2]"
-                            placeholder="Masukkan tempat lahir anda" />
-                        <!-- <button type='submit' class="flex absolute inset-y-0 right-0 items-center pr-5 cursor-pointer">
-                            <i class="bi bi-send-fill text-relazee-blue"></i>
-                        </button> -->
-                    </form>
-                </div>
-                <div class="flex flex-col gap-1">
-                    <label for="username" class="text-eduwork-text-paragraph">Tanggal Lahir</label>
-                    <form class="relative md:w-full">
-                        <div class="flex absolute inset-y-0 left-0 items-center pl-5 pointer-events-none"><i
-                                class="bi bi-calendar-date-fill text-[#C2C2C2]"></i></div>
-                        <input type="date" id="simple-search"
-                            class="bg-white border border-eduwork-neutral-40 text-sm rounded-lg focus:ring-relazee-blue focus:border-relazee-blue block w-full pl-14 md:pl-12 p-2.5 placeholder-[#C2C2C2]"
-                            placeholder="Tekan untuk memilih tanggal lahir anda" />
-                        <!-- <button type='submit' class="flex absolute inset-y-0 right-0 items-center pr-5 cursor-pointer">
-                            <i class="bi bi-send-fill text-relazee-blue"></i>
-                        </button> -->
-                    </form>
-                </div>
-                <div class="flex flex-col gap-1">
-                    <label for="select" class="text-eduwork-text-paragraph">Jenis Kelamin</label>
-                    <form class="relative md:w-full">
-                        <div class="flex absolute inset-y-0 left-0 items-center pl-5 pointer-events-none"><i
-                                class="bi bi-gender-ambiguous text-[#C2C2C2]"></i></div>
+                                class="bi bi-reception-4 text-[#C2C2C2]"></i></div>
                         <select
                             class="bg-white border border-eduwork-neutral-40 text-[#C2C2C2] text-sm rounded-lg block w-full px-14 md:px-12 p-2.5 placeholder-[#C2C2C2]">
-                            <option class="">Pilih Jenis Kelamin</option>
-                            <option class="text-black">Laki-laki</option>
-                            <option class="text-black">Perempuan</option>
+                            <option class="">Pilih opsi</option>
+                            <option class="text-black">Belum</option>
+                            <option class="text-black">Sudah</option>
+                        </select>
+                        <!-- <button type='submit' class="flex absolute inset-y-0 right-0 items-center pr-5 cursor-pointer">
+                            <i class="bi bi-eye-fill text-[#C2C2C2]"></i>
+                        </button> -->
+                    </form>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <label for="select" class="text-eduwork-text-paragraph">Apa bidang yang ingin anda kembangkan karirnya?</label>
+                    <form class="relative md:w-full">
+                        <div class="flex absolute inset-y-0 left-0 items-center pl-5 pointer-events-none"><i
+                                class="bi bi-reception-4 text-[#C2C2C2]"></i></div>
+                        <select
+                            class="bg-white border border-eduwork-neutral-40 text-[#C2C2C2] text-sm rounded-lg block w-full px-14 md:px-12 p-2.5 placeholder-[#C2C2C2]">
+                            <option class="">Pilih opsi</option>
+                            <option class="text-black">Belum</option>
+                            <option class="text-black">Sudah</option>
                         </select>
                         <!-- <button type='submit' class="flex absolute inset-y-0 right-0 items-center pr-5 cursor-pointer">
                             <i class="bi bi-eye-fill text-[#C2C2C2]"></i>
