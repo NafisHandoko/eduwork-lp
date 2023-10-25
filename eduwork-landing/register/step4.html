@@ -71,11 +71,11 @@
             <span class="text-eduwork-text-heading text-xl font-medium">STEP 2</span>
             <span class="text-eduwork-text-paragraph text-lg">Personal Information</span>
         </div>
-        <div class="flex flex-col border-t-8 border-primary gap-3">
+        <div class="flex flex-col border-t-8 border-[#43936C] gap-3">
             <span class="text-eduwork-text-heading text-xl font-medium">STEP 3</span>
             <span class="text-eduwork-text-paragraph text-lg">Experience</span>
         </div>
-        <div class="flex flex-col border-t-8 border-eduwork-neutral-40 gap-3">
+        <div class="flex flex-col border-t-8 border-primary gap-3">
             <span class="text-eduwork-text-heading text-xl font-medium">STEP 4</span>
             <span class="text-eduwork-text-paragraph text-lg">Complete</span>
         </div>
@@ -91,71 +91,58 @@
 
     <section class="container mx-auto px-3 xl:px-[135px] 2xl:px-[265px] flex flex-row gap-10 mt-10 px-10 items-stretch">
         <div class="w-full md:w-1/2 flex flex-col gap-6">
-            <h2 class="text-eduwork-text-heading font-bold text-4xl">Beri Tahu Kami Tentang <span class="text-primary">Pengalaman Anda!</span></h2>
-            <p class="text-eduwork-text-paragraph text-lg w-4/5">Kami sangat senang bisa mengenal Anda lebih baik, beri tahu kami Pengalaman Anda!</p>
+            <h2 class="text-eduwork-text-heading font-bold text-4xl">Beri Tahu Kami Tentang <span class="text-primary">Kemampuan Anda!</span></h2>
+            <p class="text-eduwork-text-paragraph text-lg">Kami sangat senang bisa mengenal Anda lebih baik, beri tahu kami Kemampuan Anda!</p>
             <div class="flex flex-col gap-5">
-                <div class="flex flex-col gap-1">
-                    <label for="select" class="text-eduwork-text-paragraph">Apa kamu memiliki pengalaman kerja?</label>
-                    <form class="relative md:w-full">
-                        <div class="flex absolute inset-y-0 left-0 items-center pl-5 pointer-events-none"><i
-                                class="bi bi-briefcase-fill text-[#C2C2C2]"></i></div>
-                        <select
-                            class="bg-white border border-eduwork-neutral-40 text-black text-sm rounded-lg block w-full px-14 md:px-12 p-2.5 placeholder-[#C2C2C2]">
-                            <option class="text-black">Belum</option>
-                            <option class="text-black">Sudah</option>
-                        </select>
-                        <!-- <button type='submit' class="flex absolute inset-y-0 right-0 items-center pr-5 cursor-pointer">
-                            <i class="bi bi-eye-fill text-[#C2C2C2]"></i>
-                        </button> -->
+                <div class="flex flex-col gap-2">
+                    <span class="text-eduwork-text-paragraph text-xl font-bold">Beri tahu kami tentang kemampuan Anda di bawah ini!</span>
+                    <form class="flex flex-col gap-3">
+                        <div class="flex items-center gap-2">
+                            <input type="checkbox" name="" id="">
+                            <label for="" class="text-eduwork-text-paragraph text-lg">Web Development</label>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <input type="checkbox" name="" id="">
+                            <label for="" class="text-eduwork-text-paragraph text-lg">Mobile Development</label>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <input type="checkbox" name="" id="">
+                            <label for="" class="text-eduwork-text-paragraph text-lg">Desktop Development</label>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <input type="checkbox" name="" id="">
+                            <label for="" class="text-eduwork-text-paragraph text-lg">experience in a managerial position</label>
+                        </div>
                     </form>
                 </div>
-                <div class="flex flex-col gap-1">
-                    <label for="select" class="text-eduwork-text-paragraph">Apakah anda bersedia untuk kami berikan edukasi intensif sebelum disalurkan ke lapangan pekerjaan ?</label>
+                <div class="flex flex-col gap-2">
+                    <label for="" class="text-eduwork-text-paragraph text-xl font-bold">Apakah anda memiliki keahlian lainya?</label>
                     <form class="relative md:w-full">
-                        <div class="flex absolute inset-y-0 left-0 items-center pl-5 pointer-events-none"><i
-                                class="bi bi-reception-4 text-[#C2C2C2]"></i></div>
-                        <select
-                            class="bg-white border border-eduwork-neutral-40 text-[#C2C2C2] text-sm rounded-lg block w-full px-14 md:px-12 p-2.5 placeholder-[#C2C2C2]">
-                            <option class="">Pilih opsi</option>
-                            <option class="text-black">Belum</option>
-                            <option class="text-black">Sudah</option>
-                        </select>
+                        <!-- <div class="flex absolute inset-y-0 left-0 items-center pl-5 pointer-events-none"><i
+                                class="bi bi-geo-alt-fill text-[#C2C2C2]"></i></div> -->
+                        <input type="text" id="simple-search"
+                            class="bg-white border border-eduwork-neutral-40 text-sm rounded-lg focus:ring-relazee-blue focus:border-relazee-blue block w-full pl-14 md:pl-12 p-2.5 placeholder-[#C2C2C2]"
+                            placeholder="Ketik disini untuk kemampuan lainnya" />
                         <!-- <button type='submit' class="flex absolute inset-y-0 right-0 items-center pr-5 cursor-pointer">
-                            <i class="bi bi-eye-fill text-[#C2C2C2]"></i>
-                        </button> -->
-                    </form>
-                </div>
-                <div class="flex flex-col gap-1">
-                    <label for="select" class="text-eduwork-text-paragraph">Apa bidang yang ingin anda kembangkan karirnya?</label>
-                    <form class="relative md:w-full">
-                        <div class="flex absolute inset-y-0 left-0 items-center pl-5 pointer-events-none"><i
-                                class="bi bi-reception-4 text-[#C2C2C2]"></i></div>
-                        <select
-                            class="bg-white border border-eduwork-neutral-40 text-[#C2C2C2] text-sm rounded-lg block w-full px-14 md:px-12 p-2.5 placeholder-[#C2C2C2]">
-                            <option class="">Pilih opsi</option>
-                            <option class="text-black">Belum</option>
-                            <option class="text-black">Sudah</option>
-                        </select>
-                        <!-- <button type='submit' class="flex absolute inset-y-0 right-0 items-center pr-5 cursor-pointer">
-                            <i class="bi bi-eye-fill text-[#C2C2C2]"></i>
+                            <i class="bi bi-send-fill text-relazee-blue"></i>
                         </button> -->
                     </form>
                 </div>
             </div>
         </div>
         <!-- <div class="hidden md:block w-1/2 bg-center bg-cover rounded-2xl" style="background-image: url('./images/register/hero3.png');background-size: 115%;"></div> -->
-        <div class="hidden md:block w-1/2">
-            <img src="./images/register/hero3.png" class="scale-110 translate-x-5 translate-y-5" alt="">
+        <div class="hidden md:flex justify-center items-center w-1/2">
+            <img src="./images/register/hero4.png" class="scale-110 translate-y-5" alt="">
         </div>
     </section>
 
-    <section class="container mx-auto px-3 xl:px-[135px] 2xl:px-[265px] flex flex-row justify-end py-7 z-50">
+    <section class="container mx-auto px-3 xl:px-[135px] 2xl:px-[265px] flex flex-row justify-end py-10">
         <div class="w-full md:w-1/2 flex flex-col md:flex-row md:justify-end gap-3">
             <a href="step2.html" class="rounded-full w-full md:w-1/2 py-2 text-eduwork-neutral-50 border border-eduwork-neutral-50 flex flex-row items-center justify-center gap-2">
                 <i class="bi bi-chevron-left"></i>
                 <span>Previous Step</span>
             </a>
-            <a href="step4.html" class="rounded-full w-full md:w-1/2 py-2 text-white bg-eduwork-main flex flex-row items-center justify-center gap-2">
+            <a href="#" class="rounded-full w-full md:w-1/2 py-2 text-white bg-eduwork-main flex flex-row items-center justify-center gap-2">
                 <span>Next Step</span>
                 <i class="bi bi-chevron-right"></i>
             </a>
