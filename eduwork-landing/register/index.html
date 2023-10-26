@@ -89,7 +89,7 @@
         </div>
     </section>
 
-    <section class="container mx-auto px-3 xl:px-[135px] 2xl:px-[265px] flex flex-row gap-10 mt-10 px-10 items-stretch">
+    <section class="container mx-auto px-3 xl:px-[135px] 2xl:px-[265px] flex flex-col-reverse md:flex-row gap-10 mt-10 px-10 items-stretch">
         <div class="w-full md:w-1/2 flex flex-col gap-6">
             <h2 class="text-eduwork-text-heading font-bold text-4xl">Welcome!</h2>
             <div class="flex flex-col gap-5">
@@ -195,12 +195,12 @@
                 </div>
             </div>
         </div>
-        <div class="hidden md:block w-1/2 bg-center bg-cover" style="background-image: url('./images/register/hero1.png');">
-            <div class="bg-eduwork-neutral-100/[.9] w-full h-full flex flex-col items-center justify-center gap-10 py-14">
-                <img src="./images/logo/favicon.png" class="w-40" alt="">
-                <h2 class="text-white text-4xl font-bold text-center px-20">Get Ready to <span
+        <div class="w-full md:w-1/2 bg-center bg-cover" style="background-image: url('./images/register/hero1.png');">
+            <div class="bg-eduwork-neutral-100/[.9] w-full h-full flex flex-col items-center justify-center gap-10 py-5 md:py-14">
+                <img src="./images/logo/favicon.png" class="w-40 hidden md:block" alt="">
+                <h2 class="text-white text-2xl md:text-4xl font-bold text-center px-10 md:px-20">Get Ready to <span
                         class="text-[#FBBC04]">Kickstart</span> Your Journey with Us</h2>
-                <div class="swiper mySwiper flex flex-col">
+                <div class="swiper mySwiper flex flex-col -mt-14 md:mt-auto">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide flex items-center justify-center">
                             <img src="./images/register/slide-img.png" class="w-[60%]" alt="">
@@ -224,7 +224,7 @@
                         </div>
                     </div>
                 </div>
-                <a href="#" class="rounded-full border border-white px-5 py-2 flex flex-row items-center gap-2 text-white">
+                <a href="#" class="rounded-full border border-white px-5 py-2 hidden md:flex flex-row items-center gap-2 text-white">
                     <i class="bi bi-chevron-left"></i>
                     <span>Back to Home</span>
                 </a>
