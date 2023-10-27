@@ -1,3 +1,10 @@
+import Cash from '../assets/images/register/cash.png'
+import Support from '../assets/images/register/support.png'
+import Calendar from '../assets/images/register/Calendar.png'
+import Location from '../assets/images/register/ion_location.png'
+import VideoPlay from '../assets/images/register/video-play.svg'
+import Hero5b from '../assets/images/register/hero5b.png'
+
 export default function Step5() {
   return (
     <>
@@ -13,7 +20,7 @@ export default function Step5() {
                         berapa ekspektasi gaji Anda?</label>
                     <form className="relative md:w-full">
                         <div className="flex absolute inset-y-0 left-0 items-center pl-4 pointer-events-none"><img
-                                src="./images/register/cash.png" alt="" /></div>
+                                src={Cash} alt="" /></div>
                         <input type="text" id="simple-search"
                             className="bg-white border border-eduwork-neutral-40 text-sm rounded-lg focus:ring-relazee-blue focus:border-relazee-blue block w-full pl-14 md:pl-12 p-2.5 placeholder-[#C2C2C2]"
                             placeholder="Gaji perbulan" />
@@ -26,7 +33,7 @@ export default function Step5() {
                     <label htmlFor="select" className="text-eduwork-text-paragraph">Status Pekerjaan Saat Ini</label>
                     <form className="relative md:w-full">
                         <div className="flex absolute inset-y-0 left-0 items-center pl-4 pointer-events-none"><img
-                                src="./images/register/support.png" alt="" /></div>
+                                src={Support} alt="" /></div>
                         <select
                             className="bg-white border border-eduwork-neutral-40 text-[#C2C2C2] text-sm rounded-lg block w-full px-14 md:px-12 p-2.5 placeholder-[#C2C2C2]">
                             <option className="">Pilih status pekerjaan saat ini</option>
@@ -40,7 +47,7 @@ export default function Step5() {
                     <label htmlFor="username" className="text-eduwork-text-paragraph">Tanggal Siap bekerja</label>
                     <form className="relative md:w-full">
                         <div className="flex absolute inset-y-0 left-0 items-center pl-4 pointer-events-none"><img
-                                src="./images/register/Calendar.png" alt="" /></div>
+                                src={Calendar} alt="" /></div>
                         <input type="text" id="simple-search" onFocus={(e) => {e.target.type='date'}} onBlur={(e) => {e.target.type='text'}}
                             className="bg-white border border-eduwork-neutral-40 text-sm rounded-lg focus:ring-relazee-blue focus:border-relazee-blue block w-full pl-14 md:pl-12 p-2.5 placeholder-[#C2C2C2]"
                             placeholder="Tekan untuk memilih tanggal siap bekerja" />
@@ -54,7 +61,7 @@ export default function Step5() {
                         kota?</label>
                     <form className="relative md:w-full">
                         <div className="flex absolute inset-y-0 left-0 items-center pl-4 pointer-events-none"><img
-                                src="./images/register/support.png" alt="" /></div>
+                                src={Support} alt="" /></div>
                         <select
                             className="bg-white border border-eduwork-neutral-40 text-[#C2C2C2] text-sm rounded-lg block w-full px-14 md:px-12 p-2.5 placeholder-[#C2C2C2]">
                             <option className="">Select an option</option>
@@ -71,7 +78,7 @@ export default function Step5() {
                         remote?</label>
                     <form className="relative md:w-full">
                         <div className="flex absolute inset-y-0 left-0 items-center pl-4 pointer-events-none"><img
-                                src="./images/register/ion_location.png" alt="" /></div>
+                                src={Location} alt="" /></div>
                         <select
                             className="bg-white border border-eduwork-neutral-40 text-[#C2C2C2] text-sm rounded-lg block w-full px-14 md:px-12 p-2.5 placeholder-[#C2C2C2]">
                             <option className="">Select an option</option>
@@ -101,9 +108,9 @@ export default function Step5() {
                 </div>
             </div>
         </div>
-        <div className="w-full md:w-1/2 bg-center bg-cover rounded-2xl shadow-md bg-no-repeat" style="background-image: url('./images/register/hero5b.png');background-size: 115%;">
+        <div className="w-full md:w-1/2 bg-center bg-cover rounded-2xl shadow-md bg-no-repeat" style={{ backgroundImage: `url(${Hero5b})`, backgroundSize: '115%' }}>
             <div className="relative w-full h-full bg-gradient-to-t rounded-2xl from-white to-transparent from-0% to-50% flex flex-col justify-end p-5">
-                <img src="./images/register/video-play.svg" className="w-1/3 self-center my-auto pt-32" alt="" />
+                <img src={VideoPlay} className="w-1/3 self-center my-auto pt-32" alt="" />
                 <div className="flex flex-col gap-2">
                     <h2 className="text-eduwork-text-heading text-3xl font-semibold w-3/5">Video Penjelasan Freelance</h2>
                     <p className="text-eduwork-text-paragraph">Pekerjaan fleksibilitas waktu dan tempat kerja, peluang untuk bekerja dengan berbagai klien.. <span className="text-primary font-bold">Selengkapnya</span></p>
