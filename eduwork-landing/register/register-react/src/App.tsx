@@ -10,7 +10,7 @@ function App() {
     <>
       <Routes>
         <Route path='/' element={<Register />}>
-          <Route path='step1' element={<Step1 />} />
+          <Route path='/' element={<Step1 />} />
         </Route>
       </Routes>
     </>
