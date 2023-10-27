@@ -112,7 +112,7 @@ export default function Step1() {
                         </div>
                     </div>
                 </div>
-                <div className="w-full md:w-1/2 bg-center bg-cover" style={{ backgroundImage: `url(${Hero1});` }}>
+                <div className="w-full md:w-1/2 bg-center bg-cover" style={{ backgroundImage: `url(${Hero1})` }}>
                     <div className="bg-eduwork-neutral-100/[.9] w-full h-full flex flex-col items-center justify-center gap-10 py-5 md:py-14">
                         <img src={EduworkLogo} className="w-40 hidden md:block" alt="" />
                             <h2 className="text-white text-2xl md:text-4xl font-bold text-center px-10 md:px-20">Get Ready to <span
