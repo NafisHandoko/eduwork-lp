@@ -1,4 +1,5 @@
 import Hero3 from '../assets/images/register/hero3.png'
+import { Link } from 'react-router-dom'
 
 export default function Step3() {
     return (
@@ -78,10 +79,10 @@ export default function Step3() {
                         <i className="bi bi-chevron-left"></i>
                         <span>Previous Step</span>
                     </a>
-                    <a href="step4.html" className="rounded-full w-full md:w-1/2 py-2 text-white bg-eduwork-main flex flex-row items-center justify-center gap-2">
+                    <Link to='/step4' className="rounded-full w-full md:w-1/2 py-2 text-white bg-eduwork-main flex flex-row items-center justify-center gap-2">
                         <span>Next Step</span>
                         <i className="bi bi-chevron-right"></i>
-                    </a>
+                    </Link>
                 </div>
             </section>
         </>

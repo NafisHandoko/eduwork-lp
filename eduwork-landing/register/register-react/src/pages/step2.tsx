@@ -7,6 +7,7 @@ import Krafthaus from '../assets/images/register/krafthaus.png'
 import Crowde from '../assets/images/register/crowde.png'
 import Wakuliner from '../assets/images/register/wakuliner.png'
 import Calendar from '../assets/images/register/Calendar.png'
+import { Link } from 'react-router-dom'
 
 export default function Step2() {
     return (
@@ -105,10 +106,10 @@ export default function Step2() {
                         <i className="bi bi-chevron-left"></i>
                         <span>Previous Step</span>
                     </a>
-                    <a href="step3.html" className="rounded-full w-full md:w-1/2 py-2 text-white bg-eduwork-main flex flex-row items-center justify-center gap-2">
+                    <Link to='/step3' className="rounded-full w-full md:w-1/2 py-2 text-white bg-eduwork-main flex flex-row items-center justify-center gap-2">
                         <span>Next Step</span>
                         <i className="bi bi-chevron-right"></i>
-                    </a>
+                    </Link>
                 </div>
             </section>
         </>

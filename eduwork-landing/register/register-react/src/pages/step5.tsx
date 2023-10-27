@@ -4,6 +4,7 @@ import Calendar from '../assets/images/register/Calendar.png'
 import Location from '../assets/images/register/ion_location.png'
 import VideoPlay from '../assets/images/register/video-play.svg'
 import Hero5b from '../assets/images/register/hero5b.png'
+import { Link } from 'react-router-dom'
 
 export default function Step5() {
   return (
@@ -141,11 +142,11 @@ export default function Step5() {
                 <i className="bi bi-chevron-left"></i>
                 <span>Previous Step</span>
             </a>
-            <a href="step6.html"
+            <Link to='/step6'
                 className="rounded-full w-full md:w-1/2 py-2 text-white bg-eduwork-main flex flex-row items-center justify-center gap-2">
                 <span>Next Step</span>
                 <i className="bi bi-chevron-right"></i>
-            </a>
+            </Link>
         </div>
     </section>
     </>

@@ -2,6 +2,7 @@ import IDNFlag from '../assets/images/register/Indonesia (ID).svg'
 import EduworkLogo from '../assets/images/logo/favicon.png'
 import SlideImg from '../assets/images/register/slide-img.png'
 import Hero1 from '../assets/images/register/hero1.png'
+import { Link } from 'react-router-dom'
 
 export default function Step1() {
     return (
@@ -151,10 +152,10 @@ export default function Step1() {
 
             <section className="container mx-auto px-3 xl:px-[135px] 2xl:px-[265px] flex flex-row justify-end py-7">
                 <div className="w-full md:w-1/2 flex justify-end">
-                    <a href="step2.html" className="rounded-full w-full md:w-1/2 py-2 text-white bg-eduwork-main flex flex-row items-center justify-center gap-2">
+                    <Link to='/step2' className="rounded-full w-full md:w-1/2 py-2 text-white bg-eduwork-main flex flex-row items-center justify-center gap-2">
                         <span>Next Step</span>
                         <i className="bi bi-chevron-right"></i>
-                    </a>
+                    </Link>
                 </div>
             </section>
         </>
