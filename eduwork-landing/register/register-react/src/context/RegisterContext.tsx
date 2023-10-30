@@ -35,7 +35,7 @@ const initialState = {
     isFreelance: []
 }
 
-export const registerReducer = (state:any, action:any) => {
+export const registerReducer = (state: any, action: any) => {
     switch (action.type) {
         // step 1
         case 'USERNAME':
@@ -50,7 +50,7 @@ export const registerReducer = (state:any, action:any) => {
             return { ...state, phoneNumber: action.payload }
         case 'SOURCE_OF_INFO':
             return { ...state, sourceOfInfo: action.payload }
-        
+
         // step 2
         case 'NAME':
             return { ...state, name: action.payload }
@@ -96,7 +96,7 @@ export const registerReducer = (state:any, action:any) => {
     }
 }
 
-export const RegisterContextProvider = ({ children }:any) => {
+export const RegisterContextProvider = ({ children }: any) => {
     const [state, dispatch] = useReducer(registerReducer, initialState)
 
     // useEffect(() => {
@@ -108,6 +108,11 @@ export const RegisterContextProvider = ({ children }:any) => {
     // }, [])
 
     // console.log('RegisterContext state:', state)
+    useEffect(() => {
+        if (state.sourceOfInfo) {
+            console.log(state.sourceOfInfo)
+        }
+    }, [state.sourceOfInfo])
 
     return (
         <RegisterContext.Provider value={{ state, dispatch }}>

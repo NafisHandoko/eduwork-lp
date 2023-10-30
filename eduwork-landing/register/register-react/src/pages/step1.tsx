@@ -3,13 +3,17 @@ import EduworkLogo from '../assets/images/logo/favicon.png'
 import SlideImg from '../assets/images/register/slide-img.png'
 import Hero1 from '../assets/images/register/hero1.png'
 import { Link } from 'react-router-dom'
+import { useRegisterContext } from '../hooks/useRegisterContext'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/css';
 
+
 export default function Step1() {
+    const { state, dispatch } = useRegisterContext()
+
     return (
         <>
             <section className="container mx-auto px-3 xl:px-[135px] 2xl:px-[265px] flex flex-col-reverse md:flex-row gap-10 mt-10 px-10 items-stretch">
@@ -21,9 +25,14 @@ export default function Step1() {
                             <form className="relative md:w-full">
                                 <div className="flex absolute inset-y-0 left-0 items-center pl-5 pointer-events-none"><i
                                     className="bi bi-person-fill text-[#C2C2C2]"></i></div>
-                                <input type="text" id="simple-search"
+                                <input
+                                    type="text"
+                                    id="simple-search"
                                     className="bg-white border border-eduwork-neutral-40 text-sm rounded-lg focus:ring-relazee-blue focus:border-relazee-blue block w-full px-14 md:px-12 p-2.5 placeholder-[#C2C2C2]"
-                                    placeholder="Username" />
+                                    placeholder="Username"
+                                    value={state.username}
+                                    onChange={(e) => dispatch({ type: 'USERNAME', payload: e.target.value })}
+                                />
                                 {/* <button type='submit' className="flex absolute inset-y-0 right-0 items-center pr-5 cursor-pointer">
                                     <i className="bi bi-send-fill text-relazee-blue"></i>
                                 </button> */}
@@ -34,9 +43,14 @@ export default function Step1() {
                             <form className="relative md:w-full">
                                 <div className="flex absolute inset-y-0 left-0 items-center pl-5 pointer-events-none"><i
                                     className="bi bi-envelope text-[#C2C2C2]"></i></div>
-                                <input type="email" id="simple-search"
+                                <input
+                                    type="email"
+                                    id="simple-search"
                                     className="bg-white border border-eduwork-neutral-40 text-sm rounded-lg focus:ring-relazee-blue focus:border-relazee-blue block w-full px-14 md:px-12 p-2.5 placeholder-[#C2C2C2]"
-                                    placeholder="Email" />
+                                    placeholder="Email"
+                                    value={state.email}
+                                    onChange={(e) => dispatch({ type: 'EMAIL', payload: e.target.value })}
+                                />
                                 {/* <button type='submit' className="flex absolute inset-y-0 right-0 items-center pr-5 cursor-pointer">
                                     <i className="bi bi-send-fill text-relazee-blue"></i>
                                 </button> */}
@@ -47,9 +61,14 @@ export default function Step1() {
                             <form className="relative md:w-full">
                                 <div className="flex absolute inset-y-0 left-0 items-center pl-5 pointer-events-none"><i
                                     className="bi bi-lock-fill text-[#C2C2C2]"></i></div>
-                                <input type="password" id="simple-search"
+                                <input
+                                    type="password"
+                                    id="simple-search"
                                     className="bg-white border border-eduwork-neutral-40 text-sm rounded-lg focus:ring-relazee-blue focus:border-relazee-blue block w-full px-14 md:px-12 p-2.5 placeholder-[#C2C2C2]"
-                                    placeholder="masukkan password anda" />
+                                    placeholder="masukkan password anda"
+                                    value={state.password}
+                                    onChange={(e) => dispatch({ type: 'PASSWORD', payload: e.target.value })}
+                                />
                                 <button type='button' className="flex absolute inset-y-0 right-0 items-center pr-5 cursor-pointer">
                                     <i className="bi bi-eye-fill text-[#C2C2C2]"></i>
                                 </button>
@@ -60,9 +79,14 @@ export default function Step1() {
                             <form className="relative md:w-full">
                                 <div className="flex absolute inset-y-0 left-0 items-center pl-5 pointer-events-none"><i
                                     className="bi bi-lock-fill text-[#C2C2C2]"></i></div>
-                                <input type="password" id="simple-search"
+                                <input
+                                    type="password"
+                                    id="simple-search"
                                     className="bg-white border border-eduwork-neutral-40 text-sm rounded-lg focus:ring-relazee-blue focus:border-relazee-blue block w-full px-14 md:px-12 p-2.5 placeholder-[#C2C2C2]"
-                                    placeholder="Ketik ulang pasword anda" />
+                                    placeholder="Ketik ulang pasword anda"
+                                    value={state.confirmPassword}
+                                    onChange={(e) => dispatch({ type: 'CONFIRM_PASSWORD', payload: e.target.value })}
+                                />
                                 <button type='button' className="flex absolute inset-y-0 right-0 items-center pr-5 cursor-pointer">
                                     <i className="bi bi-eye-fill text-[#C2C2C2]"></i>
                                 </button>
@@ -89,9 +113,14 @@ export default function Step1() {
                                 <form className="relative w-full">
                                     <div className="flex absolute inset-y-0 left-0 items-center pl-5 pointer-events-none"><i
                                         className="bi bi-telephone text-[#C2C2C2]"></i></div>
-                                    <input type="text" id="simple-search"
+                                    <input
+                                        type="text"
+                                        id="simple-search"
                                         className="bg-white border border-eduwork-neutral-40 text-sm rounded-lg focus:ring-relazee-blue focus:border-relazee-blue block w-full pl-14 md:pl-12 p-2.5 placeholder-[#C2C2C2]"
-                                        placeholder="masukkan nomor telephone anda" />
+                                        placeholder="masukkan nomor telephone anda"
+                                        value={state.phoneNumber}
+                                        onChange={(e) => dispatch({ type: 'PHONE_NUMBER', payload: e.target.value })}
+                                    />
                                     {/* <button type='submit' className="flex absolute inset-y-0 right-0 items-center pr-5 cursor-pointer">
                                         <i className="bi bi-send-fill text-relazee-blue"></i>
                                     </button> */}
@@ -105,11 +134,13 @@ export default function Step1() {
                                 <div className="flex absolute inset-y-0 left-0 items-center pl-5 pointer-events-none"><i
                                     className="bi bi-lock-fill text-[#C2C2C2]"></i></div>
                                 <select
+                                    onChange={(e) => dispatch({ type: 'SOURCE_OF_INFO', payload: e.target.value })}
+                                    defaultValue={state.sourceOfInfo}
                                     className="bg-white border border-eduwork-neutral-40 text-[#C2C2C2] text-sm rounded-lg block w-full px-14 md:px-12 p-2.5 placeholder-[#C2C2C2]">
-                                    <option className="">Pilih atau masukkan opsi</option>
-                                    <option className="text-black">Instagram</option>
-                                    <option className="text-black">Linkedin</option>
-                                    <option className="text-black">School/Campus</option>
+                                    <option className="" selected={state.sourceOfInfo == null}>Pilih atau masukkan opsi</option>
+                                    <option className="text-black" value='instagram'>Instagram</option>
+                                    <option className="text-black" value='linkedin'>Linkedin</option>
+                                    <option className="text-black" value='school'>School/Campus</option>
                                 </select>
                                 {/* <button type='submit' className="flex absolute inset-y-0 right-0 items-center pr-5 cursor-pointer">
                                     <i className="bi bi-eye-fill text-[#C2C2C2]"></i>
