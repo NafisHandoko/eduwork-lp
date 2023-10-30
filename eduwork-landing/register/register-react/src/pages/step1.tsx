@@ -1,11 +1,11 @@
 import IDNFlag from '../assets/images/register/Indonesia (ID).svg'
 import EduworkLogo from '../assets/images/logo/favicon.png'
-import SlideImg from '../assets/images/register/slide-img.png'
+// import SlideImg from '../assets/images/register/slide-img.png'
 import Hero1 from '../assets/images/register/hero1.png'
 import { Link } from 'react-router-dom'
 import { useRegisterContext } from '../hooks/useRegisterContext'
 // Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
+// import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/css';
