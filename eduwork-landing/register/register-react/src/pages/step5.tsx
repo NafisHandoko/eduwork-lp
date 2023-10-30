@@ -22,7 +22,7 @@ export default function Step5() {
                     <form className="relative md:w-full">
                         <div className="flex absolute inset-y-0 left-0 items-center pl-4 pointer-events-none"><img
                                 src={Cash} alt="" /></div>
-                        <input type="text" id="simple-search"
+                        <input type="number" id="simple-search"
                             className="bg-white border border-eduwork-neutral-40 text-sm rounded-lg focus:ring-relazee-blue focus:border-relazee-blue block w-full pl-14 md:pl-12 p-2.5 placeholder-[#C2C2C2]"
                             placeholder="Gaji perbulan" />
                         {/* <button type='submit' className="flex absolute inset-y-0 right-0 items-center pr-5 cursor-pointer">

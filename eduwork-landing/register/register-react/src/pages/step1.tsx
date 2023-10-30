@@ -3,6 +3,11 @@ import EduworkLogo from '../assets/images/logo/favicon.png'
 import SlideImg from '../assets/images/register/slide-img.png'
 import Hero1 from '../assets/images/register/hero1.png'
 import { Link } from 'react-router-dom'
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
 
 export default function Step1() {
     return (
@@ -116,9 +121,9 @@ export default function Step1() {
                 <div className="w-full md:w-1/2 bg-center bg-cover" style={{ backgroundImage: `url(${Hero1})` }}>
                     <div className="bg-eduwork-neutral-100/[.9] w-full h-full flex flex-col items-center justify-center gap-10 py-5 md:py-14">
                         <img src={EduworkLogo} className="w-40 hidden md:block" alt="" />
-                            <h2 className="text-white text-2xl md:text-4xl font-bold text-center px-10 md:px-20">Get Ready to <span
-                                className="text-[#FBBC04]">Kickstart</span> Your Journey with Us</h2>
-                            <div className="swiper mySwiper flex flex-col -mt-14 md:mt-auto">
+                        <h2 className="text-white text-2xl md:text-4xl font-bold text-center px-10 md:px-20">Get Ready to <span
+                            className="text-[#FBBC04]">Kickstart</span> Your Journey with Us</h2>
+                        {/* <div className="swiper mySwiper flex flex-col -mt-14 md:mt-auto">
                                 <div className="swiper-wrapper">
                                     <div className="swiper-slide flex items-center justify-center">
                                         <img src={SlideImg} className="w-[60%]" alt="" />
@@ -141,11 +146,22 @@ export default function Step1() {
                                             className="bi bi-chevron-right"></i></button>
                                     </div>
                                 </div>
-                            </div>
-                            <a href="#" className="rounded-full border border-white px-5 py-2 hidden md:flex flex-row items-center gap-2 text-white">
-                                <i className="bi bi-chevron-left"></i>
-                                <span>Back to Home</span>
-                            </a>
+                            </div> */}
+                        {/* <Swiper
+                            spaceBetween={50}
+                            slidesPerView={3}
+                            onSlideChange={() => console.log('slide change')}
+                            onSwiper={(swiper) => console.log(swiper)}
+                        >
+                            <SwiperSlide><img src={SlideImg} className="w-[60%]" alt="" /></SwiperSlide>
+                            <SwiperSlide><img src={SlideImg} className="w-[60%]" alt="" /></SwiperSlide>
+                            <SwiperSlide><img src={SlideImg} className="w-[60%]" alt="" /></SwiperSlide>
+                            <SwiperSlide><img src={SlideImg} className="w-[60%]" alt="" /></SwiperSlide>
+                        </Swiper> */}
+                        <a href="#" className="rounded-full border border-white px-5 py-2 hidden md:flex flex-row items-center gap-2 text-white">
+                            <i className="bi bi-chevron-left"></i>
+                            <span>Back to Home</span>
+                        </a>
                     </div>
                 </div>
             </section>
