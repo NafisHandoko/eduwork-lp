@@ -8,8 +8,11 @@ import Crowde from '../assets/images/register/crowde.png'
 import Wakuliner from '../assets/images/register/wakuliner.png'
 import Calendar from '../assets/images/register/Calendar.png'
 import { Link } from 'react-router-dom'
+import { useRegisterContext } from '../hooks/useRegisterContext'
 
 export default function Step2() {
+    const { state, dispatch } = useRegisterContext()
+
     return (
         <>
             <section className="container mx-auto px-3 xl:px-[135px] 2xl:px-[265px] flex flex-col-reverse md:flex-row gap-10 mt-10 px-10 items-stretch">
@@ -22,9 +25,14 @@ export default function Step2() {
                             <form className="relative md:w-full">
                                 <div className="flex absolute inset-y-0 left-0 items-center pl-5 pointer-events-none"><i
                                     className="bi bi-person-fill text-[#C2C2C2]"></i></div>
-                                <input type="text" id="simple-search"
+                                <input
+                                    type="text"
+                                    id="simple-search"
                                     className="bg-white border border-eduwork-neutral-40 text-sm rounded-lg focus:ring-relazee-blue focus:border-relazee-blue block w-full pl-14 md:pl-12 p-2.5 placeholder-[#C2C2C2]"
-                                    placeholder="Nama Kamu" />
+                                    placeholder="Nama Kamu"
+                                    value={state.name}
+                                    onChange={(e) => dispatch({ type: 'NAME', payload: e.target.value })}
+                                />
                                 {/* <button type='submit' className="flex absolute inset-y-0 right-0 items-center pr-5 cursor-pointer">
                                     <i className="bi bi-send-fill text-relazee-blue"></i>
                                 </button> */}
@@ -35,9 +43,14 @@ export default function Step2() {
                             <form className="relative md:w-full">
                                 <div className="flex absolute inset-y-0 left-0 items-center pl-5 pointer-events-none"><i
                                     className="bi bi-geo-alt-fill text-[#C2C2C2]"></i></div>
-                                <input type="text" id="simple-search"
+                                <input
+                                    type="text"
+                                    id="simple-search"
                                     className="bg-white border border-eduwork-neutral-40 text-sm rounded-lg focus:ring-relazee-blue focus:border-relazee-blue block w-full pl-14 md:pl-12 p-2.5 placeholder-[#C2C2C2]"
-                                    placeholder="Masukkan kota anda sekarang" />
+                                    placeholder="Masukkan kota anda sekarang"
+                                    value={state.domicile}
+                                    onChange={(e) => dispatch({ type: 'DOMICILE', payload: e.target.value })}
+                                />
                                 {/* <button type='submit' className="flex absolute inset-y-0 right-0 items-center pr-5 cursor-pointer">
                                     <i className="bi bi-send-fill text-relazee-blue"></i>
                                 </button> */}
@@ -48,9 +61,14 @@ export default function Step2() {
                             <form className="relative md:w-full">
                                 <div className="flex absolute inset-y-0 left-0 items-center pl-5 pointer-events-none"><i
                                     className="bi bi-geo-alt-fill text-[#C2C2C2]"></i></div>
-                                <input type="text" id="simple-search"
+                                <input
+                                    type="text"
+                                    id="simple-search"
                                     className="bg-white border border-eduwork-neutral-40 text-sm rounded-lg focus:ring-relazee-blue focus:border-relazee-blue block w-full pl-14 md:pl-12 p-2.5 placeholder-[#C2C2C2]"
-                                    placeholder="Masukkan tempat lahir anda" />
+                                    placeholder="Masukkan tempat lahir anda"
+                                    value={state.birthPlace}
+                                    onChange={(e) => dispatch({ type: 'BIRTH_PLACE', payload: e.target.value })}
+                                />
                                 {/* <button type='submit' className="flex absolute inset-y-0 right-0 items-center pr-5 cursor-pointer">
                                     <i className="bi bi-send-fill text-relazee-blue"></i>
                                 </button> */}
@@ -61,9 +79,16 @@ export default function Step2() {
                             <form className="relative md:w-full">
                                 <div className="flex absolute inset-y-0 left-0 items-center pl-4 pointer-events-none"><img
                                     src={Calendar} alt="" /></div>
-                                <input type="text" id="simple-search" onFocus={(e) => { (e.target.type = 'date') }} onBlur={(e) => { (e.target.type = 'text') }}
+                                <input
+                                    type="text"
+                                    id="simple-search"
+                                    onFocus={(e) => { (e.target.type = 'date') }}
+                                    onBlur={(e) => { (e.target.type = 'text') }}
                                     className="bg-white border border-eduwork-neutral-40 text-sm rounded-lg focus:ring-relazee-blue focus:border-relazee-blue block w-full pl-14 md:pl-12 p-2.5 placeholder-[#C2C2C2]"
-                                    placeholder="Tekan untuk memilih tanggal lahir anda" />
+                                    placeholder="Tekan untuk memilih tanggal lahir anda"
+                                    value={state.birthDate}
+                                    onChange={(e) => dispatch({ type: 'BIRTH_DATE', payload: e.target.value })}
+                                />
                                 {/* <button type='submit' className="flex absolute inset-y-0 right-0 items-center pr-5 cursor-pointer">
                                     <i className="bi bi-send-fill text-relazee-blue"></i>
                                 </button> */}
@@ -75,10 +100,12 @@ export default function Step2() {
                                 <div className="flex absolute inset-y-0 left-0 items-center pl-5 pointer-events-none"><i
                                     className="bi bi-gender-ambiguous text-[#C2C2C2]"></i></div>
                                 <select
+                                    onChange={(e) => dispatch({ type: 'GENDER', payload: e.target.value })}
+                                    defaultValue={state.gender}
                                     className="bg-white border border-eduwork-neutral-40 text-[#C2C2C2] text-sm rounded-lg block w-full px-14 md:px-12 p-2.5 placeholder-[#C2C2C2]">
-                                    <option className="">Pilih Jenis Kelamin</option>
-                                    <option className="text-black">Laki-laki</option>
-                                    <option className="text-black">Perempuan</option>
+                                    <option className="" selected={state.gender == null}>Pilih Jenis Kelamin</option>
+                                    <option className="text-black" value={1}>Laki-laki</option>
+                                    <option className="text-black" value={0}>Perempuan</option>
                                 </select>
                                 {/* <button type='submit' className="flex absolute inset-y-0 right-0 items-center pr-5 cursor-pointer">
                                     <i className="bi bi-eye-fill text-[#C2C2C2]"></i>

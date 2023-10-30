@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react'
 export default function StepIndicator() {
     const { state } = useRegisterContext()
     const [step1Finished, setStep1Finished] = useState(false)
+    const [step2Finished, setStep2Finished] = useState(false)
 
     useEffect(() => {
         if (state) {
@@ -12,6 +13,12 @@ export default function StepIndicator() {
                 setStep1Finished(true)
             } else {
                 setStep1Finished(false)
+            }
+
+            if (state.name.length > 0 && state.domicile.length > 0 && state.birthPlace.length > 0 && state.birthDate.length > 0 && state.gender != null) {
+                setStep2Finished(true)
+            } else {
+                setStep2Finished(false)
             }
         }
     }, [state])
@@ -30,7 +37,7 @@ export default function StepIndicator() {
             <NavLink
                 to='/step2'
                 className={({ isActive }) =>
-                    `flex flex-col border-t-8 gap-3 ${isActive ? 'border-primary' : 'border-eduwork-neutral-40'}`
+                    `flex flex-col border-t-8 gap-3 ${isActive ? 'border-primary' : step2Finished ? 'border-[#43936C]' : 'border-eduwork-neutral-40'}`
                 }
             >
                 <span className="text-eduwork-text-heading text-xl font-medium">STEP 2</span>
